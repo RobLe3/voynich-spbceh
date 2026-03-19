@@ -20,6 +20,19 @@
 
 `CONFIRMED` | `PROVISIONAL` | `RETRACTED` | `FALSIFIED` | `REPLICATION_PENDING`
 
+## Transcription Comparability
+
+| Status | Meaning |
+|--------|---------|
+| `DIRECT` | Token exists with same identity in both systems; packet context preserved |
+| `NORMALIZATION_REQUIRED` | Token exists but count differs; normalization step needed before comparison |
+| `TRANSCRIPTION-BOUND` | Claim depends on Eva-T-specific marker distinction; not representable in Eva- |
+| `NOT_TESTABLE_ACROSS_ZL` | Token exists in ZL but packet/structural context differs; result not transferable |
+| `CROSS-TRANSCRIPTION_COMPARABLE` | Result has been tested in ZL and direction holds |
+| `NOT_APPLICABLE` | Claim does not depend on transliteration (e.g., falsification, lexical, negative) |
+
+See `docs/TRANSCRIPTION_SENSITIVITY_METHOD.md` for full documentation.
+
 ---
 
 ## PAPER 1 CLAIMS
@@ -36,6 +49,7 @@
 - **Output**: `results/` (role comparison outputs)
 - **Verification**: `python scripts/p2_5_6role_rerun.py`
 - **Status**: `CONFIRMED`
+- **Transcription comparability**: `DIRECT`
 - **Last review**: 2026-03-19
 
 ---
@@ -52,6 +66,7 @@
 - **Output**: `results/p1_6_transition_matrix.json`
 - **Verification**: `python scripts/p1_cluster_analysis.py`
 - **Status**: `CONFIRMED`
+- **Transcription comparability**: `DIRECT`
 - **Last review**: 2026-03-19
 
 ---
@@ -66,6 +81,7 @@
 - **Output**: `results/p1_3_falsification_v1.1_results.json`
 - **Verification**: `python scripts/p1_3_falsification.py`
 - **Status**: `CONFIRMED`
+- **Transcription comparability**: `NOT_APPLICABLE`
 - **Last review**: 2026-03-19
 
 ---
@@ -78,6 +94,7 @@
 - **Annex ref**: Annex A, Table A.4
 - **Repo path**: `scripts/p1_cluster_analysis.py` (cross-transliteration section)
 - **Status**: `CONFIRMED`
+- **Transcription comparability**: `CROSS-TRANSCRIPTION_COMPARABLE`
 - **Last review**: 2026-03-19
 
 ---
@@ -92,6 +109,7 @@
 - **Output**: `results/p1_2_section_profiles.csv`
 - **Verification**: `python scripts/p1_cluster_analysis.py`
 - **Status**: `CONFIRMED`
+- **Transcription comparability**: `DIRECT`
 - **Last review**: 2026-03-19
 
 ---
@@ -105,6 +123,7 @@
 - **Repo path**: `scripts/p1_cluster_analysis.py`
 - **Output**: `results/p1_1_cluster_frequencies.csv`
 - **Status**: `CONFIRMED`
+- **Transcription comparability**: `DIRECT`
 - **Last review**: 2026-03-19
 
 ---
@@ -117,6 +136,7 @@
 - **Annex ref**: Annex A, Table A.1
 - **Repo path**: `scripts/p1_cluster_analysis.py`
 - **Status**: `CONFIRMED`
+- **Transcription comparability**: `DIRECT`
 - **Last review**: 2026-03-19
 
 ---
@@ -129,6 +149,7 @@
 - **Annex ref**: Annex A, Table A.5
 - **Repo path**: `scripts/p1_cluster_analysis.py`, `scripts/p2_analysis.py`
 - **Status**: `CONFIRMED`
+- **Transcription comparability**: `DIRECT`
 - **Last review**: 2026-03-19
 
 ---
@@ -146,6 +167,7 @@
 - **Repo path**: `scripts/p2_analysis.py`
 - **Verification**: `python scripts/p2_analysis.py --corpus data/corpus_tokens.csv --roles results/p1_1_cluster_frequencies.csv`
 - **Status**: `CONFIRMED`
+- **Transcription comparability**: `DIRECT`
 - **Last review**: 2026-03-19
 
 ---
@@ -158,6 +180,7 @@
 - **Annex ref**: Annex B, Table B.2
 - **Repo path**: `scripts/p2_analysis.py`
 - **Status**: `CONFIRMED`
+- **Transcription comparability**: `DIRECT`
 - **Last review**: 2026-03-19
 
 ---
@@ -172,6 +195,7 @@
 - **Output**: `results/p1_4_classification_results.json`
 - **Verification**: `python scripts/p1_4_classification.py`
 - **Status**: `CONFIRMED`
+- **Transcription comparability**: `DIRECT`
 - **Last review**: 2026-03-19
 
 ---
@@ -184,6 +208,7 @@
 - **Annex ref**: Annex B, Table B.4
 - **Repo path**: `scripts/p2_analysis.py`
 - **Status**: `CONFIRMED`
+- **Transcription comparability**: `DIRECT`
 - **Last review**: 2026-03-19
 
 ---
@@ -197,6 +222,7 @@
 - **Repo path**: `scripts/DECODE3_qol_cluster.py`, `scripts/ILLUS1_content_token_illustration_alignment.py`
 - **Output**: `results/DECODE3_qol_results.json`
 - **Status**: `CONFIRMED` (structural); `PROVISIONAL` (layer 3 entity count — depends on illustration-type data quality)
+- **Transcription comparability**: `DIRECT`
 - **Last review**: 2026-03-19
 
 ---
@@ -209,6 +235,7 @@
 - **Annex ref**: Annex B, Table B.5
 - **Repo path**: `scripts/DECODE3_qol_cluster.py`
 - **Status**: `CONFIRMED`
+- **Transcription comparability**: `DIRECT`
 - **Last review**: 2026-03-19
 
 ---
@@ -222,6 +249,7 @@
 - **Repo path**: `scripts/PILOT4_balneo_packet_structure.py`, `scripts/ROSETTA3c_qotaiin_positional.py`
 - **Output**: `results/PILOT4_balneo_packet_results.json`, `results/ROSETTA3c_qotaiin_positional_results.json`
 - **Status**: `CONFIRMED`
+- **Transcription comparability**: `DIRECT`
 - **Last review**: 2026-03-19
 
 ---
@@ -235,6 +263,7 @@
 - **Annex ref**: Annex B, Table B.6 addendum
 - **Repo path**: `scripts/PILOT4_balneo_packet_structure.py`
 - **Status**: `FALSIFIED` (nested packet hypothesis falsified; grammar is finite-state)
+- **Transcription comparability**: `NOT_APPLICABLE`
 - **Last review**: 2026-03-19
 
 ---
@@ -247,6 +276,7 @@
 - **Annex ref**: Annex B, Table B.6
 - **Repo path**: `scripts/PILOT4_balneo_packet_structure.py`
 - **Status**: `CONFIRMED`
+- **Transcription comparability**: `DIRECT`
 - **Last review**: 2026-03-19
 
 ---
@@ -264,6 +294,7 @@
 - **Repo path**: `scripts/PILOT5_ain_subfolio_analysis.py`, `scripts/ROSETTA3c_qotaiin_positional.py`, `scripts/ROSETTA3d_stolfi_zl_replication.py`
 - **Output**: `results/PILOT5_ain_subfolio_results.json`, `results/ROSETTA3c_qotaiin_positional_results.json`, `results/ROSETTA3d_stolfi_zl_results.json`
 - **Status**: `PROVISIONAL` (downgraded from CONFIRMED; ZL replication reveals signal fragility; see `pilots/ROSETTA3d_20260319/STOLFI_ZL_POSITIONAL_REPLICATION.md`)
+- **Transcription comparability**: `TRANSCRIPTION-BOUND`
 - **Last review**: 2026-03-19
 
 ---
@@ -278,6 +309,7 @@
 - **Annex ref**: Annex B, Table B.7
 - **Repo path**: `scripts/PILOT5_ain_subfolio_analysis.py`, `scripts/ROSETTA3c_qotaiin_positional.py`
 - **Status**: `CONFIRMED` (Takahashi H, re-confirmed by ROSETTA3c); `CROSS-TRANSCRIPTION_PENDING` (ZL not comparable; see `pilots/ROSETTA3d_20260319/STOLFI_ZL_POSITIONAL_REPLICATION.md`)
+- **Transcription comparability**: `NOT_TESTABLE_ACROSS_ZL`
 - **Last review**: 2026-03-19
 
 ---
@@ -292,6 +324,7 @@
 - **Annex ref**: Annex B, Table B.7
 - **Repo path**: `scripts/PILOT5_ain_subfolio_analysis.py`
 - **Status**: `CONFIRMED` (Takahashi H, corpus-wide); `CROSS-TRANSCRIPTION_PENDING` (`!` marker is Takahashi-specific; not representable in ZL Eva-; see `pilots/ROSETTA3d_20260319/STOLFI_ZL_POSITIONAL_REPLICATION.md`)
+- **Transcription comparability**: `NOT_TESTABLE_ACROSS_ZL`
 - **Last review**: 2026-03-19
 
 ---
@@ -305,6 +338,7 @@
 - **Repo path**: `scripts/ROSETTA2_sal_packet_position.py`
 - **Output**: `results/ROSETTA2_sal_packet_results.json`
 - **Status**: `CONFIRMED`
+- **Transcription comparability**: `DIRECT`
 - **Last review**: 2026-03-19
 
 ---
@@ -320,6 +354,7 @@
 - **Output**: `results/ROSETTA3b_expanded_results.json`
 - **Verification**: `python scripts/ROSETTA3b_expanded_alignment.py` (inspect sal row)
 - **Status**: `CONFIRMED` (lexical alignment); consonant-section-semantic triple
+- **Transcription comparability**: `NOT_APPLICABLE`
 - **Last review**: 2026-03-19
 
 ---
@@ -333,6 +368,7 @@
 - **Replacement**: No terminal-entity positional claim; sal Tier 1 status based on consonant alignment only (P2-CLAIM-014)
 - **See**: `docs/RETRACTED_AND_FALSIFIED_CLAIMS.md` → RETRACTED-001
 - **Status**: `RETRACTED` (removed from Paper 2 v0.94)
+- **Transcription comparability**: `NOT_APPLICABLE`
 - **Last review**: 2026-03-19
 
 ---
@@ -345,6 +381,7 @@
 - **Annex ref**: Annex B, Table B.8
 - **Repo path**: `scripts/ROSETTA3b_expanded_alignment.py`
 - **Status**: `CONFIRMED` (null result is the expected result; confirms grammatical morpheme hypothesis)
+- **Transcription comparability**: `NOT_APPLICABLE`
 - **Last review**: 2026-03-19
 
 ---
@@ -357,6 +394,7 @@
 - **Annex ref**: Annex B, Table B.7 addendum
 - **Repo path**: `scripts/PILOT5_ain_subfolio_analysis.py`
 - **Status**: `FALSIFIED` (folio-uniqueness argument retracted)
+- **Transcription comparability**: `DIRECT`
 - **Last review**: 2026-03-19
 
 ---
@@ -368,6 +406,7 @@
 - **Observed result**: 52.6% of R6 token types align with Hebrew prepositional forms
 - **Note**: This claim requires explicit annex expansion — the scoring method is not fully documented in the repo
 - **Status**: `PROVISIONAL` — alignment scoring method needs explicit documentation
+- **Transcription comparability**: `NORMALIZATION_REQUIRED`
 - **Last review**: 2026-03-19
 
 ---
@@ -380,6 +419,7 @@
 - **Repo path**: `scripts/ILLUS1_content_token_illustration_alignment.py`
 - **Note**: Illustration-type data quality dependency — not fully validated
 - **Status**: `PROVISIONAL` (enrichment confirmed; illustration-type ground truth quality unclear)
+- **Transcription comparability**: `NORMALIZATION_REQUIRED`
 - **Last review**: 2026-03-19
 
 ---
@@ -392,6 +432,7 @@
 - **Repo path**: `scripts/ROSETTA3c_qotaiin_positional.py`
 - **Output**: `results/ROSETTA3c_qotaiin_positional_results.json`
 - **Status**: `CONFIRMED` (null result; qotaiin Tier 3)
+- **Transcription comparability**: `DIRECT`
 - **Last review**: 2026-03-19
 
 ---
@@ -403,6 +444,7 @@
 - **Observed result**: n=15, mean 0.506, p=0.943
 - **Repo path**: `scripts/ROSETTA3c_qotaiin_positional.py`
 - **Status**: `CONFIRMED` (null result; lkaiin Tier 2 ambiguity unresolved by positional evidence)
+- **Transcription comparability**: `DIRECT`
 - **Last review**: 2026-03-19
 
 ---

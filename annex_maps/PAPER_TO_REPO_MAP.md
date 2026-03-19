@@ -145,10 +145,12 @@
 
 ## Pending Replication Items
 
-| Claim | Status | Replication method | Notes |
-|-------|--------|--------------------|-------|
-| ai!n LATE bias (0.686, p=0.005) | CROSS-TRANSCRIPTION_PENDING | Requires Eva-T compatible source | ! marker absent from ZL Eva-; ZL test not possible |
-| qokain EARLY (0.248, p=0.007) | PROVISIONAL | Requires third transliteration encoding !-marker distinction | ZL TRANSCRIPTION_MISMATCH; family test CENTRAL (n=106, p=0.365) |
-| laiin LATE (0.875, p=0.007) | CROSS-TRANSCRIPTION_PENDING | Requires transliteration that treats laiin as single token | ZL splits laiin; 0 in Stars packet payloads in ZL |
-| R6 Hebrew preposition match (52.6%) | PROVISIONAL | Full scoring method needs documentation | |
-| 44 Rosetta candidates | PROVISIONAL | Illustration-type data quality unclear | |
+Transcription comparability status codes follow `docs/TRANSCRIPTION_SENSITIVITY_METHOD.md`.
+
+| Claim | TC Status | Replication path | Notes |
+|-------|-----------|------------------|-------|
+| qokain EARLY (0.248, p=0.007) | `TRANSCRIPTION-BOUND` | Requires 3rd transliteration encoding !-marker separately (e.g., RF Extended Eva) | ZL collapses qokain+qokai!n; tests different token; family CENTRAL (n=106, p=0.365) |
+| laiin LATE (0.875, p=0.007) | `NOT_TESTABLE_ACROSS_ZL` | Requires transliteration that tokenizes laiin as single unit with stable paragraph conventions | ZL splits laiin in packet context; 0 in Stars packet payloads |
+| ai!n LATE (0.686, p=0.005) | `NOT_TESTABLE_ACROSS_ZL` | Requires Eva-T compatible source | ! marker absent from ZL Eva-; not representable |
+| R6 Hebrew preposition match (52.6%) | `NORMALIZATION_REQUIRED` | Full scoring method needs documentation | See docs/R6_HEBREW_ALIGNMENT_METHOD.md (pending) |
+| 44 Rosetta candidates | `NORMALIZATION_REQUIRED` | Illustration-type data quality clarification | Enrichment confirmed; ground truth validation pending |
