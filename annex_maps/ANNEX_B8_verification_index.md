@@ -1,5 +1,5 @@
 # Annex B.8 — Claim Verification Index
-**Table**: Master index of all 29 active claims in Papers 1 and 2.
+**Table**: Master index of all 30 active claims in Papers 1 and 2.
 **Purpose**: Allows a reviewer to locate any claim's annex table, current status, claim level, transcription comparability, and primary repo artifact in a single lookup.
 **Source**: `docs/CLAIM_REGISTRY.md` (current post-ZL, post-registry state, 2026-03-19; updated 2026-03-19 to add P2-CLAIM-022)
 

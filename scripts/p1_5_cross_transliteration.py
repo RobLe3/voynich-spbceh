@@ -17,9 +17,9 @@ import re
 from collections import defaultdict, Counter
 from pathlib import Path
 
-BASE_DIR = Path("/Users/roble/Library/Mobile Documents/com~apple~CloudDocs/Blog Article/Voynich_Manusript")
-SRC_DIR = BASE_DIR / "voynich_sources"
-P1_DIR  = BASE_DIR / "research" / "P1_structural"
+BASE_DIR = Path(__file__).parent.parent
+SRC_DIR = BASE_DIR / "data"
+P1_DIR  = BASE_DIR / "results"
 
 SPBCEH_CLUSTERS = {
     "INIT":  ["qokeedy","qokeey","qokedy","qokaiin","qokai!n","qokar","qokol","qoky","qokal","qokey","fachys"],

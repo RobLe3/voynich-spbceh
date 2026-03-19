@@ -12,13 +12,13 @@ Structural and functional analysis of the Voynich Manuscript (Beinecke MS 408) u
 
 ## Current Claim State (2026-03-19)
 
-All 30 claims are tracked in [`docs/CLAIM_REGISTRY.md`](docs/CLAIM_REGISTRY.md). Full proof tables are in [`annex_maps/ANNEX_B1–B8`](annex_maps/). Independent verification: see [Reproducing Results](#reproducing-the-613-fsa-conformance-result) and `annex_maps/ANNEX_B8_verification_index.md`.
+All 30 claims are tracked in [`docs/CLAIM_REGISTRY.md`](docs/CLAIM_REGISTRY.md). Full proof tables are in [`annex_maps/ANNEX_B1–B8`](annex_maps/). Claim-to-artifact map: see [Reproducing Results](#reproducing-the-613-fsa-conformance-result) and `annex_maps/ANNEX_B8_verification_index.md`.
 
 ### Claim status summary
 
 | Status | Count | Notes |
 |--------|-------|-------|
-| `CONFIRMED` | 21 | All structural, grammar, and section-level claims; sal enrichment and Tier 1 lexical |
+| `CONFIRMED` | 22 | All structural, grammar, and section-level claims; sal enrichment and Tier 1 lexical |
 | `CONFIRMED + CROSS-TRANSCRIPTION_PENDING` | 2 | `laiin` LATE Stars (P2-CLAIM-011); `ai!n` LATE corpus-wide (P2-CLAIM-012) |
 | `PROVISIONAL` | 2 | `qokain` EARLY Stars (P2-CLAIM-010) — downgraded; R6 Hebrew prepositions (P2-CLAIM-018) |
 | `RETRACTED` | 1 | `sal` terminal-entity positional pattern (P2-CLAIM-015) |
@@ -123,7 +123,7 @@ LAYER 3 — LEXICAL ENTITIES (section- and folio-specific vocabulary)
 **Title**: Transition Grammar and Cognitive Domain Profiles in the Voynich Manuscript: Evidence for a Functional Recording System from Six-Role Cluster Analysis
 **Version**: v0.94 — Manuscript Draft, March 2026
 **Compiled**: 17 pages; 0 LaTeX errors
-**Claim IDs**: P2-CLAIM-001 through P2-CLAIM-021 (21 confirmed, 2 provisional, 3 retracted/falsified)
+**Claim IDs**: P2-CLAIM-001 through P2-CLAIM-022 (22 confirmed, 2 provisional, 3 retracted/falsified)
 
 **Key results**:
 - Paragraph-level FSA conformance: **61.3%** (pre-registered threshold: 60%)
@@ -137,27 +137,28 @@ LAYER 3 — LEXICAL ENTITIES (section- and folio-specific vocabulary)
 ## Reproducing the 61.3% FSA Conformance Result
 
 ```bash
-# 1. Parse the corpus
+# Place Lsi_ivtff_0d_v4j_fixed.txt in data/ (download from voynich.nu/transcr.html)
+
 cd scripts/
-python parse_corpus.py \
-  --input ../data/Lsi_ivtff_0d_v4j_fixed.txt \
-  --output ../data/corpus_tokens.csv
 
-# 2. Run cluster analysis (generates role assignments)
-python p1_cluster_analysis.py \
-  --corpus ../data/corpus_tokens.csv \
-  --output ../results/p1_1_cluster_frequencies.csv
+# 1. Parse corpus → data/corpus_tokens.csv, data/corpus_lines.csv
+python parse_corpus.py
 
-# 3. Run the Paper 2 FSA conformance analysis
-python p2_analysis.py \
-  --corpus ../data/corpus_tokens.csv \
-  --roles ../results/p1_1_cluster_frequencies.csv \
-  --output ../results/
+# 2. Cluster analysis → results/p1_1_cluster_frequencies.csv, results/p1_6_transition_matrix.json
+python p1_cluster_analysis.py
 
-# Expected output: paragraph_fsa_conformance = 0.613
+# 3. FSA conformance + entropy → results/p2_*.json
+python p2_analysis.py
+# Key output: paragraph_fsa_conformance = 0.613
 ```
 
-**Requirements**: Python ≥ 3.9, pandas, numpy, scipy, scikit-learn
+Scripts read inputs from `data/` and write outputs to `results/` relative to the repo root.
+
+**Requirements**: Python ≥ 3.9; install dependencies with `pip install -r requirements.txt`
+
+Full pipeline: `bash scripts/reproduce.sh` (runs steps 1–3 in order).
+Verify existing outputs: `python scripts/smoke_test.py`
+Expected metric values: `docs/EXPECTED_OUTPUTS.md`
 
 ---
 
@@ -167,11 +168,14 @@ python p2_analysis.py \
 /
 ├── README.md
 ├── LICENSE
+├── requirements.txt               # pandas, numpy, scipy, scikit-learn
 ├── data/
 │   ├── corpus_tokens.csv          # Parsed token-level corpus (37,045 tokens)
 │   ├── corpus_lines.csv           # Line-level corpus
 │   └── ZL3b-n.txt                 # Zandbergen-Landini ZL transliteration (Eva- basic; cross-transliteration)
 ├── scripts/
+│   ├── reproduce.sh               # Full pipeline runner (steps 1–5 in order)
+│   ├── smoke_test.py              # Verify output artifacts + headline metrics
 │   ├── parse_corpus.py            # IVTFF → CSV parser
 │   ├── p1_cluster_analysis.py     # Role classification + positional stats (P1 primary)
 │   ├── p1_3_falsification.py      # Role inversion falsification test
@@ -227,6 +231,7 @@ python p2_analysis.py \
 │   ├── R6_HEBREW_ALIGNMENT_METHOD.md        # R6 Hebrew preposition alignment method (P2-CLAIM-018)
 │   ├── CONSISTENCY_AUDIT_POST_ANNEX.md      # Full audit; readiness assessment for ROSETTA3d restart
 │   ├── TIER_REGISTRY.md                     # Tier 1/2/3 assignments for lexical candidates
+│   ├── EXPECTED_OUTPUTS.md                  # Headline metrics for all scripts; use with smoke_test.py
 │   └── TABLE_FIGURE_TRACEABILITY.md         # Every table/figure traced to its source script
 └── pilots/
     ├── PILOT1_five_folio_results.md

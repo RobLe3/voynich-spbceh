@@ -13,10 +13,10 @@ from pathlib import Path
 
 random.seed(42)
 
-BASE_DIR = Path("/Users/roble/Library/Mobile Documents/com~apple~CloudDocs/Blog Article/Voynich_Manusript")
-D1_DIR = BASE_DIR / "research" / "D1_corpus"
-P1_DIR = BASE_DIR / "research" / "P1_structural"
-OUT_DIR = BASE_DIR / "research" / "P2_cognitive"
+BASE_DIR = Path(__file__).parent.parent
+D1_DIR = BASE_DIR / "data"
+P1_DIR = BASE_DIR / "results"
+OUT_DIR = BASE_DIR / "results"
 
 # ──────────────────────────────────────────────────────────
 # 6-Role Model v2.0: ACT + MODE merged into CONTENT

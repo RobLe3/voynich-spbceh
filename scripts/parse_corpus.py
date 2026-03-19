@@ -14,9 +14,9 @@ from pathlib import Path
 # ──────────────────────────────────────────────────────────
 # Paths
 # ──────────────────────────────────────────────────────────
-BASE_DIR = Path("/Users/roble/Library/Mobile Documents/com~apple~CloudDocs/Blog Article/Voynich_Manusript")
-CORPUS_FILE = BASE_DIR / "voynich_sources" / "Lsi_ivtff_0d_v4j_fixed.txt"
-OUT_DIR = BASE_DIR / "research" / "D1_corpus"
+BASE_DIR = Path(__file__).parent.parent
+CORPUS_FILE = BASE_DIR / "data" / "Lsi_ivtff_0d_v4j_fixed.txt"
+OUT_DIR = BASE_DIR / "data"
 OUT_DIR.mkdir(parents=True, exist_ok=True)
 
 # Use the Takahashi transcription (;H in this file = Stolfi/Landini harmonized baseline)

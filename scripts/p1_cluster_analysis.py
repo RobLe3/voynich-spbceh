@@ -16,9 +16,9 @@ import math
 from collections import defaultdict, Counter
 from pathlib import Path
 
-BASE_DIR = Path("/Users/roble/Library/Mobile Documents/com~apple~CloudDocs/Blog Article/Voynich_Manusript")
-D1_DIR = BASE_DIR / "research" / "D1_corpus"
-OUT_DIR = BASE_DIR / "research" / "P1_structural"
+BASE_DIR = Path(__file__).parent.parent
+D1_DIR = BASE_DIR / "data"
+OUT_DIR = BASE_DIR / "results"
 OUT_DIR.mkdir(exist_ok=True)
 
 # ──────────────────────────────────────────────────────────
