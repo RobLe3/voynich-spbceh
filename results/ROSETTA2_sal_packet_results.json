@@ -1,0 +1,88 @@
+{
+  "sal_total": 44,
+  "sal_section_distribution": {
+    "A": 1,
+    "B": 17,
+    "C": 3,
+    "H": 6,
+    "P": 5,
+    "S": 8,
+    "Z": 4
+  },
+  "n_packets_reconstructed": 897,
+  "sal_in_payload_n": 17,
+  "sal_payload_enrichment": 1.4445741733034827,
+  "sal_positions_in_packets": [
+    0.0,
+    0.2926829268292683,
+    0.6666666666666666,
+    0.3684210526315789,
+    0.26,
+    0.75,
+    0.08333333333333333,
+    0.25,
+    1.0,
+    0.9230769230769231,
+    1.0,
+    0.6666666666666666,
+    0.6578947368421053,
+    0.8148148148148148,
+    0.75,
+    0.2,
+    0.6923076923076923
+  ],
+  "sal_mean_position": 0.5515214595981792,
+  "sal_position_p_value": 0.5201214979726312,
+  "sal_family_members": [
+    "sal",
+    "sal!",
+    "salal",
+    "salar",
+    "saldam",
+    "saldy",
+    "salkeedy",
+    "salo",
+    "saly"
+  ],
+  "sal_family_total": 63,
+  "top_preceding_tokens": {
+    "oky": 2,
+    "shey": 2,
+    "dain": 1,
+    "dy": 1,
+    "qokeedy": 1,
+    "sair": 1,
+    "chcthy": 1,
+    "oteedy": 1,
+    "kai!n": 1,
+    "lkchey": 1
+  },
+  "top_following_tokens": {
+    "chey": 2,
+    "shey": 2,
+    "chol": 2,
+    "dai!n": 1,
+    "orey": 1,
+    "qokeol": 1,
+    "chal": 1,
+    "okeey": 1,
+    "pororaiin": 1,
+    "otedy": 1
+  },
+  "preceding_role_distribution": {
+    "CONTENT": 34,
+    "INIT": 3,
+    "CLOSE": 3,
+    "ACT": 1,
+    "MODE": 1
+  },
+  "following_role_distribution": {
+    "CONTENT": 29,
+    "CLOSE": 4,
+    "LINK": 3,
+    "REF": 2,
+    "MODE": 2,
+    "ACT": 1,
+    "INIT": 1
+  }
+}

@@ -4,9 +4,27 @@
 Structural and functional analysis of the Voynich Manuscript (Beinecke MS 408) using transition-based positional role classification of EVA glyph clusters.
 
 **Author**: Roble Mumin
-**Status**: Manuscript draft, March 2026
+**Status**: Active research, March 2026
 **Papers**: [Paper 1](#paper-1) · [Paper 2](#paper-2)
 **Zenodo archive**: *DOI pending deposit*
+
+---
+
+## Latest Results (2026-03-19)
+
+Three new confirmed findings from ROSETTA2 / PILOT4 / PILOT5 batch:
+
+1. **`qokain` has section-specific positional semantics** — EARLY-biased in Stars section packets (mean position 0.248, *p* = 0.007) but central in Balneological (mean 0.558, *p* = 0.40). First confirmed case of a single token occupying different structural slots by section.
+
+2. **`ai!n` is LATE-biased corpus-wide** (mean position 0.686, *p* = 0.005) — first corpus-wide positional bias identified. Candidate terminal-entity marker.
+
+3. **`sal` shows a terminal-entity pattern** — appears immediately before R2 CLOSE in 24% of Balneological packet occurrences (4/17), elevated 1.44× inside packet payloads. Consistent with `sal` = entity label for the outcome/product of the recorded procedure.
+
+Two clean refutations:
+- **Nested B-section packets**: REFUTED — 0/67 B-packets with INIT-first-payload contain a sub-CLOSE token. Grammar remains finite-state.
+- **Folio-uniqueness as entity-label evidence**: RETRACTED — non-`-ain` rare tokens are equally folio-unique (74.8% vs 67.6%), confirming this is a baseline property of rare tokens.
+
+Active next step: **ROSETTA3** — stem-consonant alignment of `-ain` family against Arabic astronomical vocabulary (al-Sufi tradition) and Latin balneological lexicon.
 
 ---
 
@@ -149,9 +167,13 @@ python p2_analysis.py \
 │   ├── DECODE2_stars_ain_results.json
 │   └── DECODE3_qol_results.json
 └── pilots/
-    ├── folio_pilot_5folios.md      # Three-layer analysis: f75r, f88r, f103r, f111v, f114v
-    ├── stars_ain_alignment.md      # Stars -ain folio-anchor test
-    └── qol_ol_doublet.md          # qol/ol inner-packet doublet analysis
+    ├── folio_pilot_5folios.md          # Three-layer analysis: f75r, f88r, f103r, f111v, f114v
+    ├── stars_ain_alignment.md          # Stars -ain folio-anchor test (PILOT2)
+    ├── qol_ol_doublet.md               # qol/ol inner-packet doublet analysis (PILOT3)
+    ├── ROSETTA2_sal_packet_log.md      # sal packet-internal position analysis (ROSETTA2)
+    ├── PILOT4_balneo_packet_log.md     # Balneological packet structure analysis (PILOT4)
+    ├── PILOT5_ain_subfolio_log.md      # -ain positional sub-differentiation (PILOT5)
+    └── NEW_FINDINGS_2026-03-19.md      # Consolidated findings + falsifications (2026-03-19)
 ```
 
 ---

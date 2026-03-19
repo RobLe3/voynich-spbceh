@@ -1,0 +1,163 @@
+{
+  "stars_ain_total": 2049,
+  "stars_ain_types": 441,
+  "folio_dominant_ain": {
+    "f103r": [
+      "qokai!n",
+      6
+    ],
+    "f103v": [
+      "daiin",
+      8
+    ],
+    "f104r": [
+      "qokaiin",
+      9
+    ],
+    "f104v": [
+      "aiin",
+      10
+    ],
+    "f105r": [
+      "daiin",
+      5
+    ],
+    "f105v": [
+      "aiin",
+      14
+    ],
+    "f106r": [
+      "aiin",
+      14
+    ],
+    "f106v": [
+      "aiin",
+      9
+    ],
+    "f107r": [
+      "aiin",
+      13
+    ],
+    "f107v": [
+      "okaiin",
+      14
+    ],
+    "f108r": [
+      "aiin",
+      8
+    ],
+    "f108v": [
+      "daiin",
+      11
+    ],
+    "f111r": [
+      "daiin",
+      11
+    ],
+    "f111v": [
+      "qokai!n",
+      24
+    ],
+    "f112r": [
+      "aiin",
+      10
+    ],
+    "f112v": [
+      "aiin",
+      8
+    ],
+    "f113r": [
+      "aiin",
+      13
+    ],
+    "f113v": [
+      "okaiin",
+      12
+    ],
+    "f114r": [
+      "daiin",
+      11
+    ],
+    "f114v": [
+      "qotaiin",
+      9
+    ],
+    "f115r": [
+      "aiin",
+      6
+    ],
+    "f115v": [
+      "qotai!n",
+      4
+    ],
+    "f116r": [
+      "qokai!n",
+      16
+    ]
+  },
+  "n_folio_unique_types": 298,
+  "ain_packet_positions_n": 929,
+  "ain_mean_packet_position": 0.4957445757531883,
+  "top_stems": [
+    [
+      "",
+      261
+    ],
+    [
+      "qok",
+      219
+    ],
+    [
+      "d",
+      179
+    ],
+    [
+      "ok",
+      167
+    ],
+    [
+      "ot",
+      125
+    ],
+    [
+      "qot",
+      76
+    ],
+    [
+      "lk",
+      66
+    ],
+    [
+      "s",
+      64
+    ],
+    [
+      "r",
+      60
+    ],
+    [
+      "k",
+      50
+    ]
+  ],
+  "preceding_role_distribution": {
+    "CONTENT": 1470,
+    "INIT": 138,
+    "CLOSE": 131,
+    "LINK": 80,
+    "TIME": 78,
+    "REF": 61,
+    "ACT": 58,
+    "MODE": 32
+  },
+  "following_role_distribution": {
+    "CONTENT": 1514,
+    "INIT": 119,
+    "CLOSE": 106,
+    "TIME": 84,
+    "LINK": 81,
+    "REF": 61,
+    "ACT": 53,
+    "MODE": 30
+  }
+}
