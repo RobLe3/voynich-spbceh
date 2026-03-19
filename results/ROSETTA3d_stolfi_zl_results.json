@@ -1,0 +1,48 @@
+{
+  "metadata": {
+    "zl_file": "data/ZL3b-n.txt",
+    "total_records": 37649,
+    "total_packets": 886,
+    "stars_packets": 330
+  },
+  "qokain_stars": {
+    "token": "qokain",
+    "scope": "Stars",
+    "claim_id": "P2-CLAIM-010",
+    "zl_n": 22,
+    "zl_mean": 0.6047144711017514,
+    "zl_p": 0.23375308087210556,
+    "zl_direction": "CENTRAL",
+    "eva_n": 7,
+    "eva_mean": 0.248,
+    "eva_p": 0.007,
+    "eva_direction": "EARLY",
+    "verdict": "FAILED_REPLICATION"
+  },
+  "laiin_stars": {
+    "token": "laiin",
+    "scope": "Stars",
+    "claim_id": "P2-CLAIM-011",
+    "zl_n": 0,
+    "zl_mean": null,
+    "zl_p": null,
+    "zl_direction": "INSUFFICIENT_N",
+    "eva_n": 5,
+    "eva_mean": 0.875,
+    "eva_p": 0.007,
+    "eva_direction": "LATE",
+    "verdict": "INSUFFICIENT_N"
+  },
+  "ain_corpus": {
+    "token": "ai!n",
+    "scope": "corpus-wide",
+    "claim_id": "P2-CLAIM-012",
+    "zl_n": 0,
+    "verdict": "TRANSCRIPTION_MISMATCH",
+    "reason": "The ! marker in Takahashi H IVTFF notation has no equivalent in ZL Eva- alphabet. aiin (n!=) is a different token.",
+    "eva_n": 23,
+    "eva_mean": 0.686,
+    "eva_p": 0.005,
+    "eva_direction": "LATE"
+  }
+}

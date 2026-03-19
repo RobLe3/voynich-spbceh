@@ -258,10 +258,12 @@
 - **Observed result**: Stars: mean 0.248, n=7, p=0.007; B: mean 0.558, n=29, p=0.40
 - **Null model**: t-test vs. null position 0.5
 - **Replication**: ROSETTA3c (consistent FSA): qokain Stars positional confirmed (p=0.007)
+- **ZL cross-transcription**: TRANSCRIPTION_MISMATCH — ZL `qokain` = Takahashi H `qokai!n` (not `qokain`); `qokai!n` is CENTRAL (n=39, p=0.841); qok-ain family combined CENTRAL (n=106, p=0.365). The EARLY signal does not generalize beyond the rare no-`!` variant (n=7).
+- **Signal fragility note**: EARLY bias confined to n=7. Disappears when full qok-ain family is grouped. Cannot be replicated in ZL (Eva-) due to `!`-normalization.
 - **Annex ref**: Annex B, Table B.7
-- **Repo path**: `scripts/PILOT5_ain_subfolio_analysis.py`, `scripts/ROSETTA3c_qotaiin_positional.py`
-- **Output**: `results/PILOT5_ain_subfolio_results.json`, `results/ROSETTA3c_qotaiin_positional_results.json`
-- **Status**: `CONFIRMED` (re-confirmed by ROSETTA3c)
+- **Repo path**: `scripts/PILOT5_ain_subfolio_analysis.py`, `scripts/ROSETTA3c_qotaiin_positional.py`, `scripts/ROSETTA3d_stolfi_zl_replication.py`
+- **Output**: `results/PILOT5_ain_subfolio_results.json`, `results/ROSETTA3c_qotaiin_positional_results.json`, `results/ROSETTA3d_stolfi_zl_results.json`
+- **Status**: `PROVISIONAL` (downgraded from CONFIRMED; ZL replication reveals signal fragility; see `pilots/ROSETTA3d_20260319/STOLFI_ZL_POSITIONAL_REPLICATION.md`)
 - **Last review**: 2026-03-19
 
 ---
@@ -272,10 +274,10 @@
 - **Evidence class**: `POSITIONAL`
 - **Observed result**: n=5, mean 0.875, p=0.007
 - **Replication**: ROSETTA3c re-confirmed (p=0.007)
+- **ZL cross-transcription**: TRANSCRIPTION_MISMATCH / INSUFFICIENT_N — ZL has 7 laiin in Stars section but 0 in Stars packet payloads. ZL appears to split `laiin` → `l` + `aiin` in some contexts (f111v: `l`=11 as separate token). Cannot confirm or deny via ZL.
 - **Annex ref**: Annex B, Table B.7
 - **Repo path**: `scripts/PILOT5_ain_subfolio_analysis.py`, `scripts/ROSETTA3c_qotaiin_positional.py`
-- **Status**: `CONFIRMED` (re-confirmed by ROSETTA3c)
-- **Replication pending**: Stolfi ZL cross-transliteration
+- **Status**: `CONFIRMED` (Takahashi H, re-confirmed by ROSETTA3c); `CROSS-TRANSCRIPTION_PENDING` (ZL not comparable; see `pilots/ROSETTA3d_20260319/STOLFI_ZL_POSITIONAL_REPLICATION.md`)
 - **Last review**: 2026-03-19
 
 ---
@@ -284,10 +286,12 @@
 - **Statement**: `ai!n` is LATE-biased corpus-wide (mean 0.686, p = 0.005).
 - **Paper location**: Paper 2 §5.2
 - **Evidence class**: `POSITIONAL`
-- **Observed result**: n=23, mean 0.686, p=0.005
+- **Observed result**: n=23 (corpus-wide), mean 0.686, p=0.005
+- **Scope note**: Stars-section-only result: n=19, mean=0.668, p=0.023 (marginally significant). Paper 2 uses the corpus-wide figure (n=23, p=0.005). Stolfi replication should report both scopes separately.
+- **Token identity**: `ai!n` ≠ `aiin` (n=444) ≠ `laiin` (n=11). Distinct glyph (! marker). See `pilots/ROSETTA3d_20260319/TOKEN_IDENTITY_FREEZE.md`.
 - **Annex ref**: Annex B, Table B.7
 - **Repo path**: `scripts/PILOT5_ain_subfolio_analysis.py`
-- **Status**: `CONFIRMED` (Takahashi transliteration); `REPLICATION_PENDING` (Stolfi ZL)
+- **Status**: `CONFIRMED` (Takahashi H, corpus-wide); `CROSS-TRANSCRIPTION_PENDING` (`!` marker is Takahashi-specific; not representable in ZL Eva-; see `pilots/ROSETTA3d_20260319/STOLFI_ZL_POSITIONAL_REPLICATION.md`)
 - **Last review**: 2026-03-19
 
 ---
