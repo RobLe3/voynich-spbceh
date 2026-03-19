@@ -109,11 +109,14 @@
 - Status: **confirmed**
 
 ### §5.2 qokain EARLY (0.248, p=0.007) / laiin LATE (0.875, p=0.007) / ai!n LATE (0.686, p=0.005)
-- Script: `scripts/PILOT5_ain_subfolio_analysis.py`, `scripts/ROSETTA3c_qotaiin_positional.py`
-- Output: `results/PILOT5_ain_subfolio_results.json`, `results/ROSETTA3c_qotaiin_positional_results.json`
-- Pilot: `pilots/PILOT5_ain_subfolio_log.md`
+- Script: `scripts/PILOT5_ain_subfolio_analysis.py`, `scripts/ROSETTA3c_qotaiin_positional.py`, `scripts/ROSETTA3d_stolfi_zl_replication.py`
+- Output: `results/PILOT5_ain_subfolio_results.json`, `results/ROSETTA3c_qotaiin_positional_results.json`, `results/ROSETTA3d_stolfi_zl_results.json`
+- Pilot: `pilots/PILOT5_ain_subfolio_log.md`, `pilots/ROSETTA3d_20260319/TOKEN_IDENTITY_FREEZE.md`, `pilots/ROSETTA3d_20260319/STOLFI_ZL_POSITIONAL_REPLICATION.md`
 - Annex: Annex B, Table B.7
-- Status: **confirmed** (re-confirmed by ROSETTA3c for qokain and laiin); ai!n: `REPLICATION_PENDING` (Stolfi)
+- Status:
+  - `qokain` EARLY: **PROVISIONAL** (downgraded — signal confined to n=7 no-! variant; qokai!n n=39 CENTRAL; family n=106 CENTRAL p=0.365; ZL normalization collapses qokain/qokai!n)
+  - `laiin` LATE: **confirmed** (ROSETTA3c re-confirmed); ZL: TRANSCRIPTION_MISMATCH (laiin absent from ZL Stars packet payloads)
+  - `ai!n` LATE: **confirmed** (Takahashi H); ZL: TRANSCRIPTION_MISMATCH (! marker Eva-T specific)
 
 ### §7.3 sal Balneological enrichment (2.08×) + Tier 1 alignment (sl→sal/salus)
 - Scripts: `scripts/ROSETTA2_sal_packet_position.py`, `scripts/ROSETTA3b_expanded_alignment.py`, `scripts/ROSETTA3c_qotaiin_positional.py`
@@ -142,10 +145,10 @@
 
 ## Pending Replication Items
 
-| Claim | Status | Replication method |
-|-------|--------|--------------------|
-| ai!n LATE bias (0.686, p=0.005) | REPLICATION_PENDING | Run PILOT5 on Stolfi ZL transliteration |
-| qokain EARLY (0.248, p=0.007) | REPLICATION_PENDING | Run ROSETTA3c on Stolfi ZL transliteration |
-| laiin LATE (0.875, p=0.007) | REPLICATION_PENDING | Run ROSETTA3c on Stolfi ZL transliteration |
-| R6 Hebrew preposition match (52.6%) | PROVISIONAL | Full scoring method needs documentation |
-| 44 Rosetta candidates | PROVISIONAL | Illustration-type data quality unclear |
+| Claim | Status | Replication method | Notes |
+|-------|--------|--------------------|-------|
+| ai!n LATE bias (0.686, p=0.005) | CROSS-TRANSCRIPTION_PENDING | Requires Eva-T compatible source | ! marker absent from ZL Eva-; ZL test not possible |
+| qokain EARLY (0.248, p=0.007) | PROVISIONAL | Requires third transliteration encoding !-marker distinction | ZL TRANSCRIPTION_MISMATCH; family test CENTRAL (n=106, p=0.365) |
+| laiin LATE (0.875, p=0.007) | CROSS-TRANSCRIPTION_PENDING | Requires transliteration that treats laiin as single token | ZL splits laiin; 0 in Stars packet payloads in ZL |
+| R6 Hebrew preposition match (52.6%) | PROVISIONAL | Full scoring method needs documentation | |
+| 44 Rosetta candidates | PROVISIONAL | Illustration-type data quality unclear | |
