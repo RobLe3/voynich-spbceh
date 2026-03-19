@@ -126,6 +126,8 @@ python3 PILOT5_ain_subfolio_analysis.py
 
 **Status**: `FALSIFIED` (3/4 predictions failed; sub-label framework dropped)
 
+**Alias**: Also identified as `FALSIFIED-003` in the Paper 1 appendix retraction count. Paper 1 counts all retractions including informal pilot items and uses FALSIFIED-003 as the alias for this entry. Paper 2 counts only formal P2-CLAIM-NNN items (which excludes this entry since it has no P2-CLAIM-NNN ID). The `daiin` section-rate finding from this falsification was subsequently formalized as `P2-CLAIM-022`.
+
 ---
 
 ## RETRACTED-004

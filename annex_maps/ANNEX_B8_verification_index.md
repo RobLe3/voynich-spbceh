@@ -1,7 +1,7 @@
 # Annex B.8 — Claim Verification Index
 **Table**: Master index of all 29 active claims in Papers 1 and 2.
 **Purpose**: Allows a reviewer to locate any claim's annex table, current status, claim level, transcription comparability, and primary repo artifact in a single lookup.
-**Source**: `docs/CLAIM_REGISTRY.md` (current post-ZL, post-registry state, 2026-03-19)
+**Source**: `docs/CLAIM_REGISTRY.md` (current post-ZL, post-registry state, 2026-03-19; updated 2026-03-19 to add P2-CLAIM-022)
 
 ---
 
@@ -58,6 +58,7 @@
 | P2-CLAIM-019 | 44 Rosetta candidates: p<0.05 and enrichment >3× per illustration type | `TOKEN-LEVEL` | `PROVISIONAL` | `NORMALIZATION_REQUIRED` | B.3 | `scripts/ILLUS1_content_token_illustration_alignment.py` |
 | P2-CLAIM-020 | `qotaiin` CENTRAL in Stars packets (p=0.388) — Tier 3 | `TOKEN-LEVEL` | `CONFIRMED` (null) | `DIRECT` | B.2 | `scripts/ROSETTA3c_qotaiin_positional.py` → `results/ROSETTA3c_qotaiin_positional_results.json` |
 | P2-CLAIM-021 | `lkaiin` CENTRAL in Stars packets (p=0.943) — Tier 2 unresolved | `TOKEN-LEVEL` | `CONFIRMED` (null) | `DIRECT` | B.2 | `scripts/ROSETTA3c_qotaiin_positional.py` |
+| P2-CLAIM-022 | `daiin` non-periodic (CV=1.502) and section-clustered (H: 35.6/1k, B: 10.8/1k) — R4 domain-modulated | `SECTION-LEVEL` | `CONFIRMED` | `DIRECT` | B.7c | `scripts/p2_analysis.py` |
 
 ---
 
@@ -65,13 +66,13 @@
 
 | Status | TOKEN-LEVEL | FAMILY-LEVEL | SECTION-LEVEL | METHOD-LEVEL | Total |
 |--------|------------|--------------|--------------|-------------|-------|
-| `CONFIRMED` | 11 | 2 | 5 | 3 | 21 |
+| `CONFIRMED` | 11 | 2 | 6 | 3 | 22 |
 | `CONFIRMED` + `CROSS-TRANSCRIPTION_PENDING` | 2 | 0 | 0 | 0 | 2 |
 | `PROVISIONAL` | 1 | 1 | 0 | 0 | 2 |
 | `PROVISIONAL` (layer 3 component) | 0 | 0 | 0 | 1 | 1 |
 | `RETRACTED` | 1 | 0 | 0 | 0 | 1 |
 | `FALSIFIED` | 0 | 0 | 0 | 2 | 2 |
-| **Total** | **15** | **3** | **5** | **6** | **29** |
+| **Total** | **15** | **3** | **6** | **6** | **30** |
 
 ---
 
@@ -80,7 +81,7 @@
 | TC Status | Claim IDs |
 |-----------|-----------|
 | `CROSS-TRANSCRIPTION_COMPARABLE` | P1-CLAIM-004 |
-| `DIRECT` | P1-CLAIM-001, 002, 003, 005, 006, 007, 008; P2-CLAIM-001, 002, 003, 004, 005, 006, 007, 009, 013, 017, 020, 021 |
+| `DIRECT` | P1-CLAIM-001, 002, 003, 005, 006, 007, 008; P2-CLAIM-001, 002, 003, 004, 005, 006, 007, 009, 013, 017, 020, 021, 022 |
 | `NORMALIZATION_REQUIRED` | P2-CLAIM-018, 019 |
 | `TRANSCRIPTION-BOUND` | P2-CLAIM-010 |
 | `NOT_TESTABLE_ACROSS_ZL` | P2-CLAIM-011, 012 |
@@ -98,7 +99,7 @@ python3 p1_3_falsification.py      # P1-CLAIM-003
 python3 p1_4_classification.py     # P1-CLAIM-001 (anti-projection); P2-CLAIM-003
 
 # Paper 2 primary results
-python3 p2_analysis.py             # P2-CLAIM-001, 002, 004
+python3 p2_analysis.py             # P2-CLAIM-001, 002, 004, 022
 python3 PILOT4_balneo_packet_structure.py  # P2-CLAIM-007, 008, 009
 python3 ROSETTA3c_qotaiin_positional.py    # P2-CLAIM-006, 010, 011, 020, 021
 python3 PILOT5_ain_subfolio_analysis.py    # P2-CLAIM-012, 017

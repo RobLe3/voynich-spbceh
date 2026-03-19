@@ -488,6 +488,22 @@ See `docs/TRANSCRIPTION_SENSITIVITY_METHOD.md` for full documentation.
 
 ---
 
+### P2-CLAIM-022
+- **Statement**: `daiin` is non-periodic and section-clustered: CV = 1.502 (above the Poisson threshold of 1.0); section rates H: 35.6/1k, P: 34.6/1k, B: 10.8/1k, Z: 8.3/1k — consistent with an R4 (Content) domain-modulated content marker, not a corpus-wide periodic signal.
+- **Claim level**: `SECTION-LEVEL`
+- **Paper location**: Paper 2 §5.1
+- **Evidence class**: `STRUCTURAL`
+- **Observed result**: CV = 1.502; H-section rate 3.3× higher than Z-section rate (Mann-Whitney p < 0.0001, Herbal vs. Balneological)
+- **Null model**: CV = 1.0 for a Poisson (periodic) process; CV > 1.5 indicates clustering / non-periodicity
+- **Annex ref**: Annex B, Table B.7c
+- **Repo path**: `scripts/p2_analysis.py`
+- **Note**: This finding refutes the domain-neutral ACT:PULSE semantic sub-label hypothesis (see RETRACTED-003 in `docs/RETRACTED_AND_FALSIFIED_CLAIMS.md`). The section-rate pattern places `daiin` as Herbal/Pharmaceutical-primary, not balanced across domains.
+- **Status**: `CONFIRMED`
+- **Transcription comparability**: `DIRECT`
+- **Last review**: 2026-03-19
+
+---
+
 ## NEGATIVE RESULTS SUMMARY
 
 | Claim ID | Statement | Status |

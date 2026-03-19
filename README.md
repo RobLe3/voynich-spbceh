@@ -12,7 +12,7 @@ Structural and functional analysis of the Voynich Manuscript (Beinecke MS 408) u
 
 ## Current Claim State (2026-03-19)
 
-All 29 claims are tracked in [`docs/CLAIM_REGISTRY.md`](docs/CLAIM_REGISTRY.md). Full proof tables are in [`annex_maps/ANNEX_B1–B8`](annex_maps/). Independent verification: see [Reproducing Results](#reproducing-the-613-fsa-conformance-result) and `annex_maps/ANNEX_B8_verification_index.md`.
+All 30 claims are tracked in [`docs/CLAIM_REGISTRY.md`](docs/CLAIM_REGISTRY.md). Full proof tables are in [`annex_maps/ANNEX_B1–B8`](annex_maps/). Independent verification: see [Reproducing Results](#reproducing-the-613-fsa-conformance-result) and `annex_maps/ANNEX_B8_verification_index.md`.
 
 ### Claim status summary
 
@@ -219,13 +219,14 @@ python p2_analysis.py \
 │   ├── ANNEX_B5_replication_crosstranscription.md  # Cross-transliteration outcomes
 │   ├── ANNEX_B6_retracted_falsified.md      # All retracted and falsified claims
 │   ├── ANNEX_B7_section_method.md           # Section-level and method-level claims
-│   └── ANNEX_B8_verification_index.md       # Master index: all 29 claims, repo paths, status
+│   └── ANNEX_B8_verification_index.md       # Master index: all 30 claims, repo paths, status
 ├── docs/
 │   ├── CLAIM_REGISTRY.md                    # Per-claim registry (ID, level, status, TC, repo path)
 │   ├── RETRACTED_AND_FALSIFIED_CLAIMS.md    # Full record of retracted/falsified claims
 │   ├── TRANSCRIPTION_SENSITIVITY_METHOD.md  # Eva-T vs Eva- taxonomy; ZL boundary-test framework
 │   ├── R6_HEBREW_ALIGNMENT_METHOD.md        # R6 Hebrew preposition alignment method (P2-CLAIM-018)
 │   ├── CONSISTENCY_AUDIT_POST_ANNEX.md      # Full audit; readiness assessment for ROSETTA3d restart
+│   ├── TIER_REGISTRY.md                     # Tier 1/2/3 assignments for lexical candidates
 │   └── TABLE_FIGURE_TRACEABILITY.md         # Every table/figure traced to its source script
 └── pilots/
     ├── PILOT1_five_folio_results.md

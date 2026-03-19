@@ -33,7 +33,7 @@ These claims characterize aggregate structural patterns at section level or at t
 | `daiin` periodicity | METHOD-LEVEL | Inter-occurrence CV | CV = 1.502 (> 1.5 = clustered, not periodic) | `daiin` is domain-clustered, not a corpus-wide periodic signal | `CONFIRMED` |
 | `daiin` section rates | SECTION-LEVEL | Rate comparison | H: 35.6/1k tokens; P: 34.6/1k; B: 10.8/1k; Z: 8.3/1k | `daiin` is a domain-modulated content marker; 3× higher in content-intensive sections | `CONFIRMED` |
 
-Note: `daiin` analysis does not carry a formal P2-CLAIM-NNN ID in the current registry. It supports the R4 (Content) role characterization as domain-modulated. A formal claim ID should be assigned before ROSETTA3d expansion — see `docs/CONSISTENCY_AUDIT_POST_ANNEX.md` item C-009.
+Note: `daiin` analysis is now formalized as **P2-CLAIM-022** in `docs/CLAIM_REGISTRY.md` (assigned 2026-03-19). It supports the R4 (Content) role characterization as domain-modulated. See `docs/CONSISTENCY_AUDIT_POST_ANNEX.md` item C-005.
 
 ---
 

@@ -10,10 +10,10 @@
 | Issue ID | Component | Severity | Type | Status |
 |----------|-----------|----------|------|--------|
 | C-001 | Paper 2 appendix retraction listing | LOW | OMISSION | **FIXED** |
-| C-002 | RETRACTED-003 naming (RETRACTED vs FALSIFIED) | LOW | INCONSISTENCY | DOCUMENTED |
-| C-003 | Paper 1 vs Paper 2 retraction count phrasing | LOW | INCONSISTENCY | DOCUMENTED |
+| C-002 | RETRACTED-003 naming (RETRACTED vs FALSIFIED) | LOW | INCONSISTENCY | **FIXED** (alias note added 2026-03-19) |
+| C-003 | Paper 1 vs Paper 2 retraction count phrasing | LOW | INCONSISTENCY | **VERIFIED CLEAN** (Paper 2 already uses "Three formal Paper 2 claims" + "additional pilot-level retractions" qualifier) |
 | C-004 | FALSIFIED-001 (P2-CLAIM-008) missing from Paper 2 appendix retraction list | MEDIUM | OMISSION | **FIXED** |
-| C-005 | `daiin` analysis has no formal P2-CLAIM-NNN ID | LOW | GAP | DOCUMENTED |
+| C-005 | `daiin` analysis has no formal P2-CLAIM-NNN ID | LOW | GAP | **FIXED** (P2-CLAIM-022 assigned 2026-03-19) |
 | C-006 | P2-CLAIM-018 repo path (ROSETTA3 vs ROSETTA3b) | LOW | AMBIGUITY | DOCUMENTED |
 | C-007 | P2-CLAIM-005 three-layer model partial status needs clearer layer-by-layer breakdown | LOW | CLARITY | DOCUMENTED |
 | C-008 | P2-CLAIM-012 Stars-only vs corpus-wide scope is documented but only in registry, not in annex row | LOW | COVERAGE | **FIXED** (in B.2 notes) |
@@ -170,14 +170,13 @@ Specific checks:
 
 ## Open Items Before ROSETTA3d Restart
 
-| Item | Priority | Action Required |
-|------|----------|----------------|
-| C-005: Assign P2-CLAIM-022 to `daiin` non-periodic analysis | MEDIUM | Add registry entry for `daiin` CV=1.502 and section rate findings |
-| C-002: Clarify RETRACTED-003 = FALSIFIED-003 alias | LOW | Add note to retraction log |
-| C-003: Clarify Paper 2 appendix retraction count scope | LOW | Add "formal Paper 2 claims" qualifier |
-| C-006: Create `scripts/R6_hebrew_alignment.py` | MEDIUM | Required before P2-CLAIM-018 can be upgraded |
-| Tier registry: Formalize Tier 1 / Tier 2 / Tier 3 assignments | MEDIUM | Create formal `docs/TIER_REGISTRY.md` with tier criteria and all candidate assignments |
-| `daiin` claim ID: Assign P2-CLAIM-022 | LOW | Minor registry extension |
+| Item | Priority | Action Required | Status |
+|------|----------|----------------|--------|
+| C-005: Assign P2-CLAIM-022 to `daiin` non-periodic analysis | MEDIUM | Add registry entry for `daiin` CV=1.502 and section rate findings | **FIXED** 2026-03-19 |
+| C-002: Clarify RETRACTED-003 = FALSIFIED-003 alias | LOW | Add note to retraction log | **FIXED** 2026-03-19 |
+| C-003: Clarify Paper 2 appendix retraction count scope | LOW | Add "formal Paper 2 claims" qualifier | **VERIFIED CLEAN** — already present |
+| C-006: Create `scripts/R6_hebrew_alignment.py` | MEDIUM | Required before P2-CLAIM-018 can be upgraded | OPEN |
+| Tier registry: Formalize Tier 1 / Tier 2 / Tier 3 assignments | MEDIUM | Create formal `docs/TIER_REGISTRY.md` with tier criteria and all candidate assignments | **FIXED** 2026-03-19 |
 
 ---
 
