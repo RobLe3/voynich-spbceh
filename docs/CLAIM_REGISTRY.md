@@ -4,6 +4,16 @@
 
 ---
 
+
+## Claim Levels
+
+| Code | Meaning |
+|------|---------|
+| `TOKEN-LEVEL` | Claim is about a specific token string (e.g., `qokain` no-! variant) |
+| `FAMILY-LEVEL` | Claim is about a group of related tokens (e.g., the full qok-ain family, the R2 stem family) |
+| `SECTION-LEVEL` | Claim is about aggregate pattern across manuscript sections |
+| `METHOD-LEVEL` | Claim is about the overall framework, grammar, or method (e.g., FSA conformance, taxonomy selection) |
+
 ## Evidence Classes
 
 | Code | Meaning |
@@ -39,6 +49,7 @@ See `docs/TRANSCRIPTION_SENSITIVITY_METHOD.md` for full documentation.
 
 ### P1-CLAIM-001
 - **Statement**: The six-role taxonomy is empirically better supported than the original seven-role taxonomy by anti-projection testing.
+- **Claim level**: `METHOD-LEVEL`
 - **Paper location**: Paper 1 §4, §5
 - **Evidence class**: `STRUCTURAL`, `FALSIFICATION`
 - **Observed result**: Six-role model ranks 3rd/31 (classification), 5th/31 (Markov) on anti-projection test; seven-role model is dominated by the six-role model on both metrics.
@@ -56,6 +67,7 @@ See `docs/TRANSCRIPTION_SENSITIVITY_METHOD.md` for full documentation.
 
 ### P1-CLAIM-002
 - **Statement**: The R2→R1 transition is the single strongest directional signal in the corpus (z = +9.71 vs. 1,000 shuffled baselines).
+- **Claim level**: `SECTION-LEVEL`
 - **Paper location**: Paper 1 §3.2
 - **Evidence class**: `STRUCTURAL`
 - **Observed result**: z = +9.71; expected z ≈ 0 under shuffled baseline
@@ -73,6 +85,7 @@ See `docs/TRANSCRIPTION_SENSITIVITY_METHOD.md` for full documentation.
 
 ### P1-CLAIM-003
 - **Statement**: Falsification protocol: original taxonomy 3/3 coherence criteria met; inverted taxonomy 0/3.
+- **Claim level**: `METHOD-LEVEL`
 - **Paper location**: Paper 1 §6
 - **Evidence class**: `FALSIFICATION`
 - **Observed result**: R2→R1 z-score preserved under original assignment; inverted assignment z = −9.71 (opposite sign)
@@ -88,6 +101,7 @@ See `docs/TRANSCRIPTION_SENSITIVITY_METHOD.md` for full documentation.
 
 ### P1-CLAIM-004
 - **Statement**: Cross-transliteration stability: Pearson r = 0.937 between Takahashi (H) and Stolfi (ZL) positional percentages.
+- **Claim level**: `SECTION-LEVEL`
 - **Paper location**: Paper 1 §7
 - **Evidence class**: `REPLICATION`
 - **Observed result**: r = 0.937
@@ -101,6 +115,7 @@ See `docs/TRANSCRIPTION_SENSITIVITY_METHOD.md` for full documentation.
 
 ### P1-CLAIM-005
 - **Statement**: Section profiles are significant across all roles (Kruskal-Wallis p < 0.0001).
+- **Claim level**: `SECTION-LEVEL`
 - **Paper location**: Paper 1 §4.3
 - **Evidence class**: `STRUCTURAL`
 - **Observed result**: Kruskal-Wallis H significant for all 6 roles
@@ -116,6 +131,7 @@ See `docs/TRANSCRIPTION_SENSITIVITY_METHOD.md` for full documentation.
 
 ### P1-CLAIM-006
 - **Statement**: All R1 (INIT) token types share an exclusive `qok-` prefix.
+- **Claim level**: `TOKEN-LEVEL`
 - **Paper location**: Paper 1 §3.1
 - **Evidence class**: `STRUCTURAL`
 - **Observed result**: 10/10 active R1 types begin with `qok-`; no non-R1 type uses this prefix exclusively
@@ -130,6 +146,7 @@ See `docs/TRANSCRIPTION_SENSITIVITY_METHOD.md` for full documentation.
 
 ### P1-CLAIM-007
 - **Statement**: R2 (CLOSE) types reduce to 3 consonant stems (`ch-`, `sh-`, `lch-`) × 4 suffix variants.
+- **Claim level**: `FAMILY-LEVEL`
 - **Paper location**: Paper 1 §3.1
 - **Evidence class**: `STRUCTURAL`
 - **Observed result**: All 10 R2 cluster types explained by the 3×4 morphological template
@@ -143,6 +160,7 @@ See `docs/TRANSCRIPTION_SENSITIVITY_METHOD.md` for full documentation.
 
 ### P1-CLAIM-008
 - **Statement**: `ch`/`sh` R2 alternation tracks domain: `sh`-stem associates with Balneological; `ch`-stem with Stars.
+- **Claim level**: `FAMILY-LEVEL`
 - **Paper location**: Paper 1 §5.2
 - **Evidence class**: `STRUCTURAL`
 - **Observed result**: `shedy`-cluster 10× elevated Balneological vs. Herbal (Mann-Whitney p < 0.0001)
@@ -158,6 +176,7 @@ See `docs/TRANSCRIPTION_SENSITIVITY_METHOD.md` for full documentation.
 
 ### P2-CLAIM-001
 - **Statement**: Paragraph-level FSA conformance reaches 61.3%, exceeding the pre-registered 60% threshold.
+- **Claim level**: `METHOD-LEVEL`
 - **Paper location**: Paper 2 §3
 - **Evidence class**: `STRUCTURAL`
 - **Observed result**: 61.3%
@@ -174,6 +193,7 @@ See `docs/TRANSCRIPTION_SENSITIVITY_METHOD.md` for full documentation.
 
 ### P2-CLAIM-002
 - **Statement**: Entropy decomposition: H(structural role) = 2.38 bits < H(surface variant) = 2.77 bits.
+- **Claim level**: `METHOD-LEVEL`
 - **Paper location**: Paper 2 §3.2
 - **Evidence class**: `STRUCTURAL`
 - **Observed result**: 2.38 < 2.77 (structural layer is more predictable than surface)
@@ -187,6 +207,7 @@ See `docs/TRANSCRIPTION_SENSITIVITY_METHOD.md` for full documentation.
 
 ### P2-CLAIM-003
 - **Statement**: Section classification accuracy 64.7% (leave-one-folio-out, majority-class baseline 57.8%).
+- **Claim level**: `SECTION-LEVEL`
 - **Paper location**: Paper 2 §4.1
 - **Evidence class**: `STRUCTURAL`
 - **Observed result**: 64.7% vs. 57.8% baseline
@@ -202,6 +223,7 @@ See `docs/TRANSCRIPTION_SENSITIVITY_METHOD.md` for full documentation.
 
 ### P2-CLAIM-004
 - **Statement**: `shedy`-cluster is 10× elevated in Balneological vs. Herbal (Mann-Whitney p < 0.0001).
+- **Claim level**: `TOKEN-LEVEL`
 - **Paper location**: Paper 2 §4.3
 - **Evidence class**: `STRUCTURAL`
 - **Observed result**: 10× relative rate; mean per-folio 15.2% vs. 1.5%
@@ -215,6 +237,7 @@ See `docs/TRANSCRIPTION_SENSITIVITY_METHOD.md` for full documentation.
 
 ### P2-CLAIM-005
 - **Statement**: Three-layer model: frame (R1/R2/R6), inner-packet function words (qol), lexical entities (44 Rosetta candidates).
+- **Claim level**: `METHOD-LEVEL`
 - **Paper location**: Paper 2 §5
 - **Evidence class**: `STRUCTURAL`, `LEXICAL`
 - **Observed result**: qol enrichment 2.01× in packet payloads vs. ol 1.35×; 44 tokens with Fisher exact p<0.05 and enrichment >3× in specific illustration types
@@ -229,6 +252,7 @@ See `docs/TRANSCRIPTION_SENSITIVITY_METHOD.md` for full documentation.
 
 ### P2-CLAIM-006
 - **Statement**: `qol` is an inner-packet function word: r = 0.940 with structural `ol`; OR = 7.83 for B first-payload slot (p < 0.01).
+- **Claim level**: `TOKEN-LEVEL`
 - **Paper location**: Paper 2 §5.1
 - **Evidence class**: `STRUCTURAL`, `POSITIONAL`
 - **Observed result**: Pearson r = 0.940; OR = 7.83
@@ -242,6 +266,7 @@ See `docs/TRANSCRIPTION_SENSITIVITY_METHOD.md` for full documentation.
 
 ### P2-CLAIM-007
 - **Statement**: B-section has 374/897 packets (41.7%) despite 18.5% of corpus tokens — packet density 2.26× average.
+- **Claim level**: `SECTION-LEVEL`
 - **Paper location**: Paper 2 §4.3
 - **Evidence class**: `STRUCTURAL`
 - **Observed result**: 374 packets; ROSETTA3c validation: 374 packets confirmed with consistent FSA
@@ -256,6 +281,7 @@ See `docs/TRANSCRIPTION_SENSITIVITY_METHOD.md` for full documentation.
 
 ### P2-CLAIM-008
 - **Statement**: Nested B-section packets are NOT supported: 0/67 outer packets with INIT-first-payload contain a sub-CLOSE token.
+- **Claim level**: `METHOD-LEVEL`
 - **Paper location**: Paper 2 §4.3
 - **Evidence class**: `NEGATIVE`, `FALSIFICATION`
 - **Observed result**: 0/67 = 0%
@@ -270,6 +296,7 @@ See `docs/TRANSCRIPTION_SENSITIVITY_METHOD.md` for full documentation.
 
 ### P2-CLAIM-009
 - **Statement**: B-section INIT-bleed rate: 17.9% of packets have INIT-classified first-payload token (vs. S: 7.9%, H: 6.4%).
+- **Claim level**: `SECTION-LEVEL`
 - **Paper location**: Paper 2 §4.3
 - **Evidence class**: `STRUCTURAL`
 - **Observed result**: B: 17.9%; S: 7.9%; H: 6.4%
@@ -283,6 +310,7 @@ See `docs/TRANSCRIPTION_SENSITIVITY_METHOD.md` for full documentation.
 
 ### P2-CLAIM-010
 - **Statement**: `qokain` is EARLY-biased in Stars section packets (mean 0.248, p = 0.007) and CENTRAL in Balneological (0.558, p = 0.40) — section-specific positional semantics.
+- **Claim level**: `TOKEN-LEVEL`
 - **Paper location**: Paper 2 §5.2
 - **Evidence class**: `POSITIONAL`
 - **Observed result**: Stars: mean 0.248, n=7, p=0.007; B: mean 0.558, n=29, p=0.40
@@ -301,6 +329,7 @@ See `docs/TRANSCRIPTION_SENSITIVITY_METHOD.md` for full documentation.
 
 ### P2-CLAIM-011
 - **Statement**: `laiin` is LATE-biased in Stars section packets (mean 0.875, p = 0.007).
+- **Claim level**: `TOKEN-LEVEL`
 - **Paper location**: Paper 2 §5.2
 - **Evidence class**: `POSITIONAL`
 - **Observed result**: n=5, mean 0.875, p=0.007
@@ -316,6 +345,7 @@ See `docs/TRANSCRIPTION_SENSITIVITY_METHOD.md` for full documentation.
 
 ### P2-CLAIM-012
 - **Statement**: `ai!n` is LATE-biased corpus-wide (mean 0.686, p = 0.005).
+- **Claim level**: `TOKEN-LEVEL`
 - **Paper location**: Paper 2 §5.2
 - **Evidence class**: `POSITIONAL`
 - **Observed result**: n=23 (corpus-wide), mean 0.686, p=0.005
@@ -331,6 +361,7 @@ See `docs/TRANSCRIPTION_SENSITIVITY_METHOD.md` for full documentation.
 
 ### P2-CLAIM-013
 - **Statement**: `sal` is enriched 2.08× in the Balneological section (per-token rate).
+- **Claim level**: `TOKEN-LEVEL`
 - **Paper location**: Paper 2 §7.3
 - **Evidence class**: `STRUCTURAL`
 - **Observed result**: n=44 total; B-section enrichment 2.08×
@@ -345,6 +376,7 @@ See `docs/TRANSCRIPTION_SENSITIVITY_METHOD.md` for full documentation.
 
 ### P2-CLAIM-014
 - **Statement**: `sal` (stem sl) is a Tier 1 lexical candidate: exact 2-consonant match against Latin *sal* (salt) and *salus* (health/welfare); no competing Arabic candidate is semantically appropriate for the Balneological section.
+- **Claim level**: `TOKEN-LEVEL`
 - **Paper location**: Paper 2 §7.3
 - **Evidence class**: `LEXICAL`, `SEMANTIC`
 - **Observed result**: sl = sl exact ordered; Balneological section coherence; competing Arabic sl-stem matches (al-shaulah, suhayl, etc.) are astronomical — wrong section
@@ -361,6 +393,7 @@ See `docs/TRANSCRIPTION_SENSITIVITY_METHOD.md` for full documentation.
 
 ### P2-CLAIM-015 ⚠️ RETRACTED
 - **Statement**: `sal` appears immediately before R2 CLOSE in 24% of Balneological packet occurrences (n = 4/17) — a terminal-entity pattern.
+- **Claim level**: `TOKEN-LEVEL`
 - **Paper location**: Paper 2 §7.3 (prior versions ≤ v0.93)
 - **Evidence class**: `POSITIONAL`
 - **Original result**: ROSETTA2: 4/17 = 24% pre-R2; cited as terminal-entity evidence
@@ -375,6 +408,7 @@ See `docs/TRANSCRIPTION_SENSITIVITY_METHOD.md` for full documentation.
 
 ### P2-CLAIM-016
 - **Statement**: `qok-` is a grammatical INIT morpheme, not a lexically alignable content prefix (confirmed by NULL alignment result: zero qk-root terms in 200-entry lexicon).
+- **Claim level**: `TOKEN-LEVEL`
 - **Paper location**: Paper 2 §7.3
 - **Evidence class**: `NEGATIVE`, `LEXICAL`
 - **Observed result**: 0 Arabic/Hebrew terms with qk consonant pair as root at 2-con threshold; only `aqua calida` (Latin, qkld, irrelevant to Stars context) generates 2-shared match
@@ -388,6 +422,7 @@ See `docs/TRANSCRIPTION_SENSITIVITY_METHOD.md` for full documentation.
 
 ### P2-CLAIM-017
 - **Statement**: Folio-uniqueness is NOT differentially evidential for `-ain` entity labeling: non-`-ain` rare tokens are equally or more folio-unique (74.8% vs. 67.6%).
+- **Claim level**: `METHOD-LEVEL`
 - **Paper location**: Paper 2 §4.3
 - **Evidence class**: `NEGATIVE`, `FALSIFICATION`
 - **Observed result**: -ain folio-unique rate 67.6%; non-ain tokens of matching frequency: 74.8%
@@ -401,6 +436,7 @@ See `docs/TRANSCRIPTION_SENSITIVITY_METHOD.md` for full documentation.
 
 ### P2-CLAIM-018
 - **Statement**: R6 tokens (`ol`, `al`, `or`, `ar`) map to Hebrew prepositions at 52.6%.
+- **Claim level**: `FAMILY-LEVEL`
 - **Paper location**: Paper 2 §6.1
 - **Evidence class**: `LEXICAL`, `SEMANTIC`
 - **Observed result**: 52.6% of R6 token types align with Hebrew prepositional forms
@@ -413,6 +449,7 @@ See `docs/TRANSCRIPTION_SENSITIVITY_METHOD.md` for full documentation.
 
 ### P2-CLAIM-019
 - **Statement**: 44 Rosetta candidates have Fisher exact p < 0.05 and enrichment > 3× in specific illustration types.
+- **Claim level**: `TOKEN-LEVEL`
 - **Paper location**: Paper 2 §5
 - **Evidence class**: `STRUCTURAL`, `LEXICAL`
 - **Observed result**: 44 tokens meeting the threshold
@@ -426,6 +463,7 @@ See `docs/TRANSCRIPTION_SENSITIVITY_METHOD.md` for full documentation.
 
 ### P2-CLAIM-020
 - **Statement**: `qotaiin` (qt stem) has no significant positional slot in Stars-section packets (CENTRAL, p = 0.388).
+- **Claim level**: `TOKEN-LEVEL`
 - **Paper location**: Paper 2 §9 (future work section; relevant to qotaiin tier)
 - **Evidence class**: `NEGATIVE`, `POSITIONAL`
 - **Observed result**: n=16, mean 0.543, p=0.388 — CENTRAL
@@ -439,6 +477,7 @@ See `docs/TRANSCRIPTION_SENSITIVITY_METHOD.md` for full documentation.
 
 ### P2-CLAIM-021
 - **Statement**: `lkaiin` (lk stem) has no significant positional slot in Stars-section packets (CENTRAL, p = 0.943).
+- **Claim level**: `TOKEN-LEVEL`
 - **Paper location**: Not yet in paper; pilot result
 - **Evidence class**: `NEGATIVE`, `POSITIONAL`
 - **Observed result**: n=15, mean 0.506, p=0.943
