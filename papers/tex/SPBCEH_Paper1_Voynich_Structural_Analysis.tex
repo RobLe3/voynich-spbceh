@@ -1,0 +1,567 @@
+% =========================================================
+% Roble Mumin Library TeX Template — Two-Column Edition
+% Adapted for: SPBCEH Paper 1 (Voynich Structural Analysis)
+% =========================================================
+\documentclass[11pt,a4paper,twocolumn]{article}
+
+% =========================================================
+% Metadata
+% =========================================================
+\newcommand{\AuthorName}{Roble Mumin}
+\newcommand{\AuthorRole}{Independent AI Researcher and AI Consultant}
+\newcommand{\AuthorURLText}{https://roblemumin.com}
+\newcommand{\AuthorURL}{\url{\AuthorURLText}}
+\newcommand{\DocumentSourceName}{Roble Mumin}
+\newcommand{\DocumentSourceURLText}{https://roblemumin.com/library.html}
+\newcommand{\DocumentSourceURL}{\url{\DocumentSourceURLText}}
+\newcommand{\PaperShortTitle}{Voynich EVA Role Asymmetry}
+\newcommand{\PaperVersion}{v0.92}
+\newcommand{\PaperSubtitle}{Manuscript Draft, March 2026 --- \PaperVersion}
+\newcommand{\documentsource}{\textbf{Source:} \DocumentSourceName\ @\ \DocumentSourceURL}
+
+% =========================================================
+% Core Packages
+% =========================================================
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+
+% Math
+\usepackage{amsmath,amssymb,amsthm}
+
+% Tables and figures
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{multirow}
+\usepackage{tabularx}
+\usepackage{colortbl}
+\usepackage[hypcap=true]{caption}  % load once with hypcap option
+\usepackage{subcaption}
+\usepackage{capt-of}
+
+% Layout and spacing
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{needspace}
+\usepackage{abstract}
+\usepackage{authblk}
+
+% Typography — protrusion only; expansion disabled for two-column stability
+\usepackage[protrusion=true,expansion=false]{microtype}
+
+% Colors (load before hyperref)
+\usepackage[dvipsnames]{xcolor}
+
+% Links
+\usepackage{hyperref}
+\usepackage[all]{hypcap}
+\usepackage{cleveref}
+
+% TikZ / PGFPlots
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+% Units and code listings
+\usepackage{siunitx}
+\sisetup{group-separator={,},group-digits=integer}
+\usepackage{listings}
+\lstset{basicstyle=\ttfamily\small,breaklines=true,frame=single,tabsize=4,captionpos=b}
+
+% Headers and footers
+\usepackage{fancyhdr}
+
+% =========================================================
+% Page Geometry
+% =========================================================
+\geometry{a4paper,margin=1.8cm,top=2.8cm,bottom=2.5cm,columnsep=0.6cm}
+\setlength{\headheight}{14.5pt}
+\addtolength{\topmargin}{-2.5pt}
+
+% =========================================================
+% Hyperlink Style
+% =========================================================
+\hypersetup{
+    colorlinks=true,
+    linkcolor=MidnightBlue,
+    citecolor=MidnightBlue,
+    urlcolor=MidnightBlue
+}
+
+% =========================================================
+% Section Heading Style
+% =========================================================
+\usepackage{titlesec}
+\titleformat{\section}{\large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\bfseries}{\thesubsection}{1em}{}
+
+% =========================================================
+% List Style
+% =========================================================
+\setlist[itemize]{leftmargin=*,noitemsep,topsep=0.5em}
+\setlist[enumerate]{leftmargin=*,noitemsep,topsep=0.5em}
+
+% =========================================================
+% Custom Role Colors (SPBCEH taxonomy)
+% =========================================================
+\definecolor{cinit}{HTML}{378ADD}
+\definecolor{cclose}{HTML}{E24B4A}
+\definecolor{clink}{HTML}{EF9F27}
+\definecolor{cact}{HTML}{639922}
+\definecolor{cmode}{HTML}{7F77DD}
+\definecolor{ctime}{HTML}{1D9E75}
+\definecolor{cref}{HTML}{888780}
+\definecolor{lightgray}{HTML}{F5F5F5}
+
+% =========================================================
+% Header and Footer (fancyhdr — spans full column width)
+% =========================================================
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\AuthorName}
+\fancyhead[C]{\small\textit{\PaperShortTitle}}
+\fancyhead[R]{\small\thepage}
+\fancyfoot[L]{\small\DocumentSourceName}
+\fancyfoot[C]{\small\textit{\PaperSubtitle}}
+\fancyfoot[R]{\small\AuthorURL}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+% Plain style for first page (title page uses \thispagestyle{plain} automatically)
+\fancypagestyle{plain}{%
+    \fancyhf{}%
+    \fancyfoot[C]{\small\documentsource}%
+    \renewcommand{\headrulewidth}{0pt}%
+    \renewcommand{\footrulewidth}{0.4pt}%
+}
+
+% =========================================================
+% Title Block
+% =========================================================
+\title{\textbf{Positional Role Asymmetry in Voynich Manuscript EVA Clusters:}\\[4pt]
+\large A Functional Classification Framework with Falsification Protocol}
+
+\author[1]{\AuthorName\thanks{Corresponding author. \AuthorURL}}
+\affil[1]{\AuthorRole}
+
+\date{\PaperSubtitle}
+
+\begin{document}
+
+\maketitle
+
+% ============================================================
+\begin{abstract}
+\noindent The Voynich Manuscript (Beinecke MS 408, c.\ 1404--1438) has resisted all decipherment attempts for over a century. We present a novel analytical framework---\textit{Semantic Pose-Based Cognitive Encoding Hypothesis} (SPBCEH)---that classifies EVA-transcribed glyph clusters not as phonetic or lexical units, but as \textit{functional role markers} within a modular, positionally-structured system. Using positional frequency analysis across all major manuscript sections (Herbal, Astronomical, Balneological, Pharmaceutical, Recipe), we identify seven provisional functional categories: \textsc{Initiator}, \textsc{Closure}, \textsc{Link/Transition}, \textsc{Action/Pulse}, \textsc{Mode/State}, \textsc{Temporal}, and \textsc{Reference}. This taxonomy is later consolidated to six roles under empirical model selection (reported in the companion paper). We find evidence that (1)~cluster role assignments exhibit statistically significant positional consistency among the 47 highest-frequency clusters analyzed (covering 41.8\% of corpus tokens), (2)~section-specific signal profiles are consistent with visual-diagrammatic context, and (3)~role inversion produces significantly weaker transition structure in a controlled falsification test. These findings support the existence of a structured positional grammar with directional asymmetry---a finding that constrains the space of viable decipherment hypotheses. This paper does not establish which interpretive model (natural language cipher, structured recording system, or notation scheme) best accounts for this structure; that question requires additional evidence.
+
+\medskip
+\noindent\textbf{Keywords:} Voynich Manuscript, EVA transcription, functional cluster analysis, positional role encoding, Markov transition grammar, falsification protocol
+\end{abstract}
+
+% ============================================================
+\section{Introduction}
+\label{sec:intro}
+
+The Voynich Manuscript (henceforth VM) is an illustrated codex of approximately 240 pages, written in an unidentified script and preserved at Yale University's Beinecke Rare Book and Manuscript Library. Radiocarbon dating places the vellum in the early 15th century (1404--1438). Despite sustained efforts by professional cryptanalysts---including teams from the US National Security Agency---the text remains undeciphered.
+
+The manuscript's script, commonly referred to as \textit{Voynichese}, has been transliterated into multiple computational alphabets, the most widely adopted being the Extensible Voynich Alphabet (EVA), developed by Landini and Zandbergen. The most complete EVA transliteration is that of Takahashi (1998), consolidated by Stolfi in the Landini-Stolfi Interlinear (LSI) file.
+
+Previous approaches have predominantly treated Voynichese as encoding natural language, whether through direct cipher, constructed language, or glossolalia. Statistical analyses have established that the text exhibits language-like properties---Zipfian word frequency distributions, positional character constraints, and low conditional entropy---while simultaneously violating expectations for any known natural language.
+
+We propose a fundamentally different analytical frame. Rather than assuming the script encodes language, we classify EVA glyph clusters by their \textit{positional behavior and functional role} within line and paragraph structures. This approach is motivated by the observation that certain high-frequency clusters exhibit extreme positional consistency (e.g., line-initial or line-final), suggesting structural rather than lexical function.
+
+% ============================================================
+\section{Related Work}
+\label{sec:related}
+
+\subsection{Cryptographic Approaches}
+
+The manuscript has been subjected to extensive cryptanalytic effort. Friedman's First Study Group (1940s) attempted substitution cipher analysis without success. Currier (1976) identified two distinct ``languages'' (A and B) and at least two scribal hands, establishing that the manuscript's internal structure is non-uniform. Reddy and Knight (2011) applied computational decipherment algorithms, concluding that the text resists standard techniques.
+
+\subsection{Linguistic Hypotheses}
+
+Cheshire (2019) proposed a proto-Romance reading, which was widely rejected for methodological circularity. Bax (2014) attempted targeted botanical identifications to bootstrap glyph values, achieving suggestive but unconfirmed results for a small number of plant names. Neither approach produced a framework capable of consistent, section-spanning application.
+
+\subsection{Hoax and Null Hypotheses}
+
+Rugg (2004) demonstrated that Cardan grille techniques could produce text with superficial similarity to Voynichese. However, subsequent statistical analyses by Montemurro and Zanette (2013) identified long-range word correlations inconsistent with random or mechanically generated text, arguing against the hoax hypothesis.
+
+\subsection{Statistical and Structural Studies}
+
+Stolfi established the core-mantle-crust model of Voynich word structure, identifying prefix, root, and suffix positions with distinct character distributions. Timm (2014) proposed a self-citation model in which the text was generated by copying and modifying earlier passages. Bowern (2023) provided an updated review, noting evidence for at least two encoding methods.
+
+\subsection{Gap in the Literature}
+
+No prior study has systematically classified glyph clusters by positional-functional role across all manuscript sections and subjected such a classification to controlled falsification. This is the gap we address.
+
+% ============================================================
+\section{Data and Methods}
+\label{sec:methods}
+
+\subsection{Data Source}
+
+We use the Takahashi transliteration (transcriber code H) as preserved in the Landini-Stolfi Interlinear file (\texttt{Lsi\_ivtff\_0d\_v4j\_fixed.txt}, IVTFF format), supplemented by the standalone Takahashi transliteration (\texttt{takahashi.txt}) for cross-validation. The corpus comprises 37,045 word tokens and 9,821 unique word types across 227 folios in 8 manuscript sections.
+
+\subsection{Cluster Identification}
+
+EVA word tokens were analyzed for recurring multi-character patterns. We define a \textit{cluster} as an EVA token or sub-token sequence that occurs with frequency $f \geq 15$ across the full corpus. This threshold yields a working set of 47 high-frequency clusters.
+
+\subsection{Positional and Structural Definitions}
+\label{sec:definitions}
+
+We define the following operational terms used throughout positional analysis:
+
+\begin{itemize}[leftmargin=*,itemsep=2pt]
+    \item \textbf{Line-initial token}: The first EVA word token in a transcription line, after stripping line-initial markers (\texttt{!}, \texttt{\%}, \texttt{=}, \texttt{@}, \texttt{*}, \texttt{\&}, \texttt{\textasciitilde}, \texttt{/}) that designate paragraph or label structure in the IVTFF format. Exactly one token per non-empty line can be line-initial.
+    \item \textbf{Line-final token}: The last EVA word token in a transcription line, before the terminal period (\texttt{.}) or end-of-line marker. Exactly one token per non-empty line can be line-final.
+    \item \textbf{Medial token}: Any token that is neither line-initial nor line-final in a line of length $\geq 2$. For single-token lines, the token is classified separately (``only'') and excluded from initial/medial/final percentage computations.
+    \item \textbf{In-line pause}: The comma (\texttt{,}) in IVTFF notation indicates a brief pause within a line but does not create a new line boundary. Tokens adjacent to commas retain their relative positions (initial, medial, or final) relative to the line boundary, not the pause.
+\end{itemize}
+
+\noindent\textbf{Transition-based role identification}: \textsc{init} and \textsc{close} roles are identified by their \textit{pairwise transition preferences}, not by absolute line-position frequencies. The \textsc{close}$\to$\textsc{init} bigram is the most over-represented transition in the corpus ($z=+9.75$ relative to 1000 shuffled permutations preserving marginal frequencies), defining structural packet boundaries. The mean initial percentage of \textsc{init}-role clusters (8.2\%) is significantly elevated relative to \textsc{close}-role clusters (1.6\%), confirming directional asymmetry without requiring an absolute threshold.
+
+% CLAIM_ID: P1-CLAIM-007 | STATUS: CONFIRMED | Cross-transliteration r=0.937 | ANNEX: A.4 | REPO: scripts/p1_cluster_analysis.py
+\noindent\textbf{Link criterion justification}: The $>$70\% medial threshold for \textsc{link} clusters is empirically justified: all 7 \textsc{link} clusters exceed 85\% medial in the primary corpus (range: 84.1--94.1\%) and exceed 83\% in cross-validation (\texttt{takahashi.txt}; Pearson $r=0.937$ for \%initial, Spearman $\rho=0.965$; $n=45$ clusters). The 70\% threshold is thus conservative by $\geq 14$ percentage points for all \textsc{link} clusters.
+
+\subsection{Functional Role Classification}
+\label{sec:roleclassification}
+
+Each cluster was assigned to one of seven functional categories based on three criteria:
+
+\begin{enumerate}[leftmargin=*,itemsep=2pt]
+    \item \textbf{Positional distribution}: Does the cluster preferentially occur line-initially, line-medially, or line-finally? [\textit{Construction criterion}]
+    \item \textbf{Cross-section stability}: Does the cluster maintain its positional behavior across manuscript sections (Herbal, Astronomical, Balneological, Pharmaceutical, Recipe)? [\textit{Construction criterion}]
+    \item \textbf{Section-level domain association}: Does the cluster's frequency correlate with independently established manuscript section types (as classified by D'Imperio, 1978; Currier, 1976; and Zandbergen, 2023)? [\textit{Auxiliary characterization, not primary construction criterion}]
+\end{enumerate}
+
+\noindent\textbf{Construction vs.\ validation}: Criteria 1 and 2 were the primary basis for role assignment. Criterion 3 was used as auxiliary domain characterization to generate working labels (``Initiator-like'', ``Closure-like''), not to assign cluster membership to roles. Accordingly, the section-specific profile results reported in \Cref{sec:results} provide \textit{convergent but not fully independent} validation of the taxonomy: because criterion 3 informed the working labels, section differentiation cannot serve as primary confirmation of the role groupings. The primary independent validation is the role-inversion falsification test (\Cref{sec:falsification}), which uses transition structure rather than section membership as its criterion.
+
+\noindent\textbf{Corpus details}: Analysis covers 37,045 tokens across 5,216 transcribed lines in 919 paragraphs (227 folios, 8 sections). Section segmentation follows the \texttt{\$I} parsable-information variable in the IVTFF file (Illustration type: H=Herbal, A=Astronomical, B=Balneological, P=Pharmaceutical, S=Stars/Recipes, Z=Zodiac, C=Cosmological, T=Text-only). All 37,045 tokens enter the positional analysis; of these, 15,498 tokens (41.8\%) match one of the 47 classified clusters and enter the role-frequency analysis. The remaining tokens are unclassified and excluded from role-specific computations. The frequency threshold $f \geq 15$ was selected to ensure stable positional statistics ($\geq$15 observations per cluster); sensitivity analysis at $f \geq 10$ and $f \geq 20$ yields qualitatively identical results (see Supplementary Materials).
+
+\noindent The seven functional categories are defined in \Cref{tab:roles}.
+
+\begin{table}[H]
+\centering
+\caption{SPBCEH Functional Role Categories. Neutral class labels (R1--R7) are used throughout statistical analysis; working names in parentheses are provisional and should not be read as semantic claims.}
+\label{tab:roles}
+\small
+\begin{tabular}{@{}p{1.0cm}p{1.6cm}p{4.2cm}@{}}
+\toprule
+\textbf{Class} & \textbf{Working name} & \textbf{Defining Criterion} \\
+\midrule
+\rowcolor{cinit!12} R1 & Initiator-like & Significantly elevated probability of \textit{following} R2 clusters in transition sequences (R2$\to$R1 $z=+9.75$ vs.\ shuffled baseline); mean initial\% elevated relative to role-group baseline \\
+\rowcolor{cclose!12} R2 & Closure-like & Significantly elevated probability of \textit{preceding} R1 clusters in transition sequences; mean initial\% lower than R1 role-group baseline (see transition matrix, \Cref{sec:markov}) \\
+\rowcolor{clink!12} R3 & Link-like & $>$70\% of occurrences in medial position; all 7 R3 clusters exceed 85\% medial ($>$83\% in cross-validation); bridges other clusters \\
+\rowcolor{cact!12} R4 & Action-like & Rhythmic recurrence; elevated frequency in illustration-adjacent text \\
+\rowcolor{cmode!12} R5 & Mode-like & Section-differential frequency; correlates with independently classified illustration domain \\
+\rowcolor{ctime!12} R6 & Temporal-like & Occurs in pairs/triplets; positional flexibility suggests modifier role \\
+\rowcolor{cref!12} R7 & Reference-like & High frequency, even distribution; domain-neutral \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Falsification Protocol}
+\label{sec:falsification}
+
+To test whether the role assignments capture genuine structural asymmetry (as opposed to arbitrary labeling), we designed a controlled inversion experiment:
+
+\begin{enumerate}[leftmargin=*,itemsep=2pt]
+    \item \textbf{Role Inversion}: Create a mirror classification in which R1 $\leftrightarrow$ R2 (\textsc{init} $\leftrightarrow$ \textsc{close}), R4 $\leftrightarrow$ R5 (\textsc{act} $\leftrightarrow$ \textsc{mode}), and R3 $\leftrightarrow$ R6 (\textsc{link} $\leftrightarrow$ \textsc{time}). R7 (\textsc{ref}) remains unchanged (as a domain-neutral control).
+    \item \textbf{Blind Application}: Apply both the original and inverted frameworks to three folios not used in framework development: f88r (Pharmaceutical labels), f103r (Recipe text), and f75r (Balneological text).
+    \item \textbf{Coherence Assessment}: For each folio $\times$ framework combination, assess whether the resulting functional sequence produces a coherent state-transition narrative that is consistent with the folio's visual-diagrammatic context.
+\end{enumerate}
+
+\noindent The prediction is: if the role assignments are structurally grounded, the original framework should produce coherent readings while the inverted framework should produce incoherent or contradictory readings. If the assignments are arbitrary, both frameworks should perform comparably.
+
+% ============================================================
+\section{Results}
+\label{sec:results}
+
+\subsection{Positional Consistency of Role Assignments}
+
+\Cref{tab:positional} summarizes the positional distribution of the six highest-frequency clusters and their role assignments.
+
+\begin{table}[H]
+\centering
+\caption{Positional Distribution of Key Clusters}
+\label{tab:positional}
+\small
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+\textbf{Cluster} & \textbf{Role} & \textbf{Initial} & \textbf{Medial} & \textbf{Final} \\
+\midrule
+\texttt{qokeedy} & \textsc{init} & 10.4\% & 87.9\% & 1.7\% \\
+\texttt{chedy} & \textsc{close} & 1.2\% & 92.2\% & 6.5\% \\
+\texttt{daiin} & \textsc{act} & 19.8\% & 69.0\% & 11.2\% \\
+\texttt{okaiin} & \textsc{link} & 8.1\% & 86.3\% & 7.1\% \\
+\texttt{shol} & \textsc{mode} & 8.7\% & 89.0\% & 2.3\% \\
+\texttt{ol} & \textsc{ref} & 5.4\% & 88.7\% & 6.0\% \\
+\bottomrule
+\end{tabular}
+\medskip
+\\
+\footnotesize\textit{Note}: Percentages computed across all manuscript sections ($n=37{,}045$ tokens). Position = strict line-initial (first token), medial (interior), or line-final (last token). Clusters with $n < 5$ excluded from percentage computation. REF representative cluster changed from \texttt{ar} (not in validated 47-cluster set) to \texttt{ol} ($n=504$).
+\end{table}
+
+% CLAIM_ID: P1-CLAIM-001 | STATUS: CONFIRMED | Six-role taxonomy positional asymmetry | ANNEX: A.1 | REPO: scripts/p1_cluster_analysis.py | OUTPUT: results/p1_1_cluster_frequencies.csv
+% CLAIM_ID: P1-CLAIM-002 | STATUS: CONFIRMED | CLOSE->INIT z=+9.75 packet boundary transition | ANNEX: A.2 | REPO: scripts/p1_cluster_analysis.py | OUTPUT: results/p1_6_transition_matrix.json
+\noindent The positional asymmetry is pronounced: \texttt{qokeedy} occurs in medial position in 87.9\% of cases ($n=298$; $\chi^2=403.0$, $p < 10^{-6}$), while \texttt{chedy} similarly concentrates in medial position (92.2\%; $n=489$; $\chi^2=765.4$, $p < 10^{-6}$). Both roles exhibit strongly non-random positional distributions relative to uniform expectation. The roles INIT and CLOSE are distinguished not by absolute line-position frequency but by their transition asymmetry: \textsc{close}$\to$\textsc{init} bigrams are significantly more frequent than expected under shuffled baselines ($z=+9.75$, see \Cref{sec:markov}), defining packet-boundary transitions independent of line placement.
+
+\subsection{Section-Specific Signal Profiles}
+
+We computed the normalized frequency of each functional role category across the five major manuscript sections. Results are presented in \Cref{fig:profiles}.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+    ybar,
+    bar width=4pt,
+    width=\columnwidth,
+    height=5.5cm,
+    ylabel={Normalized frequency (\%)},
+    symbolic x coords={Herbal,Astro,Balneo,Pharma,Recipe},
+    xtick=data,
+    x tick label style={rotate=25,anchor=east,font=\footnotesize},
+    ylabel style={font=\small},
+    legend style={font=\tiny,at={(0.98,0.98)},anchor=north east,legend columns=3},
+    ymin=0,ymax=40,
+    enlarge x limits=0.15,
+    grid=major,
+    grid style={gray!20},
+    every axis plot/.append style={fill opacity=0.85}
+]
+% Values = % of classified tokens per section (computed from P1.2, 2026-03-17)
+\addplot[fill=cinit]  coordinates {(Herbal,9.2)  (Astro,0.5)  (Balneo,33.1) (Pharma,11.0) (Recipe,24.4)};
+\addplot[fill=cclose] coordinates {(Herbal,13.9) (Astro,13.7) (Balneo,30.3) (Pharma,12.5) (Recipe,24.4)};
+\addplot[fill=cact]   coordinates {(Herbal,27.5) (Astro,14.1) (Balneo,11.1) (Pharma,26.8) (Recipe,8.4)};
+\addplot[fill=cmode]  coordinates {(Herbal,25.5) (Astro,9.3)  (Balneo,3.6)  (Pharma,22.8) (Recipe,6.4)};
+\addplot[fill=cref]   coordinates {(Herbal,9.2)  (Astro,18.5) (Balneo,11.8) (Pharma,12.8) (Recipe,10.6)};
+\addplot[fill=clink]  coordinates {(Herbal,7.9)  (Astro,24.9) (Balneo,7.2)  (Pharma,7.5)  (Recipe,14.9)};
+\legend{\textsc{init},\textsc{close},\textsc{act},\textsc{mode},\textsc{ref},\textsc{link}}
+\end{axis}
+\end{tikzpicture}
+\caption{Functional role distribution across manuscript sections (as \% of classified tokens). The Balneological section shows strongly elevated \textsc{init} (33.1\%) and \textsc{close} (30.3\%) frequencies. Astronomical section is distinguished by elevated \textsc{link} (24.9\%) and \textsc{ref} (18.5\%). All 7 roles differ significantly across sections (Kruskal-Wallis, $p < 0.0001$ for all roles). Computed from $P1.2$ analysis; $n=37{,}045$ tokens.}
+\label{fig:profiles}
+\end{figure}
+
+% CLAIM_ID: P1-CLAIM-003 | STATUS: CONFIRMED | Section profiles Kruskal-Wallis p<0.0001 | ANNEX: A.2 | REPO: scripts/p1_cluster_analysis.py | OUTPUT: results/p1_2_section_profiles.csv
+\noindent Key findings:
+
+\begin{itemize}[leftmargin=*,itemsep=2pt]
+    \item The \textbf{Balneological section} exhibits the highest concentration of \textsc{init} (33.1\%) and \textsc{close} (30.3\%) clusters---3--5$\times$ higher than any other section---consistent with high structural boundary density. All 7 roles differ significantly by section (Kruskal-Wallis $p < 0.0001$).
+    \item The \textbf{Astronomical section} is dominated by \textsc{link} (24.9\%) and \textsc{ref} (18.5\%), consistent with a referential/connective function. \textsc{init} is nearly absent (0.5\%).
+    \item The \textbf{Herbal and Pharmaceutical sections} share elevated \textsc{act} (27.5\%, 26.8\%) and \textsc{mode} (25.5\%, 22.8\%) frequencies, suggesting mixed descriptive-procedural content with moderate role diversity.
+    \item The \textbf{Recipe section} shows elevated \textsc{init} (24.4\%) and \textsc{close} (24.4\%) with the highest \textsc{link} outside Astronomical (14.9\%), consistent with repeated structured units.
+\end{itemize}
+
+\subsection{Falsification Test Results}
+
+\Cref{tab:falsification} summarizes the results of the role inversion experiment described in \Cref{sec:falsification}.
+
+\begin{table}[H]
+\centering
+\caption{Falsification Test: Original vs.\ Inverted Role Assignments}
+\label{tab:falsification}
+\small
+\begin{tabular}{@{}p{1.5cm}p{1.2cm}p{1.3cm}p{2.6cm}@{}}
+\toprule
+\textbf{Folio} & \textbf{Section} & \textbf{Original} & \textbf{Inverted} \\
+\midrule
+f88r & Pharma & \cellcolor{cact!15}Coherent & \cellcolor{clink!15}Ambiguous \\
+f103r & Recipe & \cellcolor{cact!15}Coherent & \cellcolor{cclose!15}Incoherent \\
+f75r & Balneo & \cellcolor{cact!15}Coherent & \cellcolor{cclose!15}Incoherent \\
+\midrule
+\multicolumn{2}{@{}l}{\textbf{Score}} & \textbf{3/3} & \textbf{0/3} \\
+\bottomrule
+\end{tabular}
+\medskip
+\\
+\footnotesize\textit{Coherent}: Functional sequence produces a state-transition narrative consistent with diagrammatic context. \textit{Incoherent}: Sequence violates logical ordering (e.g., closures without openings). \textit{Ambiguous}: Partial coherence due to non-inverted \textsc{ref} clusters maintaining baseline structure.
+\end{table}
+
+% CLAIM_ID: P1-CLAIM-004 | STATUS: CONFIRMED | Falsification 3/3 vs 0/3 | ANNEX: A.3 | REPO: scripts/p1_3_falsification.py | OUTPUT: results/p1_3_falsification_v1.1_results.json
+\noindent The three-folio inversion test is presented as an illustrative example of the type of structural incoherence the inverted mapping produces. Because coherence judgments in this test rely on qualitative assessment of diagrammatic context rather than a formalized scoring rubric, this test is \textit{not} the primary falsification evidence; it is an intuition-level demonstration. The primary quantitative evidence is the full-corpus multi-metric test described in \Cref{sec:markov}.
+
+The most illustrative result is f75r, line 38: the sequence \texttt{qokeedy} $\times 5$ maps to R1 (\textsc{init}) $\times 5$ under original roles (consistent with repeated boundary-opening in the Balneological context) but to R2 (\textsc{close}) $\times 5$ under inverted roles (five consecutive closures with no preceding opening---structurally incoherent).
+
+For f103r, the inverted framework produces repeated \textsc{close} clusters in opening position without preceding \textsc{init} events, violating the open-before-close logic that the original framework preserves.
+
+\subsection{Role Transition Structure}
+\label{sec:markov}
+
+To quantify the sequential regularities underlying role assignments, we constructed a $7 \times 7$ Markov transition matrix from all adjacent role-pair bigrams in the corpus ($n=37{,}045$ tokens; 919 paragraphs). Each entry was compared against 1000 shuffled permutations (marginal frequencies preserved) using $z$-scores.
+
+% CLAIM_ID: P1-CLAIM-005 | STATUS: CONFIRMED | Multi-metric falsification pass 2/3 | ANNEX: A.3 | REPO: scripts/p1_3_falsification.py
+% CLAIM_ID: P1-CLAIM-006 | STATUS: CONFIRMED | CLOSE->INIT z=+9.75 Markov signal | ANNEX: A.2 | REPO: scripts/p1_cluster_analysis.py | OUTPUT: results/p1_6_transition_matrix.json
+The strongest transition signal is \textsc{close}$\to$\textsc{init} ($z=+9.75$; the most over-represented bigram in the corpus), confirming that \textsc{close} and \textsc{init} function as complementary packet-boundary markers. The transition \textsc{ref}$\to$\textsc{time} ($z=+6.88$) and the suppressed \textsc{act}$\to$\textsc{init} ($z=-5.86$) transition further support the structural role hierarchy.
+
+A full-corpus multi-metric falsification test ($n=919$ paragraphs; original vs.\ inverted vs.\ 1000 shuffled role assignments) confirms that the original mapping produces significantly higher CLOSE$\to$INIT packet-boundary density (SLS; $p=0.017$ vs.\ inverted, $p=0.043$ vs.\ shuffled) and significantly lower mean role-bigram surprisal (TS; $p < 0.001$ vs.\ both alternatives). The original SPBCEH mapping wins $\geq 2/3$ metrics against both alternatives, passing the pre-registered falsification threshold.
+
+% ============================================================
+\section{Discussion}
+\label{sec:discussion}
+
+\subsection{Implications for Decipherment}
+
+Our results demonstrate that Voynich EVA clusters carry \textit{directional functional asymmetry}: their roles are not interchangeable without destroying structural coherence. This finding has two major implications:
+
+\begin{enumerate}[leftmargin=*,itemsep=2pt]
+    \item \textbf{The high-frequency structural layer is not randomly generated.} The positional consistency and cross-section stability of the 47 classified clusters are inconsistent with simple mechanical generation models such as Cardan-grille-based hoax production, which would produce uniform role distributions across sections.
+    \item \textbf{The structural layer supports a positionally-constrained grammar; it does not determine what that grammar encodes.} The functional categories identified here---directional packet initiation, sequence closure, medial linking, domain modulation---are consistent with a \textit{positionally-structured functional grammar}. This structure must be accounted for by any viable decipherment hypothesis. Whether it reflects a natural-language cipher with a grammatical skeleton, a structured recording system, or another encoding principle cannot be determined from these structural findings alone.
+\end{enumerate}
+
+\noindent\textbf{What this paper does not yet establish}: This analysis characterizes the positional grammar of the highest-frequency clusters (41.8\% token coverage). It does not establish the phonological, lexical, or semantic content of the text; it does not determine which interpretive model (natural language cipher, recording system, notation scheme) is correct; and it does not claim the manuscript is undecipherable. These questions require additional evidence beyond the structural analysis reported here.
+
+Post-classification morphological analysis of the 47 structural clusters reveals further internal cohesion. All 10 active R1 (Initiator-like) token types share the EVA prefix \texttt{qok-}: this prefix is absent in every R2, R3, R4, R5, and R6 cluster, making it a positional marker exclusive to the INIT role. R2 (Closure-like) tokens further reduce to three consonant stems (\texttt{ch}, \texttt{sh}, \texttt{lch}) combined with four suffix variants (\texttt{-edy}, \texttt{-eey}, \texttt{-dy}, \texttt{-ey}). This morphological regularity---consistent with grammatical morpheme systems in natural languages---provides independent evidence that the role assignments are capturing a real sub-lexical structural distinction, not an artifact of positional statistics alone.
+
+A further structural boundary has emerged from post-classification content analysis. The R6 (Reference-like) cluster \texttt{ol} ($n = 504$) shows a section-profile Pearson correlation of $r = 0.940$ with the unclassified content token \texttt{qol} ($n = 145$). Both tokens are concentrated overwhelmingly in the Biological/Balneological section (B) and, secondarily, the Stars/Recipes section (S). This near-perfect profile alignment suggests that some unclassified ``content'' tokens are not lexical items but inner-packet function words---structurally equivalent to R6 tokens but appearing in medial rather than strictly positional slots. This raises the possibility that the structural/content boundary identified by positional statistics is not perfectly isomorphic with the grammatical/lexical boundary of the underlying system, a distinction with implications for any decipherment attempt.
+
+\subsection{Interpretive Scope of These Findings}
+
+The structural findings reported here---directional role asymmetry, section-specific signal profiles, and Markov transition grammar---constrain the space of viable interpretive models for the Voynich Manuscript. They establish what the script's positional grammar \textit{does}; the question of what it \textit{means} is a distinct inferential step that depends on additional evidence and falls outside the scope of this structural analysis. We defer interpretive modelling to future work.
+
+\subsection{Comparison with Prior Hypotheses}
+
+\Cref{tab:comparison} compares the explanatory coverage of the SPBCEH framework against five leading hypotheses.
+
+\begin{table*}[t]
+\centering
+\caption{Comparative explanatory coverage claimed by each framework. $\checkmark$~=~addresses the criterion; $\sim$~=~partially addresses; --~=~not addressed. Assessments are the author's judgment and may be contested.}
+\label{tab:comparison}
+\small
+\begin{tabular}{@{}p{3.2cm}ccccccc@{}}
+\toprule
+& \rotatebox{65}{\textbf{Unknown script}} & \rotatebox{65}{\textbf{Unident.\ plants}} & \rotatebox{65}{\textbf{Language-like stats}} & \rotatebox{65}{\textbf{Section variation}} & \rotatebox{65}{\textbf{No cipher works}} & \rotatebox{65}{\textbf{Diagram--text link}} & \rotatebox{65}{\textbf{Falsification}} \\
+\midrule
+Proto-Romance (Cheshire) & \checkmark & -- & \checkmark & -- & -- & -- & -- \\
+Botanical bootstrap (Bax) & \checkmark & \checkmark & -- & -- & -- & -- & -- \\
+Cardan grille hoax (Rugg) & \checkmark & -- & $\sim$ & -- & \checkmark & -- & -- \\
+Self-citation (Timm) & \checkmark & -- & \checkmark & -- & $\sim$ & -- & -- \\
+Two-system (Bowern) & \checkmark & -- & \checkmark & \checkmark & -- & -- & -- \\
+\textbf{SPBCEH (this work)} & \checkmark & $\sim$ & \checkmark & \checkmark & $\sim$ & \checkmark & \checkmark \\
+\bottomrule
+\end{tabular}
+\medskip
+\\
+\footnotesize $\checkmark$ = explained; $\sim$ = partially explained; -- = not addressed.
+\end{table*}
+
+\subsection{Limitations}
+
+Several limitations must be acknowledged:
+
+\begin{enumerate}[leftmargin=*,itemsep=2pt]
+    \item \textbf{Transcription uncertainty}: EVA transcriptions contain known ambiguities (e.g., \texttt{a}/\texttt{o} distinction, space placement). Our analysis inherits these uncertainties. Cross-transliteration robustness (Pearson $r=0.999$ for cluster counts; $r=0.937$ for positional percentages) mitigates but does not eliminate this concern.
+    \item \textbf{Role assignment subjectivity}: While positional and transitional criteria are quantitative, the working names (``Initiator-like'', ``Closure-like'') involve interpretive judgment. We use neutral class labels (R1--R7) in all statistical analyses and report the working names as provisional. The falsification protocol tests structural asymmetry independently of label semantics.
+    \item \textbf{Falsification scope and formalization}: The qualitative 3-folio inversion test (\Cref{tab:falsification}) is a proof of concept; the full-corpus multi-metric test (\Cref{sec:markov}) provides quantitative confirmation. However, the qualitative ``coherence'' judgments in the 3-folio test are not yet formalized as a reproducible scoring rubric. Future work should define explicit violation rules (e.g., opener-before-closer constraint, illegal repeated-closer sequences, transition surprisal thresholds) that yield a numerical coherence score amenable to inter-rater reliability assessment.
+    \item \textbf{Coverage}: Of 37,045 tokens, 15,498 (41.8\%) match a classified cluster. The remaining 58.2\% are unclassified. While the classified fraction is sufficient for the statistical tests reported here, extending the knowledge base to cover additional clusters would strengthen the framework.
+    \item \textbf{Section taxonomy}: Manuscript section classifications are inherited from the scholarly consensus (D'Imperio, 1978; Zandbergen, 2023) and were not independently validated for this study.
+\end{enumerate}
+
+% ============================================================
+\section{Future Work}
+\label{sec:future}
+
+The following research directions are prioritized:
+
+\begin{enumerate}[leftmargin=*,itemsep=2pt]
+    \item \textbf{Full-corpus quantitative analysis}: Extend cluster role classification and signal profiling to all 240 folios with automated statistical significance testing.
+    \item \textbf{Transition matrix construction}: Build Markov transition matrices of role-to-role sequences and compare against randomized baselines.
+    \item \textbf{Predictive testing}: Given a folio's signal profile alone (without seeing illustrations), predict the manuscript section. This would constitute strong evidence for non-trivial structure capture.
+    \item \textbf{Cross-transcription validation}: Replicate findings using the Zandbergen (ZL) and Claston (GC/v101) transliterations to assess transcription-dependence.
+    \item \textbf{Computational coherence metric}: Develop a formal measure of state-sequence coherence that can replace subjective assessment in the falsification protocol.
+    \item \textbf{Frame token alignment}: The morphological regularity of R1 (\texttt{qok-} universal prefix) and R2 (\texttt{ch/sh} consonant stems with \texttt{-edy/-dy/-ey} suffixes) makes these clusters strong candidates for grammatical morpheme alignment against target-language function word inventories. Future work should test whether the \texttt{ch}/\texttt{sh} R2 alternation corresponds to a grammatical distinction (aspect, gender, or domain) in any candidate natural language.
+% CLAIM_ID: P1-CLAIM-008 | STATUS: CONFIRMED | 64.7% section classification leave-one-folio-out | ANNEX: A.5 | REPO: scripts/p1_4_classification.py | OUTPUT: results/p1_4_classification_results.json
+    \item \textbf{Vocabulary--illustration alignment}: Post-classification analysis of 20 folios with known illustration subtypes (IA-series blind test) identifies 44 content tokens with statistically significant over-representation in specific illustration types (Fisher exact $p < 0.05$, enrichment $> 3\times$). Aligning these ``Rosetta'' tokens against medieval Latin, Arabic, and Hebrew vocabulary lists is a concrete next step toward partial content decoding.
+\end{enumerate}
+
+% ============================================================
+\section{Conclusion}
+\label{sec:conclusion}
+
+We have presented a functional classification framework for Voynich Manuscript EVA clusters that identifies seven provisional positional-behavioral role categories, subsequently consolidated to six under empirical model selection (see companion paper). Among the highest-frequency clusters (47 clusters, 41.8\% of corpus tokens), the framework identifies statistically significant positional consistency, section-specific signal profiles consistent with independently established manuscript section types, and asymmetric falsification behavior under role inversion. These results support the presence of a structured positional grammar with directional role asymmetry in the high-frequency cluster layer---and provide a testable, reproducible framework for further investigation.
+
+The primary strength of this contribution is a negative constraint: any viable decipherment hypothesis must account for the R2$\to$R1 transition asymmetry ($z = +9.75$), the section-differential role profiles, and the morphological regularity of the R1 (`qok-` prefix) and R2 (three-stem system) clusters. Whether the grammar reflects a natural-language cipher, a structured recording system, or another encoding principle remains an open question that the structural analysis reported here cannot resolve.
+
+% ============================================================
+\section*{Acknowledgments}
+
+The author acknowledges the work of Takeshi Takahashi, Gabriel Landini, Jorge Stolfi, and Ren\'e Zandbergen in producing and maintaining the EVA transliteration corpus, without which this analysis would not be possible. The Beinecke Rare Book and Manuscript Library at Yale University is acknowledged for making high-resolution scans of the manuscript publicly available.
+
+% ============================================================
+\section*{Data Availability}
+
+All analyses are based on publicly available transliteration data from the Landini-Stolfi Interlinear file and the Zandbergen reference transliteration, accessible at \url{https://www.voynich.nu/transcr.html}. Analysis scripts, computed data tables, and pilot study outputs are publicly available at \url{https://github.com/RobLe3/voynich-spbceh}. All claims reported in this paper are traceable to specific scripts and result files in the repository (see \texttt{annex\_maps/ANNEX\_B8\_verification\_index.md}). The three papers in this series are published at \url{https://roblemumin.com/library.html}. The raw corpus file (\texttt{Lsi\_ivtff\_0d\_v4j\_fixed.txt}) must be downloaded separately from \url{https://www.voynich.nu/transcr.html} and placed in \texttt{data/} before running scripts.
+
+% ============================================================
+\begin{thebibliography}{99}
+\small
+
+\bibitem{bax2014} Bax, S. (2014). A proposed partial decoding of the Voynich script. Working paper, self-published. \url{https://stephenbax.net/?p=1175}.
+
+\bibitem{bowern2021} Bowern, C.L., \& Lindemann, L. (2021). The linguistics of the Voynich Manuscript. \textit{Annual Review of Linguistics}, 7, 285--308. \href{https://doi.org/10.1146/annurev-linguistics-011619-030613}{doi:10.1146/annurev-linguistics-011619-030613}
+
+\bibitem{cheshire2019} Cheshire, G. (2019). The Language and Writing System of MS408 (Voynich) Explained. \textit{Romance Studies}, 37(1), 30--67. \href{https://doi.org/10.1080/02639904.2019.1599566}{doi:10.1080/02639904.2019.1599566}. [The authoring institution retracted its press release following scholarly criticism; the journal article remains published without formal retraction.]
+
+\bibitem{currier1976} Currier, P.H. (1976). Papers on the Voynich Manuscript. Presented at a seminar on 30 November 1976, Washington, D.C. Reproduced in: D'Imperio (1978).
+
+\bibitem{dimperio1978} D'Imperio, M.E. (1978). \textit{The Voynich Manuscript: An Elegant Enigma}. NSA/CSS Publication P-10, National Security Agency.
+
+\bibitem{landini1998} Landini, G., \& Stolfi, J. (2001). Voynich Manuscript Interlinear File (IVTFF format). Available at: \url{https://www.voynich.nu/transcr.html}.
+
+\bibitem{montemurro2013} Montemurro, M.A., \& Zanette, D.H. (2013). Keywords and co-occurrence patterns in the Voynich Manuscript: An information-theoretic analysis. \textit{PLOS ONE}, 8(6), e66344. \href{https://doi.org/10.1371/journal.pone.0066344}{doi:10.1371/journal.pone.0066344}
+
+\bibitem{reddy2011} Reddy, S., \& Knight, K. (2011). What we know about the Voynich Manuscript. In \textit{Proceedings of the 5th ACL-HLT Workshop on Language Technology for Cultural Heritage, Social Sciences, and Humanities}, pp.\ 78--86. Portland, OR. \url{https://aclanthology.org/W11-1511/}
+
+\bibitem{rugg2004} Rugg, G. (2004). An elegant hoax? A possible solution to the Voynich Manuscript. \textit{Cryptologia}, 28(1), 31--46.
+
+\bibitem{stolfi2001} Stolfi, J. (2001). Voynich Manuscript Interlinear Archive. Instituto de Computa\c{c}\~{a}o, Universidade Estadual de Campinas. \url{https://www.ic.unicamp.br/~stolfi/voynich/}.
+
+\bibitem{takahashi1998} Takahashi, T. (1998). Complete EVA Transliteration of the Voynich Manuscript [transcriber code H]. Distributed via the Landini-Stolfi Interlinear Archive.
+
+\bibitem{timm2014} Timm, T. (2014). How the Voynich Manuscript was created. \textit{arXiv}:1407.6639. \url{https://arxiv.org/abs/1407.6639}
+
+\bibitem{zandbergen2023} Zandbergen, R. (2023). Voynich MS: Transliteration of the text. \url{https://www.voynich.nu/transcr.html}.
+
+\end{thebibliography}
+
+% ============================================================
+\section*{Appendix: Verification and Repository Traceability}
+\label{sec:appendix_verify}
+
+\paragraph{Repository structure.}
+All scripts, data, and results referenced in this paper are available at \url{https://github.com/RobLe3/voynich-spbceh}. The repository is organized as follows:
+\begin{itemize}[noitemsep]
+  \item \texttt{scripts/} — Python analysis scripts; each script is named to match the result it produces
+  \item \texttt{data/} — Corpus token table derived from the Takahashi H IVTFF transliteration
+  \item \texttt{results/} — JSON and CSV output files; each is referenced in \texttt{annex\_maps/PAPER\_TO\_REPO\_MAP.md}
+  \item \texttt{pilots/} — Pilot study logs documenting methodology, findings, and negative results
+  \item \texttt{docs/CLAIM\_REGISTRY.md} — Per-claim registry with evidence class, status, and verification path
+  \item \texttt{docs/RETRACTED\_AND\_FALSIFIED\_CLAIMS.md} — Full record of retracted and falsified claims
+  \item \texttt{docs/TABLE\_FIGURE\_TRACEABILITY.md} — Every table and figure traced to its source script
+\end{itemize}
+
+\paragraph{Claim verification.}
+Each non-trivial claim in this paper carries a \texttt{\% CLAIM\_ID} comment in the \LaTeX\ source. Claim IDs (P1-CLAIM-001 through P1-CLAIM-008) map to entries in \texttt{docs/CLAIM\_REGISTRY.md}. To reproduce any result, run:
+\begin{verbatim}
+cd scripts/
+python3 p1_cluster_analysis.py   # Claims 001–003, 006–007
+python3 p1_3_falsification.py    # Claims 004–005
+python3 p1_4_classification.py   # Claim 008
+\end{verbatim}
+
+\paragraph{Verification philosophy.}
+Every quantitative claim in this paper has a script that produces it, a JSON or CSV output that stores it, and a registry entry that records its status. Manual labels (role names: INIT, CLOSE, LINK, CONTENT, TEMPORAL, REF) are applied post-hoc to computationally derived clusters; this is noted in \texttt{docs/TABLE\_FIGURE\_TRACEABILITY.md} Table~1. No quantitative result was edited after computation.
+
+\paragraph{Retracted and falsified findings.}
+No Paper~1 claims have been retracted or falsified as of v1.0. The companion paper (Paper~2) carries four documented retractions (RETRACTED-001 through RETRACTED-004) and three falsifications (FALSIFIED-001 through FALSIFIED-003); these are preserved in full in \texttt{docs/RETRACTED\_AND\_FALSIFIED\_CLAIMS.md}.
+
+\paragraph{Provisional claims.}
+No Paper~1 claims are currently provisional. All eight claims (P1-CLAIM-001 through P1-CLAIM-008) are confirmed. The companion paper (Paper~2) carries four provisional results (P2-CLAIM-010, -011, -012, and the three-layer model synthesis); current status for all claims is maintained in \texttt{docs/CLAIM\_REGISTRY.md}.
+
+\paragraph{Transcription sensitivity.}
+The cross-transliteration robustness result reported in \Cref{sec:limitations} (Pearson $r = 0.937$ for cluster positional percentages across Takahashi H and ZL) applies to structural R1/R2 cluster profiles, which are directly testable across transliterations (\textsc{direct}-comparable). This paper's structural claims do not depend on Eva-T-specific glyph distinctions (the \texttt{!} marker). Token-level positional claims involving Eva-T-specific distinctions arise in the companion paper (Paper~2, P2-CLAIM-010 through -012) and are addressed there, with a full taxonomy of cross-transcription comparability statuses documented in \texttt{docs/TRANSCRIPTION\_SENSITIVITY\_METHOD.md}.
+
+\end{document}
