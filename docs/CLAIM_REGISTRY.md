@@ -184,7 +184,7 @@ See `docs/TRANSCRIPTION_SENSITIVITY_METHOD.md` for full documentation.
 - **Null model**: Random role-sequence baseline
 - **Annex ref**: Annex B, Table B.1
 - **Repo path**: `scripts/p2_analysis.py`
-- **Verification**: `python scripts/p2_analysis.py --corpus data/corpus_tokens.csv --roles results/p1_1_cluster_frequencies.csv`
+- **Verification**: `python scripts/p2_analysis.py` (reads `data/corpus_lines.csv` and writes `results/p2_*.json`)
 - **Status**: `CONFIRMED`
 - **Transcription comparability**: `DIRECT`
 - **Last review**: 2026-03-19

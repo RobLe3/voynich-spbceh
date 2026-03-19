@@ -68,7 +68,7 @@
 |--------|------------|--------------|--------------|-------------|-------|
 | `CONFIRMED` | 11 | 2 | 6 | 3 | 22 |
 | `CONFIRMED` + `CROSS-TRANSCRIPTION_PENDING` | 2 | 0 | 0 | 0 | 2 |
-| `PROVISIONAL` | 1 | 1 | 0 | 0 | 2 |
+| `PROVISIONAL` | 2 | 1 | 0 | 0 | 3 |
 | `PROVISIONAL` (layer 3 component) | 0 | 0 | 0 | 1 | 1 |
 | `RETRACTED` | 1 | 0 | 0 | 0 | 1 |
 | `FALSIFIED` | 0 | 0 | 0 | 2 | 2 |

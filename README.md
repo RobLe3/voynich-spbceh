@@ -20,7 +20,7 @@ All 30 claims are tracked in [`docs/CLAIM_REGISTRY.md`](docs/CLAIM_REGISTRY.md).
 |--------|-------|-------|
 | `CONFIRMED` | 22 | All structural, grammar, and section-level claims; sal enrichment and Tier 1 lexical |
 | `CONFIRMED + CROSS-TRANSCRIPTION_PENDING` | 2 | `laiin` LATE Stars (P2-CLAIM-011); `ai!n` LATE corpus-wide (P2-CLAIM-012) |
-| `PROVISIONAL` | 2 | `qokain` EARLY Stars (P2-CLAIM-010) — downgraded; R6 Hebrew prepositions (P2-CLAIM-018) |
+| `PROVISIONAL` | 3 | `qokain` EARLY Stars (P2-CLAIM-010) — downgraded; R6 Hebrew prepositions (P2-CLAIM-018); 44 Rosetta candidates illustration-type enrichment (P2-CLAIM-019) |
 | `RETRACTED` | 1 | `sal` terminal-entity positional pattern (P2-CLAIM-015) |
 | `FALSIFIED` | 2 | Nested B-section packets (P2-CLAIM-008); folio-uniqueness as entity evidence (P2-CLAIM-017) |
 
@@ -166,7 +166,7 @@ Scripts read inputs from `data/` and write outputs to `results/` relative to the
 
 **Requirements**: Python ≥ 3.9; install dependencies with `pip install -r requirements.txt`
 
-Full pipeline: `bash scripts/reproduce.sh` (runs steps 1–3 in order).
+Full pipeline: `bash scripts/reproduce.sh` (runs steps 1–5 in order).
 Verify existing outputs: `python scripts/smoke_test.py`
 Expected metric values: `docs/EXPECTED_OUTPUTS.md`
 

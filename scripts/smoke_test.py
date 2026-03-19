@@ -54,20 +54,22 @@ check("results/R6_hebrew_alignment_results.json exists",
 p1_6 = BASE / "results" / "p1_6_transition_matrix.json"
 if p1_6.exists():
     data = json.loads(p1_6.read_text())
-    z = data.get("R2_to_R1_z_score") or data.get("z_score")
-    if z is not None:
+    # z-score is nested: data["zscores"]["CLOSE"]["INIT"]["z"]
+    try:
+        z = data["zscores"]["CLOSE"]["INIT"]["z"]
         check("R2→R1 z-score ≥ 9.0", float(z) >= 9.0, f"got {z}")
-    else:
-        FAIL.append("p1_6_transition_matrix.json: R2_to_R1_z_score key not found")
+    except (KeyError, TypeError):
+        FAIL.append("p1_6_transition_matrix.json: zscores.CLOSE.INIT.z key not found")
 
 p1_4 = BASE / "results" / "p1_4_classification_results.json"
 if p1_4.exists():
     data = json.loads(p1_4.read_text())
-    acc = data.get("best_section_accuracy") or data.get("section_accuracy")
+    # key is best_section_spbceh (SPBCEH features only); best_section_raw uses raw frequencies
+    acc = data.get("best_section_spbceh") or data.get("best_section_raw") or data.get("best_section_combo")
     if acc is not None:
         check("Section classification ≥ 0.60", float(acc) >= 0.60, f"got {acc}")
     else:
-        FAIL.append("p1_4_classification_results.json: best_section_accuracy key not found")
+        FAIL.append("p1_4_classification_results.json: best_section_spbceh key not found")
 
 # ── 5. Docs and claim registry ───────────────────────────────────────────────
 check("docs/CLAIM_REGISTRY.md exists", (BASE / "docs" / "CLAIM_REGISTRY.md").exists())
