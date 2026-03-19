@@ -4,7 +4,7 @@
 
 ---
 
-## PAPER 1 — Positional Role Asymmetry in Voynich Manuscript EVA Clusters
+## PAPER 1 — v0.92 — Positional Role Asymmetry in Voynich Manuscript EVA Clusters
 
 ### §1 Introduction
 - Claim group: Corpus description (37,045 tokens, Takahashi H transliteration)
@@ -64,7 +64,7 @@
 
 ---
 
-## PAPER 2 — Transition Grammar and Cognitive Domain Profiles
+## PAPER 2 — v0.94 — Transition Grammar and Cognitive Domain Profiles
 
 ### §3 FSA Conformance (61.3%)
 - Script: `scripts/p2_analysis.py`

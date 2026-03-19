@@ -102,9 +102,12 @@ LAYER 3 — LEXICAL ENTITIES (section- and folio-specific vocabulary)
 
 ---
 
-## Paper 1
+## Paper 1 — v0.92
 
 **Title**: Positional Role Asymmetry in Voynich Manuscript EVA Clusters: A Functional Classification Framework with Falsification Protocol
+**Version**: v0.92 — Manuscript Draft, March 2026
+**Compiled**: 10 pages; 0 LaTeX errors
+**Claim IDs**: P1-CLAIM-001 through P1-CLAIM-008 (all `CONFIRMED`)
 
 **Key results**:
 - 7→6 role taxonomy via anti-projection testing
@@ -115,9 +118,12 @@ LAYER 3 — LEXICAL ENTITIES (section- and folio-specific vocabulary)
 
 ---
 
-## Paper 2
+## Paper 2 — v0.94
 
 **Title**: Transition Grammar and Cognitive Domain Profiles in the Voynich Manuscript: Evidence for a Functional Recording System from Six-Role Cluster Analysis
+**Version**: v0.94 — Manuscript Draft, March 2026
+**Compiled**: 17 pages; 0 LaTeX errors
+**Claim IDs**: P2-CLAIM-001 through P2-CLAIM-021 (21 confirmed, 2 provisional, 3 retracted/falsified)
 
 **Key results**:
 - Paragraph-level FSA conformance: **61.3%** (pre-registered threshold: 60%)
