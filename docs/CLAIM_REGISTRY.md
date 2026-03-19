@@ -66,12 +66,12 @@ See `docs/TRANSCRIPTION_SENSITIVITY_METHOD.md` for full documentation.
 ---
 
 ### P1-CLAIM-002
-- **Statement**: The R2→R1 transition is the single strongest directional signal in the corpus (z = +9.71 vs. 1,000 shuffled baselines).
+- **Statement**: The R2→R1 transition is the single strongest directional signal in the corpus (z = +9.75 vs. 1,000 shuffled baselines).
 - **Claim level**: `SECTION-LEVEL`
 - **Paper location**: Paper 1 §3.2
 - **Evidence class**: `STRUCTURAL`
-- **Observed result**: z = +9.71; expected z ≈ 0 under shuffled baseline
-- **Effect size**: z = 9.71
+- **Observed result**: z = +9.75 (7-role model; exact: 9.753); expected z ≈ 0 under shuffled baseline
+- **Effect size**: z = 9.75
 - **Null model**: 1,000 random role-label shuffles preserving frequency distribution
 - **Annex ref**: Annex A, Table A.2 (transition matrix z-scores)
 - **Repo path**: `scripts/p1_cluster_analysis.py`
@@ -88,7 +88,7 @@ See `docs/TRANSCRIPTION_SENSITIVITY_METHOD.md` for full documentation.
 - **Claim level**: `METHOD-LEVEL`
 - **Paper location**: Paper 1 §6
 - **Evidence class**: `FALSIFICATION`
-- **Observed result**: R2→R1 z-score preserved under original assignment; inverted assignment z = −9.71 (opposite sign)
+- **Observed result**: R2→R1 z-score preserved under original assignment; inverted assignment z = −9.75 (opposite sign)
 - **Annex ref**: Annex A, Table A.3
 - **Repo path**: `scripts/p1_3_falsification.py`
 - **Output**: `results/p1_3_falsification_v1.1_results.json`

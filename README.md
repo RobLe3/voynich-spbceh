@@ -65,7 +65,7 @@ Derived from the original seven-role framework through empirical anti-projection
 
 | Role | Label | Defining criterion | Key tokens |
 |------|-------|-------------------|-----------|
-| R1 | Initiator-like | Significantly elevated R2→R1 transition (*z*=+9.71); all 10 active types share exclusive `qok-` prefix | `qokeedy`, `qokeey`, `qokedy` |
+| R1 | Initiator-like | Significantly elevated R2→R1 transition (*z*=+9.71, 6-role; *z*=+9.75, 7-role); 10 of 11 INIT types share exclusive `qok-` prefix (fachys excluded, n=1) | `qokeedy`, `qokeey`, `qokedy` |
 | R2 | Closure-like | Elevated R2→R1 preceding; 3 consonant stems (`ch-`, `sh-`, `lch-`) × 4 suffix variants | `chedy`, `shedy`, `lchedy` |
 | R3 | Link-like | >85% medial position in all 7 tokens (cross-validated: >83%) | `okaiin`, `aiin` |
 | R4 | Content | Section-modulated; clustered not periodic (CV=1.502); domain anchor | `daiin`, `ol`, `al` |
@@ -111,7 +111,7 @@ LAYER 3 — LEXICAL ENTITIES (section- and folio-specific vocabulary)
 
 **Key results**:
 - 7→6 role taxonomy via anti-projection testing
-- R2→R1 *z* = +9.71; CLOSE→INIT packet grammar
+- R2→R1 *z* = +9.75 (7-role); CLOSE→INIT packet grammar
 - Section profiles significant across all roles (Kruskal-Wallis *p* < 0.0001)
 - Falsification: original framework 3/3 coherent; inverted framework 0/3
 - Cross-transliteration: Pearson *r* = 0.937 for positional % (Takahashi vs. Stolfi)
@@ -128,7 +128,7 @@ LAYER 3 — LEXICAL ENTITIES (section- and folio-specific vocabulary)
 **Key results**:
 - Paragraph-level FSA conformance: **61.3%** (pre-registered threshold: 60%)
 - Entropy: H(structural) = 2.38 bits < H(variant) = 2.77 bits ✓
-- Section classification accuracy: **69.8%** best (KNN-5, 7-role features; majority-class baseline: 57.8%). Note: raw token baseline reaches 73.3% with KNN-5 — RF3b flag is active in result file (`rf3b_triggered: true`).
+- Section classification accuracy: **64.7%** (6-role model, 1-NN; pre-registered primary result from `p2_5_6role_rerun.py`). 7-role KNN-5 reaches 69.8% but is superseded by the 6-role model selection. RF3b note: the 7-role raw-token baseline (73.3% KNN-5) remains in the result file (`rf3b_triggered: true` in `p1_4_classification_results.json`) as a documented instrument limitation under the superseded 7-role model.
 - `shedy`-cluster: 10× elevated in Balneological vs. Herbal (*p* < 0.0001)
 - Three-way interpretive comparison: recording system (Model A), Hebrew cipher (Model B), structured notation (Model C)
 
