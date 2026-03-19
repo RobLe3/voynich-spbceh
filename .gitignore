@@ -1,0 +1,13 @@
+# Papers — published at roblemumin.com/library.html, not in this repo
+*.tex
+*.pdf
+papers/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.env
+
+# macOS
+.DS_Store
