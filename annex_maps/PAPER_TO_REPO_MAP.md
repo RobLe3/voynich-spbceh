@@ -152,5 +152,5 @@ Transcription comparability status codes follow `docs/TRANSCRIPTION_SENSITIVITY_
 | qokain EARLY (0.248, p=0.007) | `TRANSCRIPTION-BOUND` | Requires 3rd transliteration encoding !-marker separately (e.g., RF Extended Eva) | ZL collapses qokain+qokai!n; tests different token; family CENTRAL (n=106, p=0.365) |
 | laiin LATE (0.875, p=0.007) | `NOT_TESTABLE_ACROSS_ZL` | Requires transliteration that tokenizes laiin as single unit with stable paragraph conventions | ZL splits laiin in packet context; 0 in Stars packet payloads |
 | ai!n LATE (0.686, p=0.005) | `NOT_TESTABLE_ACROSS_ZL` | Requires Eva-T compatible source | ! marker absent from ZL Eva-; not representable |
-| R6 Hebrew preposition match (52.6%) | `NORMALIZATION_REQUIRED` | Full scoring method needs documentation | See docs/R6_HEBREW_ALIGNMENT_METHOD.md (pending) |
+| R6 Hebrew preposition match (52.6%) | `NORMALIZATION_REQUIRED` | 52.6% not reproducible with 3-type REF pool; `al`→Hebrew `al` (על/אל) is genuine full-glyph match; claim wording revision required | `scripts/R6_hebrew_alignment.py`; `docs/R6_HEBREW_ALIGNMENT_METHOD.md` |
 | 44 Rosetta candidates | `NORMALIZATION_REQUIRED` | Illustration-type data quality clarification | Enrichment confirmed; ground truth validation pending |

@@ -175,7 +175,7 @@ Specific checks:
 | C-005: Assign P2-CLAIM-022 to `daiin` non-periodic analysis | MEDIUM | Add registry entry for `daiin` CV=1.502 and section rate findings | **FIXED** 2026-03-19 |
 | C-002: Clarify RETRACTED-003 = FALSIFIED-003 alias | LOW | Add note to retraction log | **FIXED** 2026-03-19 |
 | C-003: Clarify Paper 2 appendix retraction count scope | LOW | Add "formal Paper 2 claims" qualifier | **VERIFIED CLEAN** — already present |
-| C-006: Create `scripts/R6_hebrew_alignment.py` | MEDIUM | Required before P2-CLAIM-018 can be upgraded | OPEN |
+| C-006: Create `scripts/R6_hebrew_alignment.py` | MEDIUM | Required before P2-CLAIM-018 can be upgraded | **FIXED** 2026-03-19 (script creates `results/R6_hebrew_alignment_results.json`; key finding: 52.6% not reproducible with 3-type REF pool; claim wording requires revision) |
 | Tier registry: Formalize Tier 1 / Tier 2 / Tier 3 assignments | MEDIUM | Create formal `docs/TIER_REGISTRY.md` with tier criteria and all candidate assignments | **FIXED** 2026-03-19 |
 
 ---

@@ -1,0 +1,182 @@
+{
+  "claim_id": "P2-CLAIM-018",
+  "status": "PROVISIONAL \u2014 see interpretation",
+  "date": "2026-03-19",
+  "hebrew_inventory_size": 18,
+  "primary_r6_pool": {
+    "tokens": [
+      "al",
+      "ol",
+      "or"
+    ],
+    "n_types": 3,
+    "match_rate_2con": 0.0,
+    "match_rate_1con": 1.0,
+    "matches_2con": 0,
+    "matches_1con": 3
+  },
+  "extended_r6_pool": {
+    "tokens": [
+      "al",
+      "ar",
+      "ol",
+      "or"
+    ],
+    "n_types": 4,
+    "match_rate_2con": 0.0,
+    "match_rate_1con": 1.0
+  },
+  "claimed_rate_p2_claim_018": 0.526,
+  "null_baseline": {
+    "n_random_sequences": 10000,
+    "baseline_2con": 0.0189,
+    "baseline_1con": 0.5808
+  },
+  "control_pool_1": {
+    "n_control": 50,
+    "ctrl_rate_2con": 0.08,
+    "ctrl_rate_1con": 0.74,
+    "fisher_p_2con": 1.0,
+    "fisher_or_2con": 0.0
+  },
+  "token_details": {
+    "al": {
+      "token": "al",
+      "n_corpus": 246,
+      "is_primary_ref": true,
+      "eva_consonants": "l",
+      "eva_fullglyph": "al",
+      "match_2con": false,
+      "match_1con": true,
+      "match_fullglyph": true,
+      "matching_forms_2con": [],
+      "matching_forms_1con": [
+        [
+          "\u05dc",
+          "le/li",
+          "l",
+          "to, for (proclitic)"
+        ],
+        [
+          "\u05e2\u05dc",
+          "al",
+          "l",
+          "on, upon (guttural \u02bf treated silent)"
+        ],
+        [
+          "\u05d0\u05dc",
+          "el",
+          "l",
+          "to, toward (guttural \u02be treated silent)"
+        ],
+        [
+          "\u05db\u05dc",
+          "kol/kul",
+          "kl",
+          "all, every"
+        ],
+        [
+          "\u05dc\u05d0",
+          "lo",
+          "l",
+          "not (negation particle)"
+        ]
+      ]
+    },
+    "ar": {
+      "token": "ar",
+      "n_corpus": 336,
+      "is_primary_ref": false,
+      "eva_consonants": "r",
+      "eva_fullglyph": "ar",
+      "match_2con": false,
+      "match_1con": true,
+      "match_fullglyph": false,
+      "matching_forms_2con": [],
+      "matching_forms_1con": [
+        [
+          "\u05d0\u05e9\u05e8",
+          "asher",
+          "shr",
+          "that, which, who"
+        ],
+        [
+          "\u05e8\u05e7",
+          "rak",
+          "rk",
+          "only, but"
+        ]
+      ]
+    },
+    "ol": {
+      "token": "ol",
+      "n_corpus": 504,
+      "is_primary_ref": true,
+      "eva_consonants": "l",
+      "eva_fullglyph": "ol",
+      "match_2con": false,
+      "match_1con": true,
+      "match_fullglyph": true,
+      "matching_forms_2con": [],
+      "matching_forms_1con": [
+        [
+          "\u05dc",
+          "le/li",
+          "l",
+          "to, for (proclitic)"
+        ],
+        [
+          "\u05e2\u05dc",
+          "al",
+          "l",
+          "on, upon (guttural \u02bf treated silent)"
+        ],
+        [
+          "\u05d0\u05dc",
+          "el",
+          "l",
+          "to, toward (guttural \u02be treated silent)"
+        ],
+        [
+          "\u05db\u05dc",
+          "kol/kul",
+          "kl",
+          "all, every"
+        ],
+        [
+          "\u05dc\u05d0",
+          "lo",
+          "l",
+          "not (negation particle)"
+        ]
+      ]
+    },
+    "or": {
+      "token": "or",
+      "n_corpus": 340,
+      "is_primary_ref": true,
+      "eva_consonants": "r",
+      "eva_fullglyph": "or",
+      "match_2con": false,
+      "match_1con": true,
+      "match_fullglyph": false,
+      "matching_forms_2con": [],
+      "matching_forms_1con": [
+        [
+          "\u05d0\u05e9\u05e8",
+          "asher",
+          "shr",
+          "that, which, who"
+        ],
+        [
+          "\u05e8\u05e7",
+          "rak",
+          "rk",
+          "only, but"
+        ]
+      ]
+    }
+  },
+  "interpretation": "P2-CLAIM-018 PROVISIONAL: The role_map yields only 3 REF token types (ol, or, al). The claimed 52.6% rate requires ~19 R6 token types and cannot be reproduced with the current role_map. The original token pool is undocumented. 'al' directly matches Hebrew al-forms (\u05e2\u05dc, \u05d0\u05dc) at full-glyph level \u2014 this is the strongest individual match. Upgrade requires: (1) retrieve original R6 pool definition; (2) null model comparison; (3) formal Fisher exact test. See docs/R6_HEBREW_ALIGNMENT_METHOD.md \u00a710.",
+  "upgrade_path": "docs/R6_HEBREW_ALIGNMENT_METHOD.md \u00a710"
+}

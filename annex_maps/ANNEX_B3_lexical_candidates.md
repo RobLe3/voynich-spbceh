@@ -18,7 +18,7 @@
 
 | Claim ID | Level | Paper § | Token Pool | Scope | Transcription | n (types) | Test | Null / Control | Observed Result | Status | TC | Interpretation Bound | Repo Artifact |
 |----------|-------|---------|-----------|-------|---------------|-----------|------|----------------|----------------|--------|-----|---------------------|---------------|
-| P2-CLAIM-018 | FAMILY-LEVEL | P2 §6.1 | R6 cluster family (`ol`, `al`, `or`, `ar` and variants) | Corpus-wide | Takahashi H | ~19 R6 token types (exact count pending full documentation) | Consonant alignment to Hebrew preposition inventory | Random 2-con match baseline; Hebrew preposition set (grammatical words: ל, ב, מ, על, אל, עם, כ, ו) | 52.6% of R6 token types match Hebrew prepositional consonant forms | `PROVISIONAL` | `NORMALIZATION_REQUIRED` | Scoring method not yet fully documented (hence PROVISIONAL). Match rate must be compared against random baseline for R6-length tokens. Hebrew preposition inventory must be pre-specified, not selected post-hoc. See `docs/R6_HEBREW_ALIGNMENT_METHOD.md` for method documentation target. | `scripts/ROSETTA3_ain_stem_alignment.py` (partial); full scoring not yet in repo |
+| P2-CLAIM-018 | FAMILY-LEVEL | P2 §6.1 | R6 cluster family (`ol`, `al`, `or`, `ar` and variants) | Corpus-wide | Takahashi H | role_map REF = 3 types (ol, or, al); extended +ar = 4 | Consonant alignment to 18-form Hebrew preposition inventory; null baseline (n=10,000 random sequences); Control pool 1 (n=50 non-REF short tokens) | Random 2-con baseline = 1.9%; 1-con baseline = 58.1% | **2-con: 0/3 (0%)** — below baseline. **1-con: 3/3 (100%)** — above baseline but trivially so (all l/r tokens match Hebrew l/r forms). Full-glyph: `al` directly matches על/אל (genuine match). **52.6% NOT REPRODUCIBLE** with 3-type REF pool. | `PROVISIONAL` (score not reproducible; original R6 pool ~19 types is undocumented) | `NORMALIZATION_REQUIRED` | The 52.6% figure requires ~10/19 R6 token types. The current role_map yields only 3 REF types, making the figure unverifiable without recovering the original analysis's token pool. The strongest finding is `al`→Hebrew `al` (על/אל) as a genuine full-glyph match. Claim wording must be revised to "al directly matches Hebrew al-forms" rather than an aggregate rate. | `scripts/R6_hebrew_alignment.py` → `results/R6_hebrew_alignment_results.json` |
 
 ---
 
@@ -42,7 +42,7 @@ Included here because it is a lexical null result that bears on interpretation o
 
 ## Notes
 
-1. **Tier assignments**: `sal` is Tier 1 (exact consonant + section + semantic triple, no better competing reading). `qotaiin` is Tier 3 (consonant selectivity only, no positional slot, no section-semantic match). `lkaiin` is Tier 2 (ambiguous between Arabic `al-kaff` and Latin *lacus*). Tier definitions are maintained in pilot notes, not yet in a formal tier registry.
+1. **Tier assignments**: `sal` is Tier 1 (exact consonant + section + semantic triple, no better competing reading). `qotaiin` is Tier 3 (consonant selectivity only, no positional slot, no section-semantic match). `lkaiin` is Tier 2 (ambiguous between Arabic `al-kaff` and Latin *lacus*). Tier definitions are in `docs/TIER_REGISTRY.md`.
 
 2. **RETRACTED-001**: `sal`'s earlier claimed terminal-entity positional pattern (24% pre-R2, n=4/17) was retracted after ROSETTA3c showed the rate (0.200) is below the 90th-percentile baseline (0.286). P2-CLAIM-014 stands on consonant alignment only — not on positional evidence. See Annex B.6.
 

@@ -440,8 +440,10 @@ See `docs/TRANSCRIPTION_SENSITIVITY_METHOD.md` for full documentation.
 - **Paper location**: Paper 2 §6.1
 - **Evidence class**: `LEXICAL`, `SEMANTIC`
 - **Observed result**: 52.6% of R6 token types align with Hebrew prepositional forms
-- **Note**: This claim requires explicit annex expansion — the scoring method is not fully documented in the repo
-- **Status**: `PROVISIONAL` — alignment scoring method needs explicit documentation
+- **Script finding (2026-03-19)**: `scripts/R6_hebrew_alignment.py` establishes that the role_map yields only 3 confirmed REF types (ol, or, al). At the 2-con threshold: 0/3 match (0%). At 1-con: 3/3 (100%), but the baseline for random EVA sequences at 1-con is 58.1% — the 100% rate is above baseline but insufficient to support the 52.6% claim specifically. The `al` token matches Hebrew `על` / `אל` directly at full-glyph level (genuine match). The 52.6% figure requires a larger R6 pool (~19 types with 10 matches); the original pool is undocumented. **Outcome: 52.6% not reproducible with current role_map. Claim wording must be revised before upgrade.**
+- **Repo path**: `scripts/R6_hebrew_alignment.py`, `scripts/ROSETTA3_ain_stem_alignment.py` (partial)
+- **Output**: `results/R6_hebrew_alignment_results.json`
+- **Status**: `PROVISIONAL` — score not reproducible with confirmed role_map; original R6 pool definition required
 - **Transcription comparability**: `NORMALIZATION_REQUIRED`
 - **Last review**: 2026-03-19
 
