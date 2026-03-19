@@ -5,8 +5,8 @@ Structural and functional analysis of the Voynich Manuscript (Beinecke MS 408) u
 
 **Author**: Roble Mumin
 **Status**: Active research, March 2026
-**Papers**: [Paper 1](#paper-1) · [Paper 2](#paper-2)
-**Zenodo archive**: *DOI pending deposit*
+**Papers**: [Paper 1](#paper-1) · [Paper 2](#paper-2) · [Paper 3](#paper-3)
+**Published at**: https://roblemumin.com/library.html
 
 ---
 
@@ -131,6 +131,16 @@ LAYER 3 — LEXICAL ENTITIES (section- and folio-specific vocabulary)
 - Section classification accuracy: **64.7%** (majority-class baseline: 57.8%)
 - `shedy`-cluster: 10× elevated in Balneological vs. Herbal (*p* < 0.0001)
 - Three-way interpretive comparison: recording system (Model A), Hebrew cipher (Model B), structured notation (Model C)
+
+---
+
+## Paper 3 — v0.30
+
+**Title**: The Stranded Recorder Hypothesis: The Voynich Manuscript as a Domain-Specific Notation System
+**Version**: v0.30 — Manuscript Draft, March 2026
+**Compiled**: 10 pages; 0 LaTeX errors
+
+**Key argument**: The Voynich text is the earliest surviving example of a highly structured, multi-layer domain-specific notation system. The paper demonstrates four defining properties of domain-specific notation and compares the VM architecture to contemporaneous notation traditions (liturgical music, astronomical tables, pharmaceutical recipe notation). The ET/non-human authorship hypothesis is confined to a speculative epilogue, clearly labeled as such. Gate condition for this paper: P1.3 + P1.4 + P2.1 + P2.5 + D3 — all passed.
 
 ---
 
@@ -266,7 +276,9 @@ Mumin, R. (2026a). *Positional Role Asymmetry in Voynich Manuscript EVA Clusters
 
 Mumin, R. (2026b). *Transition Grammar and Cognitive Domain Profiles in the Voynich Manuscript: Evidence for a Functional Recording System from Six-Role Cluster Analysis*. Manuscript draft.
 
-Archived at: *[Zenodo DOI pending]*
+Mumin, R. (2026c). *The Stranded Recorder Hypothesis: The Voynich Manuscript as a Domain-Specific Notation System*. Manuscript draft.
+
+All three papers are available at: https://roblemumin.com/library.html
 
 ---
 
