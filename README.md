@@ -53,7 +53,7 @@ Full method: [`docs/TRANSCRIPTION_SENSITIVITY_METHOD.md`](docs/TRANSCRIPTION_SEN
 
 The Voynich Manuscript has resisted decipherment for over a century. Rather than assuming it encodes natural language, this project classifies EVA-transcribed glyph clusters by their *positional behavior and functional role* within line and paragraph structures.
 
-The central finding: EVA clusters exhibit **directional functional asymmetry** — their roles are not interchangeable without destroying structural coherence. The R2 (Closure-like) → R1 (Initiator-like) transition is the single strongest structural signal in the corpus (*z* = +9.71 vs. 1,000 shuffled baselines), anchoring a packet grammar that operates at the paragraph level. Paragraph-level FSA conformance reaches **61.3%**, exceeding the pre-registered 60% threshold.
+The central finding: EVA clusters exhibit **directional functional asymmetry** — their roles are not interchangeable without destroying structural coherence. The R2 (Closure-like) → R1 (Initiator-like) transition is the single strongest structural signal in the corpus (*z* = +9.75 vs. 1,000 shuffled baselines), anchoring a packet grammar that operates at the paragraph level. Paragraph-level FSA conformance reaches **61.3%**, exceeding the pre-registered 60% threshold.
 
 These findings are **compatible with multiple interpretive hypotheses** (recording system, Hebrew/Semitic cipher, structured notation) and do not claim to translate the manuscript. The contribution is structural: establishing that a real, reproducible, falsification-tested grammar exists — a necessary foundation for any subsequent interpretive work.
 
@@ -128,7 +128,7 @@ LAYER 3 — LEXICAL ENTITIES (section- and folio-specific vocabulary)
 **Key results**:
 - Paragraph-level FSA conformance: **61.3%** (pre-registered threshold: 60%)
 - Entropy: H(structural) = 2.38 bits < H(variant) = 2.77 bits ✓
-- Section classification accuracy: **64.7%** (majority-class baseline: 57.8%)
+- Section classification accuracy: **69.8%** best (KNN-5, 7-role features; majority-class baseline: 57.8%). Note: raw token baseline reaches 73.3% with KNN-5 — RF3b flag is active in result file (`rf3b_triggered: true`).
 - `shedy`-cluster: 10× elevated in Balneological vs. Herbal (*p* < 0.0001)
 - Three-way interpretive comparison: recording system (Model A), Hebrew cipher (Model B), structured notation (Model C)
 
@@ -212,8 +212,8 @@ Expected metric values: `docs/EXPECTED_OUTPUTS.md`
 │   ├── p1_1_cluster_frequencies.csv         # 47 classified clusters with role assignments (role_map)
 │   ├── p1_2_section_profiles.csv            # Normalized role frequencies by section
 │   ├── p1_3_falsification_v1.1_results.json # Inversion falsification 3/3 vs 0/3
-│   ├── p1_4_classification_results.json     # 64.7% section classification accuracy
-│   ├── p1_6_transition_matrix.json          # 6×6 Markov transition matrix (R2→R1 z=+9.71)
+│   ├── p1_4_classification_results.json     # 69.8% best section accuracy (KNN-5, 7-role); rf3b_triggered=true
+│   ├── p1_6_transition_matrix.json          # 7×7 Markov transition matrix (R2→R1 z=+9.75)
 │   ├── DECODE1_sal_results.json
 │   ├── DECODE2_stars_ain_results.json
 │   ├── DECODE3_qol_results.json             # qol first-payload OR=7.83 (P2-CLAIM-006)
