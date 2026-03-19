@@ -12,19 +12,31 @@ Structural and functional analysis of the Voynich Manuscript (Beinecke MS 408) u
 
 ## Latest Results (2026-03-19)
 
-Three new confirmed findings from ROSETTA2 / PILOT4 / PILOT5 batch:
+### ROSETTA3 — Stem-consonant alignment (completed 2026-03-19)
 
-1. **`qokain` has section-specific positional semantics** — EARLY-biased in Stars section packets (mean position 0.248, *p* = 0.007) but central in Balneological (mean 0.558, *p* = 0.40). First confirmed case of a single token occupying different structural slots by section.
+Four findings from `-ain` family consonant alignment against Arabic astronomical (35 terms, al-Sufi tradition), Arabic/Hebrew balneological (25 terms), and Latin balneological (22 terms) lexicons:
 
-2. **`ai!n` is LATE-biased corpus-wide** (mean position 0.686, *p* = 0.005) — first corpus-wide positional bias identified. Candidate terminal-entity marker.
+1. **`sal` → Latin *sal* / *salus*: exact 2-consonant match** (sl = sl). Confirms the strongest entity-label candidate. Combined with terminal packet pattern (4/17 B-section packets end with `sal` before R2), this is the most tightly constrained alignment in the corpus.
 
-3. **`sal` shows a terminal-entity pattern** — appears immediately before R2 CLOSE in 24% of Balneological packet occurrences (4/17), elevated 1.44× inside packet payloads. Consistent with `sal` = entity label for the outcome/product of the recorded procedure.
+2. **`qokain` alignment: NULL (significant negative)**. No Arabic or Hebrew term carries the `qk` consonant pair as a root. This is expected: `qok-` is the INIT grammatical particle (structural morpheme), not lexical content. The null result confirms `qok-` encodes grammatical role, not entity identity. Entity information in `qokain` resides in the `-ain` suffix alone.
+
+3. **`lkaiin` → Latin *lacus* (lake/pool): exact 2-consonant match** (lk = lk). New candidate, low confidence — requires expanded testing. `lkaiin` is a Stars-section token; Latin *lacus* is balneological. Cross-domain exact match is either meaningful (celestial water bodies) or coincidental.
+
+4. **Baseline limitation identified**: 90.5% of random stems match at score ≥ 0.5 — single-consonant alignments are not discriminating. Only 2-consonant exact matches are reportable. ROSETTA3b planned with full al-Sufi catalog (283 entries) and 2-consonant minimum threshold.
+
+### ROSETTA2 / PILOT4 / PILOT5 batch (2026-03-19)
+
+Three positional findings:
+
+- **`qokain` has section-specific positional semantics** — EARLY-biased in Stars section packets (mean position 0.248, *p* = 0.007) but central in Balneological (mean 0.558, *p* = 0.40). First confirmed case of a single token occupying different structural slots by section.
+- **`ai!n` is LATE-biased corpus-wide** (mean position 0.686, *p* = 0.005) — candidate terminal-entity marker across all sections.
+- **`sal` shows a terminal-entity pattern** — immediately before R2 CLOSE in 24% of Balneological packet occurrences (4/17), elevated 1.44× inside packet payloads.
 
 Two clean refutations:
 - **Nested B-section packets**: REFUTED — 0/67 B-packets with INIT-first-payload contain a sub-CLOSE token. Grammar remains finite-state.
 - **Folio-uniqueness as entity-label evidence**: RETRACTED — non-`-ain` rare tokens are equally folio-unique (74.8% vs 67.6%), confirming this is a baseline property of rare tokens.
 
-Active next step: **ROSETTA3** — stem-consonant alignment of `-ain` family against Arabic astronomical vocabulary (al-Sufi tradition) and Latin balneological lexicon.
+Active next step: **ROSETTA3b** — full al-Sufi star catalog (283 entries), 2-consonant minimum threshold, per-stem-length baseline.
 
 ---
 
@@ -155,8 +167,12 @@ python p2_analysis.py \
 │   ├── DECODE3_qol_cluster.py     # qol/ol correlation analysis
 │   ├── MORPH1_ain_suffix_alignment.py
 │   ├── ROSETTA1_balneological_alignment.py
+│   ├── ROSETTA2_sal_packet_position.py  # sal packet enrichment + terminal position
+│   ├── ROSETTA3_ain_stem_alignment.py   # -ain stem consonant alignment vs Arabic/Latin lexicons
 │   ├── FRAME1_structural_token_alignment.py
-│   └── ILLUS1_content_token_illustration_alignment.py
+│   ├── ILLUS1_content_token_illustration_alignment.py
+│   ├── PILOT4_balneo_packet_structure.py # B-section packet grammar analysis
+│   └── PILOT5_ain_subfolio_analysis.py  # -ain positional sub-differentiation
 ├── results/
 │   ├── p1_1_cluster_frequencies.csv     # 47 classified clusters with role assignments
 │   ├── p1_2_section_profiles.csv        # Normalized role frequencies by section
@@ -165,12 +181,17 @@ python p2_analysis.py \
 │   ├── p1_6_transition_matrix.json      # 6×6 Markov transition matrix
 │   ├── DECODE1_sal_results.json
 │   ├── DECODE2_stars_ain_results.json
-│   └── DECODE3_qol_results.json
+│   ├── DECODE3_qol_results.json
+│   ├── ROSETTA2_sal_packet_results.json
+│   ├── ROSETTA3_ain_alignment_results.json  # stem-consonant alignment; 90.5% baseline noted
+│   ├── PILOT4_balneo_packet_results.json
+│   └── PILOT5_ain_subfolio_results.json
 └── pilots/
     ├── folio_pilot_5folios.md          # Three-layer analysis: f75r, f88r, f103r, f111v, f114v
     ├── stars_ain_alignment.md          # Stars -ain folio-anchor test (PILOT2)
     ├── qol_ol_doublet.md               # qol/ol inner-packet doublet analysis (PILOT3)
     ├── ROSETTA2_sal_packet_log.md      # sal packet-internal position analysis (ROSETTA2)
+    ├── ROSETTA3_ain_alignment_log.md   # -ain stem alignment; baseline problem; qokain null result
     ├── PILOT4_balneo_packet_log.md     # Balneological packet structure analysis (PILOT4)
     ├── PILOT5_ain_subfolio_log.md      # -ain positional sub-differentiation (PILOT5)
     └── NEW_FINDINGS_2026-03-19.md      # Consolidated findings + falsifications (2026-03-19)

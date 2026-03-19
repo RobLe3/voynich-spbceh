@@ -1,0 +1,139 @@
+{
+  "priority_token_alignment": [
+    {
+      "token": "qokain",
+      "stem_cons": "qk",
+      "note": "Stars EARLY (0.248, p=0.007)",
+      "n_matches": 7,
+      "best_match": "qaus",
+      "best_score": 0.5,
+      "best_trans": "bow/arc",
+      "best_domain": "astro"
+    },
+    {
+      "token": "laiin",
+      "stem_cons": "l",
+      "note": "Stars LATE (0.875, p=0.007)",
+      "n_matches": 8,
+      "best_match": "oleum",
+      "best_score": 1.0,
+      "best_trans": "oil",
+      "best_domain": "ingredient"
+    },
+    {
+      "token": "ai!n",
+      "stem_cons": "",
+      "note": "ALL LATE (0.686, p=0.005)",
+      "n_matches": 0,
+      "best_match": null,
+      "best_score": 0.0,
+      "best_trans": null,
+      "best_domain": null
+    },
+    {
+      "token": "aiin",
+      "stem_cons": "",
+      "note": "Stars pan-folio (n=193)",
+      "n_matches": 0,
+      "best_match": null,
+      "best_score": 0.0,
+      "best_trans": null,
+      "best_domain": null
+    },
+    {
+      "token": "daiin",
+      "stem_cons": "d",
+      "note": "Stars common (n=122)",
+      "n_matches": 3,
+      "best_match": "qaid",
+      "best_score": 0.5,
+      "best_trans": "leader/guide",
+      "best_domain": "astro"
+    },
+    {
+      "token": "okaiin",
+      "stem_cons": "k",
+      "note": "Stars common (n=93)",
+      "n_matches": 3,
+      "best_match": "kulya",
+      "best_score": 0.5,
+      "best_trans": "kidney (Arabic)",
+      "best_domain": "anatomy"
+    },
+    {
+      "token": "raiin",
+      "stem_cons": "r",
+      "note": "Stars common (n=41)",
+      "n_matches": 3,
+      "best_match": "bi'r",
+      "best_score": 0.5,
+      "best_trans": "well (Arabic)",
+      "best_domain": "water"
+    },
+    {
+      "token": "saiin",
+      "stem_cons": "s",
+      "note": "Stars common (n=37)",
+      "n_matches": 3,
+      "best_match": "qaus",
+      "best_score": 0.5,
+      "best_trans": "bow/arc",
+      "best_domain": "astro"
+    },
+    {
+      "token": "lkaiin",
+      "stem_cons": "lk",
+      "note": "Stars common (n=37)",
+      "n_matches": 17,
+      "best_match": "kulya",
+      "best_score": 1.0,
+      "best_trans": "kidney (Arabic)",
+      "best_domain": "anatomy"
+    },
+    {
+      "token": "qotaiin",
+      "stem_cons": "qt",
+      "note": "Stars folio-anchor (n=39)",
+      "n_matches": 9,
+      "best_match": "qatr",
+      "best_score": 0.6666666666666666,
+      "best_trans": "drop (of water)",
+      "best_domain": "astro/water"
+    },
+    {
+      "token": "sal",
+      "stem_cons": "sl",
+      "note": "Balneo 2.08x enriched",
+      "n_matches": 21,
+      "best_match": "sal",
+      "best_score": 1.0,
+      "best_trans": "salt",
+      "best_domain": "mineral"
+    },
+    {
+      "token": "qol",
+      "stem_cons": "ql",
+      "note": "Inner-function word OR=7.83",
+      "n_matches": 19,
+      "best_match": "al-qaid",
+      "best_score": 0.6666666666666666,
+      "best_trans": "the governor (Alkaid)",
+      "best_domain": "astro"
+    }
+  ],
+  "baseline_mean_score": 0.617555,
+  "baseline_rate_above_05": 0.9048,
+  "arabic_star_vocab_size": 35,
+  "balneo_vocab_size": 25,
+  "latin_balneo_size": 22,
+  "qokain_stars_packet_contexts": 7,
+  "qokain_packet_positions": [
+    0.26666666666666666,
+    0.0,
+    0.13333333333333333,
+    0.17647058823529413,
+    0.3076923076923077,
+    0.34146341463414637,
+    0.5125
+  ]
+}
