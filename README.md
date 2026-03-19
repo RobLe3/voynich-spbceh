@@ -12,33 +12,39 @@ Structural and functional analysis of the Voynich Manuscript (Beinecke MS 408) u
 
 ## Latest Results (2026-03-19)
 
-### ROSETTA3 — Stem-consonant alignment (completed 2026-03-19)
+### ROSETTA3b — Tier verdicts (completed 2026-03-19)
 
-Four findings from `-ain` family consonant alignment against Arabic astronomical (35 terms, al-Sufi tradition), Arabic/Hebrew balneological (25 terms), and Latin balneological (22 terms) lexicons:
+Full tier assessment with 200-entry lexicon (al-Sufi catalog, Latin balneological, Arabic/Hebrew), 2-consonant minimum, anti-overfitting rule, competing-reading comparison:
 
-1. **`sal` → Latin *sal* / *salus*: exact 2-consonant match** (sl = sl). Confirms the strongest entity-label candidate. Combined with terminal packet pattern (4/17 B-section packets end with `sal` before R2), this is the most tightly constrained alignment in the corpus.
+| Token | Tier | Best reading | Key evidence |
+|-------|------|-------------|--------------|
+| `sal` | **Tier 1** | Latin *sal* / *salus* | sl = sl exact; Balneological section; no Arabic competitor for B-section domain |
+| `qotaiin` | Tier 2-3 | Arabic *qatr* (drop of water) | qt most selective (7/200 matches); Stars section consistent |
+| `lkaiin` | Tier 2 | al-kaff (Arabic, palm/Cas) or *lacus* (Latin) | lk ambiguous; 80% Stars favors Arabic over Latin bath terms |
+| `qol` | Rejected | — | Inner-function word behavioral profile overrides consonant matching |
+| `qokain` | **NULL confirmed** | qok- = INIT grammatical particle | Zero Arabic/Hebrew qk roots — exactly as expected for a grammatical morpheme |
 
-2. **`qokain` alignment: NULL (significant negative)**. No Arabic or Hebrew term carries the `qk` consonant pair as a root. This is expected: `qok-` is the INIT grammatical particle (structural morpheme), not lexical content. The null result confirms `qok-` encodes grammatical role, not entity identity. Entity information in `qokain` resides in the `-ain` suffix alone.
+**Key retractions and weakenings:**
+- **`sal` terminal-entity claim downgraded**: ROSETTA4 shows the pre-R2 slot is dominated by structural tokens (sol=62.5%, qokol=50%, ol=33.3%). sal's 33.3% rate is above median but not exceptional. The terminal pattern is a candidate, not established.
+- **`lkaiin` → Latin *lacus* retracted as primary reading**: lkaiin is 80% Stars-section; *lacus* is a Balneological Latin term — section mismatch disqualifies it as the primary reading.
+- **2-con baseline still high (59.3%)**: Even at the stricter threshold, most 2-consonant stems generate matches by chance. Semantic + section + competing-reading tests are mandatory.
 
-3. **`lkaiin` → Latin *lacus* (lake/pool): exact 2-consonant match** (lk = lk). New candidate, low confidence — requires expanded testing. `lkaiin` is a Stars-section token; Latin *lacus* is balneological. Cross-domain exact match is either meaningful (celestial water bodies) or coincidental.
+Full tier log: [`pilots/ROSETTA3b_20260319/ROSETTA3b_verdicts.md`](pilots/ROSETTA3b_20260319/ROSETTA3b_verdicts.md)
 
-4. **Baseline limitation identified**: 90.5% of random stems match at score ≥ 0.5 — single-consonant alignments are not discriminating. Only 2-consonant exact matches are reportable. ROSETTA3b planned with full al-Sufi catalog (283 entries) and 2-consonant minimum threshold.
+### ROSETTA3 / ROSETTA2 / PILOT4 / PILOT5 batch (2026-03-19)
 
-Full analysis log: [`pilots/ROSETTA3_ain_alignment_log.md`](pilots/ROSETTA3_ain_alignment_log.md)
+Positional findings:
 
-### ROSETTA2 / PILOT4 / PILOT5 batch (2026-03-19)
+- **`qokain` EARLY-biased in Stars** (mean 0.248, *p* = 0.007), central in Balneological (0.558). Confirmed section-specific positional semantics.
+- **`ai!n` LATE-biased corpus-wide** (mean 0.686, *p* = 0.005). Terminal-entity suffix candidate.
+- **qok- = grammatical INIT particle**: NULL alignment across 200-entry lexicon confirms `qok-` encodes structure, not content. First morphological element of the Voynich system identified as purely grammatical.
 
-Three positional findings:
+Refutations:
+- **Nested B-section packets**: REFUTED (0/67 sub-CLOSE found).
+- **Folio-uniqueness as entity evidence**: RETRACTED — baseline rate for all rare tokens.
+- **`lkaiin` → Latin *lacus* as primary**: RETRACTED — section mismatch.
 
-- **`qokain` has section-specific positional semantics** — EARLY-biased in Stars section packets (mean position 0.248, *p* = 0.007) but central in Balneological (mean 0.558, *p* = 0.40). First confirmed case of a single token occupying different structural slots by section.
-- **`ai!n` is LATE-biased corpus-wide** (mean position 0.686, *p* = 0.005) — candidate terminal-entity marker across all sections.
-- **`sal` shows a terminal-entity pattern** — immediately before R2 CLOSE in 24% of Balneological packet occurrences (4/17), elevated 1.44× inside packet payloads.
-
-Two clean refutations:
-- **Nested B-section packets**: REFUTED — 0/67 B-packets with INIT-first-payload contain a sub-CLOSE token. Grammar remains finite-state.
-- **Folio-uniqueness as entity-label evidence**: RETRACTED — non-`-ain` rare tokens are equally folio-unique (74.8% vs 67.6%), confirming this is a baseline property of rare tokens.
-
-Active next step: **ROSETTA3b** — full al-Sufi star catalog (283 entries), 2-consonant minimum threshold, per-stem-length baseline.
+Active next step: **ROSETTA3c** — qotaiin/qt positional analysis in Stars packets; sal terminal re-test with consistent FSA parse; lkaiin competing-reading resolution.
 
 ---
 
