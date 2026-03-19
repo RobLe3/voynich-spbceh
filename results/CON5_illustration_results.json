@@ -1,0 +1,13 @@
+{
+  "nmi_cluster_section_proxy": 0.06658451521316526,
+  "chi2_cluster_section_proxy": 225.49829073091638,
+  "p_chi2_cluster_section_proxy": 1.8124080028363562e-24,
+  "cluster1_balne_rate": 0.1520720170259139,
+  "cluster1_herbal_rate": 0.014937106918238994,
+  "mannwhitney_p_c1_balne_vs_herbal": 2.5343349451674995e-19,
+  "cluster1_balne_elevated": true,
+  "n_sig_cluster_sections": 5,
+  "packet_nmi_vs_section": 0.06658451521316527,
+  "best_token_nmi_vs_section": 0.20259411900365876,
+  "best_token": "okai!n"
+}

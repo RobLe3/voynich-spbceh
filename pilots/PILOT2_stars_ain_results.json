@@ -1,0 +1,554 @@
+[
+  {
+    "folio": "f103r",
+    "subject": "Aries",
+    "dominant_ain": "okai!n",
+    "n": "5",
+    "stem": "ok",
+    "stem_cons": "k",
+    "subject_arabic": "hml",
+    "align_score": 0.0,
+    "top3": [
+      [
+        "okai!n",
+        5
+      ],
+      [
+        "otai!n",
+        3
+      ],
+      [
+        "ain",
+        2
+      ]
+    ]
+  },
+  {
+    "folio": "f103v",
+    "subject": "Aries",
+    "dominant_ain": "okai!n",
+    "n": "5",
+    "stem": "ok",
+    "stem_cons": "k",
+    "subject_arabic": "hml",
+    "align_score": 0.0,
+    "top3": [
+      [
+        "okai!n",
+        5
+      ],
+      [
+        "otai!n",
+        5
+      ],
+      [
+        "qotai!n",
+        3
+      ]
+    ]
+  },
+  {
+    "folio": "f104r",
+    "subject": "Taurus",
+    "dominant_ain": "lkaiin",
+    "n": "4",
+    "stem": "lk",
+    "stem_cons": "lk",
+    "subject_arabic": "twr",
+    "align_score": 0.0,
+    "top3": [
+      [
+        "lkaiin",
+        4
+      ],
+      [
+        "kaiin",
+        3
+      ],
+      [
+        "qodai!n",
+        3
+      ]
+    ]
+  },
+  {
+    "folio": "f104v",
+    "subject": "Taurus",
+    "dominant_ain": "qotai!n",
+    "n": "4",
+    "stem": "qot",
+    "stem_cons": "qt",
+    "subject_arabic": "twr",
+    "align_score": 0.3333333333333333,
+    "top3": [
+      [
+        "qotai!n",
+        4
+      ],
+      [
+        "qotaiin",
+        4
+      ],
+      [
+        "chedaiin",
+        3
+      ]
+    ]
+  },
+  {
+    "folio": "f105r",
+    "subject": "Gemini",
+    "dominant_ain": "odaiin",
+    "n": "4",
+    "stem": "od",
+    "stem_cons": "d",
+    "subject_arabic": "jwz",
+    "align_score": 0.0,
+    "top3": [
+      [
+        "odaiin",
+        4
+      ],
+      [
+        "raiin",
+        4
+      ],
+      [
+        "paiin",
+        2
+      ]
+    ]
+  },
+  {
+    "folio": "f105v",
+    "subject": "Gemini",
+    "dominant_ain": "chedaiin",
+    "n": "3",
+    "stem": "ched",
+    "stem_cons": "chd",
+    "subject_arabic": "jwz",
+    "align_score": 0.0,
+    "top3": [
+      [
+        "chedaiin",
+        3
+      ],
+      [
+        "ytaiin",
+        2
+      ],
+      [
+        "alkaiin",
+        2
+      ]
+    ]
+  },
+  {
+    "folio": "f106r",
+    "subject": "Cancer",
+    "dominant_ain": "okai!n",
+    "n": "5",
+    "stem": "ok",
+    "stem_cons": "k",
+    "subject_arabic": "srt",
+    "align_score": 0.0,
+    "top3": [
+      [
+        "okai!n",
+        5
+      ],
+      [
+        "raiin",
+        4
+      ],
+      [
+        "lkaiin",
+        2
+      ]
+    ]
+  },
+  {
+    "folio": "f106v",
+    "subject": "Cancer",
+    "dominant_ain": "qotaiin",
+    "n": "5",
+    "stem": "qot",
+    "stem_cons": "qt",
+    "subject_arabic": "srt",
+    "align_score": 0.3333333333333333,
+    "top3": [
+      [
+        "qotaiin",
+        5
+      ],
+      [
+        "okai!n",
+        3
+      ],
+      [
+        "raiin",
+        3
+      ]
+    ]
+  },
+  {
+    "folio": "f107r",
+    "subject": "Leo",
+    "dominant_ain": "lkaiin",
+    "n": "7",
+    "stem": "lk",
+    "stem_cons": "lk",
+    "subject_arabic": "asd",
+    "align_score": 0.0,
+    "top3": [
+      [
+        "lkaiin",
+        7
+      ],
+      [
+        "kaiin",
+        4
+      ],
+      [
+        "qotaiin",
+        4
+      ]
+    ]
+  },
+  {
+    "folio": "f107v",
+    "subject": "Leo",
+    "dominant_ain": "lkaiin",
+    "n": "6",
+    "stem": "lk",
+    "stem_cons": "lk",
+    "subject_arabic": "asd",
+    "align_score": 0.0,
+    "top3": [
+      [
+        "lkaiin",
+        6
+      ],
+      [
+        "okai!n",
+        6
+      ],
+      [
+        "raiin",
+        4
+      ]
+    ]
+  },
+  {
+    "folio": "f108r",
+    "subject": "Virgo",
+    "dominant_ain": "okai!n",
+    "n": "4",
+    "stem": "ok",
+    "stem_cons": "k",
+    "subject_arabic": "snbl",
+    "align_score": 0.0,
+    "top3": [
+      [
+        "okai!n",
+        4
+      ],
+      [
+        "raiin",
+        2
+      ],
+      [
+        "charai!n",
+        1
+      ]
+    ]
+  },
+  {
+    "folio": "f108v",
+    "subject": "Virgo",
+    "dominant_ain": "raiin",
+    "n": "4",
+    "stem": "r",
+    "stem_cons": "r",
+    "subject_arabic": "snbl",
+    "align_score": 0.0,
+    "top3": [
+      [
+        "raiin",
+        4
+      ],
+      [
+        "sai!n",
+        4
+      ],
+      [
+        "ai!n",
+        3
+      ]
+    ]
+  },
+  {
+    "folio": "f111r",
+    "subject": "Sagittarius",
+    "dominant_ain": "okai!n",
+    "n": "3",
+    "stem": "ok",
+    "stem_cons": "k",
+    "subject_arabic": "qws",
+    "align_score": 0.0,
+    "top3": [
+      [
+        "okai!n",
+        3
+      ],
+      [
+        "ain",
+        2
+      ],
+      [
+        "ai!n",
+        2
+      ]
+    ]
+  },
+  {
+    "folio": "f111v",
+    "subject": "Star catalog",
+    "dominant_ain": "okai!n",
+    "n": "12",
+    "stem": "ok",
+    "stem_cons": "k",
+    "subject_arabic": null,
+    "align_score": null,
+    "top3": [
+      [
+        "okai!n",
+        12
+      ],
+      [
+        "otai!n",
+        12
+      ],
+      [
+        "lkai!n",
+        8
+      ]
+    ]
+  },
+  {
+    "folio": "f112r",
+    "subject": "Capricorn",
+    "dominant_ain": "sai!n",
+    "n": "3",
+    "stem": "s",
+    "stem_cons": "s",
+    "subject_arabic": "jdy",
+    "align_score": 0.0,
+    "top3": [
+      [
+        "sai!n",
+        3
+      ],
+      [
+        "otai!n",
+        3
+      ],
+      [
+        "olaiin",
+        2
+      ]
+    ]
+  },
+  {
+    "folio": "f112v",
+    "subject": "Aquarius",
+    "dominant_ain": "chedaiin",
+    "n": "3",
+    "stem": "ched",
+    "stem_cons": "chd",
+    "subject_arabic": "dlw",
+    "align_score": 0.3333333333333333,
+    "top3": [
+      [
+        "chedaiin",
+        3
+      ],
+      [
+        "kai!n",
+        3
+      ],
+      [
+        "okai!n",
+        2
+      ]
+    ]
+  },
+  {
+    "folio": "f113r",
+    "subject": "Pisces",
+    "dominant_ain": "lkaiin",
+    "n": "4",
+    "stem": "lk",
+    "stem_cons": "lk",
+    "subject_arabic": "ht",
+    "align_score": 0.0,
+    "top3": [
+      [
+        "lkaiin",
+        4
+      ],
+      [
+        "otai!n",
+        4
+      ],
+      [
+        "okai!n",
+        3
+      ]
+    ]
+  },
+  {
+    "folio": "f113v",
+    "subject": "Aries-alt",
+    "dominant_ain": "lkaiin",
+    "n": "5",
+    "stem": "lk",
+    "stem_cons": "lk",
+    "subject_arabic": "hml",
+    "align_score": 0.3333333333333333,
+    "top3": [
+      [
+        "lkaiin",
+        5
+      ],
+      [
+        "polaiin",
+        4
+      ],
+      [
+        "otai!n",
+        3
+      ]
+    ]
+  },
+  {
+    "folio": "f114r",
+    "subject": "Star charts",
+    "dominant_ain": "qodaiin",
+    "n": "5",
+    "stem": "qod",
+    "stem_cons": "qd",
+    "subject_arabic": null,
+    "align_score": null,
+    "top3": [
+      [
+        "qodaiin",
+        5
+      ],
+      [
+        "olkaiin",
+        3
+      ],
+      [
+        "chodaiin",
+        3
+      ]
+    ]
+  },
+  {
+    "folio": "f114v",
+    "subject": "Star charts",
+    "dominant_ain": "qotaiin",
+    "n": "9",
+    "stem": "qot",
+    "stem_cons": "qt",
+    "subject_arabic": null,
+    "align_score": null,
+    "top3": [
+      [
+        "qotaiin",
+        9
+      ],
+      [
+        "chedai!n",
+        4
+      ],
+      [
+        "chdaiin",
+        3
+      ]
+    ]
+  },
+  {
+    "folio": "f115r",
+    "subject": "Star charts",
+    "dominant_ain": "raiin",
+    "n": "5",
+    "stem": "r",
+    "stem_cons": "r",
+    "subject_arabic": null,
+    "align_score": null,
+    "top3": [
+      [
+        "raiin",
+        5
+      ],
+      [
+        "qodai!n",
+        3
+      ],
+      [
+        "qotaiin",
+        2
+      ]
+    ]
+  },
+  {
+    "folio": "f115v",
+    "subject": "Star charts",
+    "dominant_ain": "qotai!n",
+    "n": "4",
+    "stem": "qot",
+    "stem_cons": "qt",
+    "subject_arabic": null,
+    "align_score": null,
+    "top3": [
+      [
+        "qotai!n",
+        4
+      ],
+      [
+        "lkai!n",
+        3
+      ],
+      [
+        "shedai!n",
+        2
+      ]
+    ]
+  },
+  {
+    "folio": "f116r",
+    "subject": "Star charts / text",
+    "dominant_ain": "ai!n",
+    "n": "10",
+    "stem": "",
+    "stem_cons": "",
+    "subject_arabic": null,
+    "align_score": null,
+    "top3": [
+      [
+        "ai!n",
+        10
+      ],
+      [
+        "okai!n",
+        7
+      ],
+      [
+        "rai!n",
+        7
+      ]
+    ]
+  }
+]

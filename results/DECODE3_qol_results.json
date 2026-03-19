@@ -1,0 +1,11 @@
+{
+  "qol_total": 145,
+  "qol_B_count": 112,
+  "qol_B_rate_per1000": 25.93,
+  "qol_B_lines": 99,
+  "content_following_B": 52,
+  "struct_following_B": 53,
+  "unique_content_following_B": 39,
+  "lines_both_qol_sal": 3,
+  "lines_both_qol_sal_B": 3
+}

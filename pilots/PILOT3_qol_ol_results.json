@@ -1,0 +1,15 @@
+{
+  "total_packets": 941,
+  "packets_with_qol": 49,
+  "packets_with_ol": 156,
+  "packets_with_both": 14,
+  "qol_total": 145,
+  "qol_in_payload": 55,
+  "qol_expected_in_payload": 39.65,
+  "qol_payload_enrichment": 1.387,
+  "qol_ol_fisher_p": 0.0,
+  "qol_ol_fisher_or": 64.583,
+  "qol_mean_relative_position": 0.558,
+  "total_paragraphs": 923,
+  "paras_with_both_qol_ol": 36
+}

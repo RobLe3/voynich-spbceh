@@ -1,0 +1,30 @@
+{
+  "stars_ain_types": 414,
+  "stars_ain_occurrences": 1225,
+  "top_stars_ain_tokens": {
+    "okai!n": 63,
+    "otai!n": 47,
+    "raiin": 41,
+    "ai!n": 40,
+    "qotaiin": 39,
+    "lkaiin": 37,
+    "qotai!n": 32,
+    "kaiin": 28,
+    "lkai!n": 26,
+    "sai!n": 24
+  },
+  "stem_freq_top10": {
+    "qot": 74,
+    "ok": 71,
+    "lk": 65,
+    "r": 60,
+    "ot": 51,
+    "k": 49,
+    "": 48,
+    "ched": 31,
+    "s": 27,
+    "t": 25
+  },
+  "shared_with_balneological": 58,
+  "jaccard_S_B": 0.114
+}
