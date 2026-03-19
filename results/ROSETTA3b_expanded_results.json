@@ -1,0 +1,1252 @@
+{
+  "baseline_by_length": {
+    "1": 0.0,
+    "2": 0.5929,
+    "3": 0.8709
+  },
+  "lexicon_sizes": {
+    "alsufi": 91,
+    "latin_balneo": 64,
+    "arabic_hebrew": 45,
+    "total": 200
+  },
+  "priority_results": [
+    {
+      "token": "sal",
+      "stem": "sl",
+      "section": "B",
+      "note": "Balneo 2.08\u00d7, terminal entity candidate",
+      "status": "MATCHES",
+      "n_matches": 43,
+      "top_match": "al-simak al-azal",
+      "top_meaning": "the unarmed one (Spica)",
+      "top_domain": "astro",
+      "top_shared": 2,
+      "top_ordered": 1.0,
+      "top_exact": true,
+      "baseline_rate": 0.5929,
+      "matches": [
+        {
+          "term": "al-simak al-azal",
+          "meaning": "the unarmed one (Spica)",
+          "domain": "astro",
+          "source": "alsufi",
+          "cons": "lsmklzl",
+          "n_shared_any": 2,
+          "score_ordered": 1.0,
+          "exact_ordered": true
+        },
+        {
+          "term": "al-shaulah",
+          "meaning": "the sting (lambda Sco)",
+          "domain": "astro",
+          "source": "alsufi",
+          "cons": "lshl",
+          "n_shared_any": 2,
+          "score_ordered": 1.0,
+          "exact_ordered": true
+        },
+        {
+          "term": "sad al-dhabih",
+          "meaning": "lucky star of the slaughterer (Algedi)",
+          "domain": "astro",
+          "source": "alsufi",
+          "cons": "sdldhbh",
+          "n_shared_any": 2,
+          "score_ordered": 1.0,
+          "exact_ordered": true
+        },
+        {
+          "term": "sad bula",
+          "meaning": "the lucky swallower (mu Aqr)",
+          "domain": "astro",
+          "source": "alsufi",
+          "cons": "sdbl",
+          "n_shared_any": 2,
+          "score_ordered": 1.0,
+          "exact_ordered": true
+        },
+        {
+          "term": "sad al-suud",
+          "meaning": "luckiest of the lucky (beta Aqr)",
+          "domain": "astro",
+          "source": "alsufi",
+          "cons": "sdlsd",
+          "n_shared_any": 2,
+          "score_ordered": 1.0,
+          "exact_ordered": true
+        }
+      ]
+    },
+    {
+      "token": "lkaiin",
+      "stem": "lk",
+      "section": "S",
+      "note": "Stars common n=37",
+      "status": "MATCHES",
+      "n_matches": 24,
+      "top_match": "al-simak al-azal",
+      "top_meaning": "the unarmed one (Spica)",
+      "top_domain": "astro",
+      "top_shared": 2,
+      "top_ordered": 1.0,
+      "top_exact": true,
+      "baseline_rate": 0.5929,
+      "matches": [
+        {
+          "term": "al-simak al-azal",
+          "meaning": "the unarmed one (Spica)",
+          "domain": "astro",
+          "source": "alsufi",
+          "cons": "lsmklzl",
+          "n_shared_any": 2,
+          "score_ordered": 1.0,
+          "exact_ordered": true
+        },
+        {
+          "term": "al-iklil",
+          "meaning": "the crown (pi Sco)",
+          "domain": "astro",
+          "source": "alsufi",
+          "cons": "lkl",
+          "n_shared_any": 2,
+          "score_ordered": 1.0,
+          "exact_ordered": true
+        },
+        {
+          "term": "sad al-akhbiya",
+          "meaning": "the lucky tents (gamma Aqr)",
+          "domain": "astro",
+          "source": "alsufi",
+          "cons": "sdlkhb",
+          "n_shared_any": 2,
+          "score_ordered": 1.0,
+          "exact_ordered": true
+        },
+        {
+          "term": "al-simak al-ramih",
+          "meaning": "the armed one = Arcturus",
+          "domain": "astro",
+          "source": "alsufi",
+          "cons": "lsmklrmh",
+          "n_shared_any": 2,
+          "score_ordered": 1.0,
+          "exact_ordered": true
+        },
+        {
+          "term": "al-dalik",
+          "meaning": "the rubbing one = Deneb Kaitos",
+          "domain": "astro",
+          "source": "alsufi",
+          "cons": "ldlk",
+          "n_shared_any": 2,
+          "score_ordered": 1.0,
+          "exact_ordered": true
+        }
+      ]
+    },
+    {
+      "token": "qotaiin",
+      "stem": "qt",
+      "section": "S",
+      "note": "Stars folio-anchor n=39",
+      "status": "MATCHES",
+      "n_matches": 7,
+      "top_match": "dhanab al-qitah",
+      "top_meaning": "tail of the cat = Deneb Algedi",
+      "top_domain": "astro",
+      "top_shared": 2,
+      "top_ordered": 1.0,
+      "top_exact": true,
+      "baseline_rate": 0.5929,
+      "matches": [
+        {
+          "term": "dhanab al-qitah",
+          "meaning": "tail of the cat = Deneb Algedi",
+          "domain": "astro",
+          "source": "alsufi",
+          "cons": "dnblqth",
+          "n_shared_any": 2,
+          "score_ordered": 1.0,
+          "exact_ordered": true
+        },
+        {
+          "term": "laqit",
+          "meaning": "the foundling = a small star",
+          "domain": "astro",
+          "source": "alsufi",
+          "cons": "lqt",
+          "n_shared_any": 2,
+          "score_ordered": 1.0,
+          "exact_ordered": true
+        },
+        {
+          "term": "qatr",
+          "meaning": "drop of water (astronomical context)",
+          "domain": "astro_water",
+          "source": "alsufi",
+          "cons": "qtr",
+          "n_shared_any": 2,
+          "score_ordered": 1.0,
+          "exact_ordered": true
+        },
+        {
+          "term": "qatr",
+          "meaning": "drop (Arabic)",
+          "domain": "water",
+          "source": "arabic_heb",
+          "cons": "qtr",
+          "n_shared_any": 2,
+          "score_ordered": 1.0,
+          "exact_ordered": true
+        },
+        {
+          "term": "qata",
+          "meaning": "to cut (Arabic)",
+          "domain": "action",
+          "source": "arabic_heb",
+          "cons": "qt",
+          "n_shared_any": 2,
+          "score_ordered": 1.0,
+          "exact_ordered": true
+        }
+      ]
+    },
+    {
+      "token": "qol",
+      "stem": "ql",
+      "section": "B",
+      "note": "B inner-function OR=7.83",
+      "status": "MATCHES",
+      "n_matches": 21,
+      "top_match": "al-qalb",
+      "top_meaning": "the heart (Antares)",
+      "top_domain": "astro",
+      "top_shared": 2,
+      "top_ordered": 1.0,
+      "top_exact": true,
+      "baseline_rate": 0.5929,
+      "matches": [
+        {
+          "term": "al-qalb",
+          "meaning": "the heart (Antares)",
+          "domain": "astro",
+          "source": "alsufi",
+          "cons": "lqlb",
+          "n_shared_any": 2,
+          "score_ordered": 1.0,
+          "exact_ordered": true
+        },
+        {
+          "term": "qalb al-asad",
+          "meaning": "heart of the lion = Regulus",
+          "domain": "astro",
+          "source": "alsufi",
+          "cons": "qlblsd",
+          "n_shared_any": 2,
+          "score_ordered": 1.0,
+          "exact_ordered": true
+        },
+        {
+          "term": "qalb al-aqrab",
+          "meaning": "heart of the scorpion = Antares",
+          "domain": "astro",
+          "source": "alsufi",
+          "cons": "qlblqrb",
+          "n_shared_any": 2,
+          "score_ordered": 1.0,
+          "exact_ordered": true
+        },
+        {
+          "term": "aqua calida",
+          "meaning": "hot water",
+          "domain": "water",
+          "source": "latin_balneo",
+          "cons": "qkld",
+          "n_shared_any": 2,
+          "score_ordered": 1.0,
+          "exact_ordered": true
+        },
+        {
+          "term": "aqua mineralis",
+          "meaning": "mineral water",
+          "domain": "water",
+          "source": "latin_balneo",
+          "cons": "qmnrl",
+          "n_shared_any": 2,
+          "score_ordered": 1.0,
+          "exact_ordered": true
+        }
+      ]
+    },
+    {
+      "token": "daiin",
+      "stem": "d",
+      "section": "S",
+      "note": "Stars common n=122",
+      "status": "EXCLUDED_SHORT_STEM",
+      "matches": []
+    },
+    {
+      "token": "okaiin",
+      "stem": "k",
+      "section": "S",
+      "note": "Stars common n=93",
+      "status": "EXCLUDED_SHORT_STEM",
+      "matches": []
+    },
+    {
+      "token": "raiin",
+      "stem": "r",
+      "section": "S",
+      "note": "Stars common n=41",
+      "status": "EXCLUDED_SHORT_STEM",
+      "matches": []
+    },
+    {
+      "token": "saiin",
+      "stem": "s",
+      "section": "S",
+      "note": "Stars common n=37",
+      "status": "EXCLUDED_SHORT_STEM",
+      "matches": []
+    },
+    {
+      "token": "qokain",
+      "stem": "qk",
+      "section": "S",
+      "note": "Stars EARLY (0.248, p=0.007) \u2014 expect NULL",
+      "status": "MATCHES",
+      "n_matches": 1,
+      "top_match": "aqua calida",
+      "top_meaning": "hot water",
+      "top_domain": "water",
+      "top_shared": 2,
+      "top_ordered": 1.0,
+      "top_exact": true,
+      "baseline_rate": 0.5929,
+      "matches": [
+        {
+          "term": "aqua calida",
+          "meaning": "hot water",
+          "domain": "water",
+          "source": "latin_balneo",
+          "cons": "qkld",
+          "n_shared_any": 2,
+          "score_ordered": 1.0,
+          "exact_ordered": true
+        }
+      ]
+    },
+    {
+      "token": "laiin",
+      "stem": "l",
+      "section": "S",
+      "note": "Stars LATE (0.875, p=0.007)",
+      "status": "EXCLUDED_SHORT_STEM",
+      "matches": []
+    },
+    {
+      "token": "ai!n",
+      "stem": "",
+      "section": "ALL",
+      "note": "Corpus-wide LATE (0.686, p=0.005) \u2014 no stem",
+      "status": "EXCLUDED_SHORT_STEM",
+      "matches": []
+    },
+    {
+      "token": "aiin",
+      "stem": "",
+      "section": "S",
+      "note": "Stars pan-folio n=193 \u2014 no stem",
+      "status": "EXCLUDED_SHORT_STEM",
+      "matches": []
+    },
+    {
+      "token": "lchein",
+      "stem": "lch",
+      "section": "B",
+      "note": "lch-stem -ain variant",
+      "status": "MATCHES",
+      "n_matches": 32,
+      "top_match": "al-sharatain",
+      "top_meaning": "the two signs (alpha/beta Ari)",
+      "top_domain": "astro",
+      "top_shared": 2,
+      "top_ordered": 0.6666666666666666,
+      "top_exact": false,
+      "baseline_rate": 0.8709,
+      "matches": [
+        {
+          "term": "al-sharatain",
+          "meaning": "the two signs (alpha/beta Ari)",
+          "domain": "astro",
+          "source": "alsufi",
+          "cons": "lshrt",
+          "n_shared_any": 2,
+          "score_ordered": 0.6666666666666666,
+          "exact_ordered": false
+        },
+        {
+          "term": "al-thurayya",
+          "meaning": "the many little ones (Pleiades)",
+          "domain": "astro",
+          "source": "alsufi",
+          "cons": "lthr",
+          "n_shared_any": 2,
+          "score_ordered": 0.6666666666666666,
+          "exact_ordered": false
+        },
+        {
+          "term": "al-haqa",
+          "meaning": "the white spot (lambda Ori)",
+          "domain": "astro",
+          "source": "alsufi",
+          "cons": "lhq",
+          "n_shared_any": 2,
+          "score_ordered": 0.6666666666666666,
+          "exact_ordered": false
+        },
+        {
+          "term": "al-hana",
+          "meaning": "the brand mark (gamma Gem)",
+          "domain": "astro",
+          "source": "alsufi",
+          "cons": "lhn",
+          "n_shared_any": 2,
+          "score_ordered": 0.6666666666666666,
+          "exact_ordered": false
+        },
+        {
+          "term": "al-dhira",
+          "meaning": "the arm (alpha/beta Gem)",
+          "domain": "astro",
+          "source": "alsufi",
+          "cons": "ldhr",
+          "n_shared_any": 2,
+          "score_ordered": 0.6666666666666666,
+          "exact_ordered": false
+        }
+      ]
+    },
+    {
+      "token": "lchsain",
+      "stem": "lchs",
+      "section": "B",
+      "note": "lch-s stem variant",
+      "status": "MATCHES",
+      "n_matches": 71,
+      "top_match": "ain al-shams",
+      "top_meaning": "eye of the sun = Heliopolis",
+      "top_domain": "astro_ayn",
+      "top_shared": 3,
+      "top_ordered": 0.75,
+      "top_exact": false,
+      "baseline_rate": 0.8709,
+      "matches": [
+        {
+          "term": "ain al-shams",
+          "meaning": "eye of the sun = Heliopolis",
+          "domain": "astro_ayn",
+          "source": "alsufi",
+          "cons": "nlshms",
+          "n_shared_any": 3,
+          "score_ordered": 0.75,
+          "exact_ordered": false
+        },
+        {
+          "term": "al-sharatain",
+          "meaning": "the two signs (alpha/beta Ari)",
+          "domain": "astro",
+          "source": "alsufi",
+          "cons": "lshrt",
+          "n_shared_any": 3,
+          "score_ordered": 0.5,
+          "exact_ordered": false
+        },
+        {
+          "term": "al-shaulah",
+          "meaning": "the sting (lambda Sco)",
+          "domain": "astro",
+          "source": "alsufi",
+          "cons": "lshl",
+          "n_shared_any": 3,
+          "score_ordered": 0.5,
+          "exact_ordered": false
+        },
+        {
+          "term": "sad al-dhabih",
+          "meaning": "lucky star of the slaughterer (Algedi)",
+          "domain": "astro",
+          "source": "alsufi",
+          "cons": "sdldhbh",
+          "n_shared_any": 3,
+          "score_ordered": 0.5,
+          "exact_ordered": false
+        },
+        {
+          "term": "sad al-akhbiya",
+          "meaning": "the lucky tents (gamma Aqr)",
+          "domain": "astro",
+          "source": "alsufi",
+          "cons": "sdlkhb",
+          "n_shared_any": 3,
+          "score_ordered": 0.5,
+          "exact_ordered": false
+        }
+      ]
+    }
+  ],
+  "sal_matches": [
+    {
+      "term": "al-simak al-azal",
+      "meaning": "the unarmed one (Spica)",
+      "domain": "astro",
+      "source": "alsufi",
+      "cons": "lsmklzl",
+      "n_shared": 2,
+      "exact": true
+    },
+    {
+      "term": "al-shaulah",
+      "meaning": "the sting (lambda Sco)",
+      "domain": "astro",
+      "source": "alsufi",
+      "cons": "lshl",
+      "n_shared": 2,
+      "exact": true
+    },
+    {
+      "term": "sad al-dhabih",
+      "meaning": "lucky star of the slaughterer (Algedi)",
+      "domain": "astro",
+      "source": "alsufi",
+      "cons": "sdldhbh",
+      "n_shared": 2,
+      "exact": true
+    },
+    {
+      "term": "sad bula",
+      "meaning": "the lucky swallower (mu Aqr)",
+      "domain": "astro",
+      "source": "alsufi",
+      "cons": "sdbl",
+      "n_shared": 2,
+      "exact": true
+    },
+    {
+      "term": "sad al-suud",
+      "meaning": "luckiest of the lucky (beta Aqr)",
+      "domain": "astro",
+      "source": "alsufi",
+      "cons": "sdlsd",
+      "n_shared": 2,
+      "exact": true
+    },
+    {
+      "term": "sad al-akhbiya",
+      "meaning": "the lucky tents (gamma Aqr)",
+      "domain": "astro",
+      "source": "alsufi",
+      "cons": "sdlkhb",
+      "n_shared": 2,
+      "exact": true
+    },
+    {
+      "term": "al-nasr al-tair",
+      "meaning": "the flying eagle = Altair",
+      "domain": "astro",
+      "source": "alsufi",
+      "cons": "lnsrltr",
+      "n_shared": 2,
+      "exact": true
+    },
+    {
+      "term": "al-nasr al-waqii",
+      "meaning": "the swooping eagle = Vega",
+      "domain": "astro",
+      "source": "alsufi",
+      "cons": "lnsrlwq",
+      "n_shared": 2,
+      "exact": true
+    },
+    {
+      "term": "ras al-ghul",
+      "meaning": "head of the ogre = Algol",
+      "domain": "astro",
+      "source": "alsufi",
+      "cons": "rslghl",
+      "n_shared": 2,
+      "exact": true
+    },
+    {
+      "term": "al-simak al-ramih",
+      "meaning": "the armed one = Arcturus",
+      "domain": "astro",
+      "source": "alsufi",
+      "cons": "lsmklrmh",
+      "n_shared": 2,
+      "exact": true
+    },
+    {
+      "term": "ras al-asad",
+      "meaning": "head of the lion = Algenubi",
+      "domain": "astro",
+      "source": "alsufi",
+      "cons": "rslsd",
+      "n_shared": 2,
+      "exact": true
+    },
+    {
+      "term": "suhayl",
+      "meaning": "smooth/Canopus",
+      "domain": "astro",
+      "source": "alsufi",
+      "cons": "shl",
+      "n_shared": 2,
+      "exact": true
+    },
+    {
+      "term": "al-suhail",
+      "meaning": "the smooth one = Canopus",
+      "domain": "astro",
+      "source": "alsufi",
+      "cons": "lshl",
+      "n_shared": 2,
+      "exact": true
+    },
+    {
+      "term": "ras al-jawza",
+      "meaning": "head of Orion",
+      "domain": "astro",
+      "source": "alsufi",
+      "cons": "rsljwz",
+      "n_shared": 2,
+      "exact": true
+    },
+    {
+      "term": "al-sunbulah",
+      "meaning": "the ear of grain = Virgo",
+      "domain": "astro",
+      "source": "alsufi",
+      "cons": "lsnbl",
+      "n_shared": 2,
+      "exact": true
+    },
+    {
+      "term": "sal",
+      "meaning": "salt",
+      "domain": "mineral",
+      "source": "latin_balneo",
+      "cons": "sl",
+      "n_shared": 2,
+      "exact": true
+    },
+    {
+      "term": "salus",
+      "meaning": "health/welfare/salvation",
+      "domain": "health",
+      "source": "latin_balneo",
+      "cons": "sl",
+      "n_shared": 2,
+      "exact": true
+    },
+    {
+      "term": "salubritas",
+      "meaning": "healthfulness",
+      "domain": "health",
+      "source": "latin_balneo",
+      "cons": "slbr",
+      "n_shared": 2,
+      "exact": true
+    },
+    {
+      "term": "salina",
+      "meaning": "salt works/brine pool",
+      "domain": "mineral",
+      "source": "latin_balneo",
+      "cons": "sln",
+      "n_shared": 2,
+      "exact": true
+    },
+    {
+      "term": "salvia",
+      "meaning": "sage (bath herb)",
+      "domain": "herb",
+      "source": "latin_balneo",
+      "cons": "slv",
+      "n_shared": 2,
+      "exact": true
+    },
+    {
+      "term": "salsus",
+      "meaning": "salted/briny",
+      "domain": "mineral",
+      "source": "latin_balneo",
+      "cons": "sls",
+      "n_shared": 2,
+      "exact": true
+    },
+    {
+      "term": "salsum aqua",
+      "meaning": "salt water",
+      "domain": "mineral",
+      "source": "latin_balneo",
+      "cons": "slsq",
+      "n_shared": 2,
+      "exact": true
+    },
+    {
+      "term": "salah",
+      "meaning": "wellbeing (Arabic via Latin)",
+      "domain": "health",
+      "source": "latin_balneo",
+      "cons": "slh",
+      "n_shared": 2,
+      "exact": true
+    },
+    {
+      "term": "sulfur",
+      "meaning": "sulfur (mineral spring)",
+      "domain": "mineral",
+      "source": "latin_balneo",
+      "cons": "slf",
+      "n_shared": 2,
+      "exact": true
+    },
+    {
+      "term": "sulphur",
+      "meaning": "sulfur (alt spelling)",
+      "domain": "mineral",
+      "source": "latin_balneo",
+      "cons": "slf",
+      "n_shared": 2,
+      "exact": true
+    },
+    {
+      "term": "salix",
+      "meaning": "willow (bath herb)",
+      "domain": "herb",
+      "source": "latin_balneo",
+      "cons": "slk",
+      "n_shared": 2,
+      "exact": true
+    },
+    {
+      "term": "salvia officinalis",
+      "meaning": "common sage",
+      "domain": "herb",
+      "source": "latin_balneo",
+      "cons": "slvf",
+      "n_shared": 2,
+      "exact": true
+    },
+    {
+      "term": "salama",
+      "meaning": "safety/peace (Arabic)",
+      "domain": "health",
+      "source": "arabic_heb",
+      "cons": "slm",
+      "n_shared": 2,
+      "exact": true
+    },
+    {
+      "term": "salar",
+      "meaning": "to flow/pour (Arabic dial.)",
+      "domain": "water",
+      "source": "arabic_heb",
+      "cons": "slr",
+      "n_shared": 2,
+      "exact": true
+    },
+    {
+      "term": "salaka",
+      "meaning": "to walk/follow path (Arabic)",
+      "domain": "action",
+      "source": "arabic_heb",
+      "cons": "slk",
+      "n_shared": 2,
+      "exact": true
+    },
+    {
+      "term": "al-sharatain",
+      "meaning": "the two signs (alpha/beta Ari)",
+      "domain": "astro",
+      "source": "alsufi",
+      "cons": "lshrt",
+      "n_shared": 2,
+      "exact": false
+    },
+    {
+      "term": "al-sarfah",
+      "meaning": "the changer (beta Leo)",
+      "domain": "astro",
+      "source": "alsufi",
+      "cons": "lsrf",
+      "n_shared": 2,
+      "exact": false
+    },
+    {
+      "term": "qalb al-asad",
+      "meaning": "heart of the lion = Regulus",
+      "domain": "astro",
+      "source": "alsufi",
+      "cons": "qlblsd",
+      "n_shared": 2,
+      "exact": false
+    },
+    {
+      "term": "ayn al-asad",
+      "meaning": "eye of the lion = epsilon Leonis",
+      "domain": "astro_ayn",
+      "source": "alsufi",
+      "cons": "nlsd",
+      "n_shared": 2,
+      "exact": false
+    },
+    {
+      "term": "ayn al-sagittarius",
+      "meaning": "eye of Sagittarius",
+      "domain": "astro_ayn",
+      "source": "alsufi",
+      "cons": "nlsgt",
+      "n_shared": 2,
+      "exact": false
+    },
+    {
+      "term": "al-raqis",
+      "meaning": "the dancer = mu Bootis",
+      "domain": "astro",
+      "source": "alsufi",
+      "cons": "lrqs",
+      "n_shared": 2,
+      "exact": false
+    },
+    {
+      "term": "al-qaws",
+      "meaning": "the bow = Sagittarius",
+      "domain": "astro",
+      "source": "alsufi",
+      "cons": "lqs",
+      "n_shared": 2,
+      "exact": false
+    },
+    {
+      "term": "al-qaus",
+      "meaning": "the arc/bow",
+      "domain": "astro",
+      "source": "alsufi",
+      "cons": "lqs",
+      "n_shared": 2,
+      "exact": false
+    },
+    {
+      "term": "al-asad",
+      "meaning": "the lion = Leo",
+      "domain": "astro",
+      "source": "alsufi",
+      "cons": "lsd",
+      "n_shared": 2,
+      "exact": false
+    },
+    {
+      "term": "al-saratan",
+      "meaning": "the crab = Cancer",
+      "domain": "astro",
+      "source": "alsufi",
+      "cons": "lsrtn",
+      "n_shared": 2,
+      "exact": false
+    },
+    {
+      "term": "ain al-shams",
+      "meaning": "eye of the sun = Heliopolis",
+      "domain": "astro_ayn",
+      "source": "alsufi",
+      "cons": "nlshms",
+      "n_shared": 2,
+      "exact": false
+    },
+    {
+      "term": "mankib al-faras",
+      "meaning": "shoulder of the horse = Scheat",
+      "domain": "astro",
+      "source": "alsufi",
+      "cons": "mnkblf rs",
+      "n_shared": 2,
+      "exact": false
+    },
+    {
+      "term": "balsamum",
+      "meaning": "balsam/balm",
+      "domain": "ingredient",
+      "source": "latin_balneo",
+      "cons": "blsm",
+      "n_shared": 2,
+      "exact": false
+    }
+  ],
+  "lk_matches": [
+    {
+      "term": "al-simak al-azal",
+      "meaning": "the unarmed one (Spica)",
+      "domain": "astro",
+      "source": "alsufi",
+      "cons": "lsmklzl",
+      "n_shared": 2,
+      "exact": true
+    },
+    {
+      "term": "al-iklil",
+      "meaning": "the crown (pi Sco)",
+      "domain": "astro",
+      "source": "alsufi",
+      "cons": "lkl",
+      "n_shared": 2,
+      "exact": true
+    },
+    {
+      "term": "sad al-akhbiya",
+      "meaning": "the lucky tents (gamma Aqr)",
+      "domain": "astro",
+      "source": "alsufi",
+      "cons": "sdlkhb",
+      "n_shared": 2,
+      "exact": true
+    },
+    {
+      "term": "al-simak al-ramih",
+      "meaning": "the armed one = Arcturus",
+      "domain": "astro",
+      "source": "alsufi",
+      "cons": "lsmklrmh",
+      "n_shared": 2,
+      "exact": true
+    },
+    {
+      "term": "al-dalik",
+      "meaning": "the rubbing one = Deneb Kaitos",
+      "domain": "astro",
+      "source": "alsufi",
+      "cons": "ldlk",
+      "n_shared": 2,
+      "exact": true
+    },
+    {
+      "term": "al-kaff al-khadib",
+      "meaning": "the dyed hand = Cassiopeia area",
+      "domain": "astro",
+      "source": "alsufi",
+      "cons": "lkflkdhb",
+      "n_shared": 2,
+      "exact": true
+    },
+    {
+      "term": "al-kaff",
+      "meaning": "the palm = gamma Cassiopeiae",
+      "domain": "astro",
+      "source": "alsufi",
+      "cons": "lkf",
+      "n_shared": 2,
+      "exact": true
+    },
+    {
+      "term": "lacus",
+      "meaning": "lake/pool/bath basin",
+      "domain": "water",
+      "source": "latin_balneo",
+      "cons": "lk",
+      "n_shared": 2,
+      "exact": true
+    },
+    {
+      "term": "lacuna",
+      "meaning": "pool/pit/gap",
+      "domain": "water",
+      "source": "latin_balneo",
+      "cons": "lkn",
+      "n_shared": 2,
+      "exact": true
+    },
+    {
+      "term": "lavacrum",
+      "meaning": "bath/washing place",
+      "domain": "bath",
+      "source": "latin_balneo",
+      "cons": "lvkr",
+      "n_shared": 2,
+      "exact": true
+    },
+    {
+      "term": "salix",
+      "meaning": "willow (bath herb)",
+      "domain": "herb",
+      "source": "latin_balneo",
+      "cons": "slk",
+      "n_shared": 2,
+      "exact": true
+    },
+    {
+      "term": "electuarium",
+      "meaning": "electuary/paste medicine",
+      "domain": "health",
+      "source": "latin_balneo",
+      "cons": "lktr",
+      "n_shared": 2,
+      "exact": true
+    },
+    {
+      "term": "melekh",
+      "meaning": "king (Hebrew)",
+      "domain": "status",
+      "source": "arabic_heb",
+      "cons": "mlk",
+      "n_shared": 2,
+      "exact": true
+    },
+    {
+      "term": "halakh",
+      "meaning": "went/walked (Hebrew)",
+      "domain": "action",
+      "source": "arabic_heb",
+      "cons": "hlk",
+      "n_shared": 2,
+      "exact": true
+    },
+    {
+      "term": "malak",
+      "meaning": "angel/messenger (Arabic/Heb)",
+      "domain": "status",
+      "source": "arabic_heb",
+      "cons": "mlk",
+      "n_shared": 2,
+      "exact": true
+    },
+    {
+      "term": "salaka",
+      "meaning": "to walk/follow path (Arabic)",
+      "domain": "action",
+      "source": "arabic_heb",
+      "cons": "slk",
+      "n_shared": 2,
+      "exact": true
+    },
+    {
+      "term": "mankib al-jawza",
+      "meaning": "shoulder of Orion = Betelgeuse area",
+      "domain": "astro",
+      "source": "alsufi",
+      "cons": "mnkbljwz",
+      "n_shared": 2,
+      "exact": false
+    },
+    {
+      "term": "akhir al-nahr",
+      "meaning": "end of the river = Achernar",
+      "domain": "astro",
+      "source": "alsufi",
+      "cons": "khrln hr",
+      "n_shared": 2,
+      "exact": false
+    },
+    {
+      "term": "mankib al-faras",
+      "meaning": "shoulder of the horse = Scheat",
+      "domain": "astro",
+      "source": "alsufi",
+      "cons": "mnkblf rs",
+      "n_shared": 2,
+      "exact": false
+    },
+    {
+      "term": "aqua calida",
+      "meaning": "hot water",
+      "domain": "water",
+      "source": "latin_balneo",
+      "cons": "qkld",
+      "n_shared": 2,
+      "exact": false
+    },
+    {
+      "term": "calor",
+      "meaning": "heat/warmth",
+      "domain": "bath",
+      "source": "latin_balneo",
+      "cons": "klr",
+      "n_shared": 2,
+      "exact": false
+    },
+    {
+      "term": "camomilla",
+      "meaning": "chamomile (bath herb)",
+      "domain": "herb",
+      "source": "latin_balneo",
+      "cons": "kmml",
+      "n_shared": 2,
+      "exact": false
+    },
+    {
+      "term": "kulya",
+      "meaning": "kidney (Arabic)",
+      "domain": "anatomy",
+      "source": "arabic_heb",
+      "cons": "kl",
+      "n_shared": 2,
+      "exact": false
+    },
+    {
+      "term": "kol",
+      "meaning": "all/every (Hebrew)",
+      "domain": "function",
+      "source": "arabic_heb",
+      "cons": "kl",
+      "n_shared": 2,
+      "exact": false
+    }
+  ],
+  "qt_matches": [
+    {
+      "term": "dhanab al-qitah",
+      "meaning": "tail of the cat = Deneb Algedi",
+      "domain": "astro",
+      "source": "alsufi",
+      "cons": "dnblqth",
+      "n_shared": 2,
+      "exact": true
+    },
+    {
+      "term": "laqit",
+      "meaning": "the foundling = a small star",
+      "domain": "astro",
+      "source": "alsufi",
+      "cons": "lqt",
+      "n_shared": 2,
+      "exact": true
+    },
+    {
+      "term": "qatr",
+      "meaning": "drop of water (astronomical context)",
+      "domain": "astro_water",
+      "source": "alsufi",
+      "cons": "qtr",
+      "n_shared": 2,
+      "exact": true
+    },
+    {
+      "term": "qatr",
+      "meaning": "drop (Arabic)",
+      "domain": "water",
+      "source": "arabic_heb",
+      "cons": "qtr",
+      "n_shared": 2,
+      "exact": true
+    },
+    {
+      "term": "qata",
+      "meaning": "to cut (Arabic)",
+      "domain": "action",
+      "source": "arabic_heb",
+      "cons": "qt",
+      "n_shared": 2,
+      "exact": true
+    },
+    {
+      "term": "al-mintaqa",
+      "meaning": "the belt = Orion's belt",
+      "domain": "astro",
+      "source": "alsufi",
+      "cons": "lmntq",
+      "n_shared": 2,
+      "exact": false
+    },
+    {
+      "term": "al-tariq",
+      "meaning": "the night-knocker = beta Per",
+      "domain": "astro",
+      "source": "alsufi",
+      "cons": "ltrq",
+      "n_shared": 2,
+      "exact": false
+    }
+  ],
+  "ayn_entries": [
+    {
+      "term": "al-sharatain",
+      "meaning": "the two signs (alpha/beta Ari)",
+      "cons": "lshrt",
+      "domain": "astro"
+    },
+    {
+      "term": "al-butain",
+      "meaning": "the little belly (delta Ari)",
+      "cons": "lbtn",
+      "domain": "astro"
+    },
+    {
+      "term": "ayn al-thawr",
+      "meaning": "eye of the bull (Hyades) = near Aldebaran",
+      "cons": "nlthr",
+      "domain": "astro_ayn"
+    },
+    {
+      "term": "ayn al-asad",
+      "meaning": "eye of the lion = epsilon Leonis",
+      "cons": "nlsd",
+      "domain": "astro_ayn"
+    },
+    {
+      "term": "ayn al-aqrab",
+      "meaning": "eye of the scorpion = pi Scorpii",
+      "cons": "nlqrb",
+      "domain": "astro_ayn"
+    },
+    {
+      "term": "ayn al-sagittarius",
+      "meaning": "eye of Sagittarius",
+      "cons": "nlsgt",
+      "domain": "astro_ayn"
+    },
+    {
+      "term": "ain al-maa",
+      "meaning": "water spring/eye of water",
+      "cons": "nlm",
+      "domain": "water_ayn"
+    },
+    {
+      "term": "ain al-shams",
+      "meaning": "eye of the sun = Heliopolis",
+      "cons": "nlshms",
+      "domain": "astro_ayn"
+    },
+    {
+      "term": "fons",
+      "meaning": "spring/fountain",
+      "cons": "fns",
+      "domain": "water"
+    },
+    {
+      "term": "sulfur",
+      "meaning": "sulfur (mineral spring)",
+      "cons": "slf",
+      "domain": "mineral"
+    },
+    {
+      "term": "ain",
+      "meaning": "eye/spring/source (Arabic/Heb)",
+      "cons": "n",
+      "domain": "water_ayn"
+    },
+    {
+      "term": "ayn",
+      "meaning": "eye/spring (Arabic)",
+      "cons": "n",
+      "domain": "water_ayn"
+    },
+    {
+      "term": "ayn",
+      "meaning": "eye/spring (Arabic)",
+      "cons": "n",
+      "domain": "anatomy_ayn"
+    }
+  ]
+}

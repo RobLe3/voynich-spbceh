@@ -1,0 +1,139 @@
+{
+  "n_B_packets": 439,
+  "sal_packets_found": 3,
+  "terminal_sal_count": 1,
+  "terminal_sal_rate": 0.3333333333333333,
+  "baseline_mean_pre_r2_rate": 0.2522272705438311,
+  "baseline_p90": 0.5,
+  "baseline_p95": 0.5,
+  "sal_pre_r2_rate": 0.3333333333333333,
+  "sal_count_pre_r2": 1,
+  "sal_count_in_payload": 3,
+  "top_20_pre_r2_tokens": [
+    {
+      "token": "ai!n",
+      "count_pre_r2": 2,
+      "count_in_payload": 3,
+      "pre_r2_rate": 0.6666666666666666
+    },
+    {
+      "token": "okol",
+      "count_pre_r2": 2,
+      "count_in_payload": 3,
+      "pre_r2_rate": 0.6666666666666666
+    },
+    {
+      "token": "sol",
+      "count_pre_r2": 10,
+      "count_in_payload": 16,
+      "pre_r2_rate": 0.625
+    },
+    {
+      "token": "dain",
+      "count_pre_r2": 3,
+      "count_in_payload": 6,
+      "pre_r2_rate": 0.5
+    },
+    {
+      "token": "okain",
+      "count_pre_r2": 3,
+      "count_in_payload": 6,
+      "pre_r2_rate": 0.5
+    },
+    {
+      "token": "ain",
+      "count_pre_r2": 2,
+      "count_in_payload": 4,
+      "pre_r2_rate": 0.5
+    },
+    {
+      "token": "qokol",
+      "count_pre_r2": 6,
+      "count_in_payload": 12,
+      "pre_r2_rate": 0.5
+    },
+    {
+      "token": "tol",
+      "count_pre_r2": 3,
+      "count_in_payload": 6,
+      "pre_r2_rate": 0.5
+    },
+    {
+      "token": "olol",
+      "count_pre_r2": 2,
+      "count_in_payload": 4,
+      "pre_r2_rate": 0.5
+    },
+    {
+      "token": "dai!n",
+      "count_pre_r2": 4,
+      "count_in_payload": 9,
+      "pre_r2_rate": 0.4444444444444444
+    },
+    {
+      "token": "qotal",
+      "count_pre_r2": 4,
+      "count_in_payload": 9,
+      "pre_r2_rate": 0.4444444444444444
+    },
+    {
+      "token": "qol",
+      "count_pre_r2": 14,
+      "count_in_payload": 34,
+      "pre_r2_rate": 0.4117647058823529
+    },
+    {
+      "token": "okar",
+      "count_pre_r2": 3,
+      "count_in_payload": 8,
+      "pre_r2_rate": 0.375
+    },
+    {
+      "token": "sai!n",
+      "count_pre_r2": 3,
+      "count_in_payload": 8,
+      "pre_r2_rate": 0.375
+    },
+    {
+      "token": "ol",
+      "count_pre_r2": 25,
+      "count_in_payload": 75,
+      "pre_r2_rate": 0.3333333333333333
+    },
+    {
+      "token": "l",
+      "count_pre_r2": 1,
+      "count_in_payload": 3,
+      "pre_r2_rate": 0.3333333333333333
+    },
+    {
+      "token": "l!chedy",
+      "count_pre_r2": 1,
+      "count_in_payload": 3,
+      "pre_r2_rate": 0.3333333333333333
+    },
+    {
+      "token": "sheor",
+      "count_pre_r2": 1,
+      "count_in_payload": 3,
+      "pre_r2_rate": 0.3333333333333333
+    },
+    {
+      "token": "daldy",
+      "count_pre_r2": 1,
+      "count_in_payload": 3,
+      "pre_r2_rate": 0.3333333333333333
+    },
+    {
+      "token": "sal",
+      "count_pre_r2": 1,
+      "count_in_payload": 3,
+      "pre_r2_rate": 0.3333333333333333
+    }
+  ],
+  "sal_mean_position": 0.3,
+  "pre_sal_terminal_context": {
+    "n1": [],
+    "n2": []
+  }
+}

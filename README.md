@@ -24,6 +24,8 @@ Four findings from `-ain` family consonant alignment against Arabic astronomical
 
 4. **Baseline limitation identified**: 90.5% of random stems match at score ≥ 0.5 — single-consonant alignments are not discriminating. Only 2-consonant exact matches are reportable. ROSETTA3b planned with full al-Sufi catalog (283 entries) and 2-consonant minimum threshold.
 
+Full analysis log: [`pilots/ROSETTA3_ain_alignment_log.md`](pilots/ROSETTA3_ain_alignment_log.md)
+
 ### ROSETTA2 / PILOT4 / PILOT5 batch (2026-03-19)
 
 Three positional findings:
