@@ -10,41 +10,42 @@ Structural and functional analysis of the Voynich Manuscript (Beinecke MS 408) u
 
 ---
 
-## Latest Results (2026-03-19)
+## Current Claim State (2026-03-19)
 
-### ROSETTA3b — Tier verdicts (completed 2026-03-19)
+All 29 claims are tracked in [`docs/CLAIM_REGISTRY.md`](docs/CLAIM_REGISTRY.md). Full proof tables are in [`annex_maps/ANNEX_B1–B8`](annex_maps/). Independent verification: see [Reproducing Results](#reproducing-the-613-fsa-conformance-result) and `annex_maps/ANNEX_B8_verification_index.md`.
 
-Full tier assessment with 200-entry lexicon (al-Sufi catalog, Latin balneological, Arabic/Hebrew), 2-consonant minimum, anti-overfitting rule, competing-reading comparison:
+### Claim status summary
+
+| Status | Count | Notes |
+|--------|-------|-------|
+| `CONFIRMED` | 21 | All structural, grammar, and section-level claims; sal enrichment and Tier 1 lexical |
+| `CONFIRMED + CROSS-TRANSCRIPTION_PENDING` | 2 | `laiin` LATE Stars (P2-CLAIM-011); `ai!n` LATE corpus-wide (P2-CLAIM-012) |
+| `PROVISIONAL` | 2 | `qokain` EARLY Stars (P2-CLAIM-010) — downgraded; R6 Hebrew prepositions (P2-CLAIM-018) |
+| `RETRACTED` | 1 | `sal` terminal-entity positional pattern (P2-CLAIM-015) |
+| `FALSIFIED` | 2 | Nested B-section packets (P2-CLAIM-008); folio-uniqueness as entity evidence (P2-CLAIM-017) |
+
+### ROSETTA3d — ZL cross-transliteration boundary test (2026-03-19)
+
+Cross-transliteration evaluation (Zandbergen-Landini ZL corpus, Eva- basic) reveals that the ZL tests constitute **boundary tests on token comparability**, not straightforward null replications. The ZL alphabet lacks the `!` glyph-variant marker used in Takahashi H (Eva-T).
+
+| Claim | Takahashi H result | ZL result | TC Status | Verdict |
+|-------|--------------------|-----------|-----------|---------|
+| `qokain` (no `!`) EARLY Stars | n=7, p=0.007 | ZL `qokain` = Takahashi `qokai!n`; n=22, p=0.234, CENTRAL | `TRANSCRIPTION-BOUND` | **PROVISIONAL** — different token tested in ZL; `qokai!n` (n=39) CENTRAL; full family (n=106) CENTRAL (p=0.365) |
+| `laiin` LATE Stars | n=5, p=0.007 | 0 in Stars packet payloads | `NOT_TESTABLE_ACROSS_ZL` | **CONFIRMED + CROSS-TRANSCRIPTION_PENDING** — ZL splits `laiin` in packet context; absence ≠ falsification |
+| `ai!n` LATE corpus-wide | n=23, p=0.005 | 0 occurrences | `NOT_TESTABLE_ACROSS_ZL` | **CONFIRMED + CROSS-TRANSCRIPTION_PENDING** — `!` marker absent from ZL Eva- |
+| Structural packet count | 896 packets | 886 packets | `DIRECT` | Full replication — structural claims are transliteration-stable |
+
+Full method: [`docs/TRANSCRIPTION_SENSITIVITY_METHOD.md`](docs/TRANSCRIPTION_SENSITIVITY_METHOD.md)
+
+### Tier verdicts — ROSETTA3b/3c (2026-03-19)
 
 | Token | Tier | Best reading | Key evidence |
 |-------|------|-------------|--------------|
-| `sal` | **Tier 1** | Latin *sal* / *salus* | sl = sl exact; Balneological section; no Arabic competitor for B-section domain |
-| `qotaiin` | Tier 2-3 | Arabic *qatr* (drop of water) | qt most selective (7/200 matches); Stars section consistent |
-| `lkaiin` | Tier 2 | al-kaff (Arabic, palm/Cas) or *lacus* (Latin) | lk ambiguous; 80% Stars favors Arabic over Latin bath terms |
-| `qol` | Rejected | — | Inner-function word behavioral profile overrides consonant matching |
-| `qokain` | **NULL confirmed** | qok- = INIT grammatical particle | Zero Arabic/Hebrew qk roots — exactly as expected for a grammatical morpheme |
-
-**Key retractions and weakenings:**
-- **`sal` terminal-entity claim downgraded**: ROSETTA4 shows the pre-R2 slot is dominated by structural tokens (sol=62.5%, qokol=50%, ol=33.3%). sal's 33.3% rate is above median but not exceptional. The terminal pattern is a candidate, not established.
-- **`lkaiin` → Latin *lacus* retracted as primary reading**: lkaiin is 80% Stars-section; *lacus* is a Balneological Latin term — section mismatch disqualifies it as the primary reading.
-- **2-con baseline still high (59.3%)**: Even at the stricter threshold, most 2-consonant stems generate matches by chance. Semantic + section + competing-reading tests are mandatory.
-
-Full tier log: [`pilots/ROSETTA3b_20260319/ROSETTA3b_verdicts.md`](pilots/ROSETTA3b_20260319/ROSETTA3b_verdicts.md)
-
-### ROSETTA3 / ROSETTA2 / PILOT4 / PILOT5 batch (2026-03-19)
-
-Positional findings:
-
-- **`qokain` EARLY-biased in Stars** (mean 0.248, *p* = 0.007), central in Balneological (0.558). Confirmed section-specific positional semantics.
-- **`ai!n` LATE-biased corpus-wide** (mean 0.686, *p* = 0.005). Terminal-entity suffix candidate.
-- **qok- = grammatical INIT particle**: NULL alignment across 200-entry lexicon confirms `qok-` encodes structure, not content. First morphological element of the Voynich system identified as purely grammatical.
-
-Refutations:
-- **Nested B-section packets**: REFUTED (0/67 sub-CLOSE found).
-- **Folio-uniqueness as entity evidence**: RETRACTED — baseline rate for all rare tokens.
-- **`lkaiin` → Latin *lacus* as primary**: RETRACTED — section mismatch.
-
-Active next step: **ROSETTA3c** — qotaiin/qt positional analysis in Stars packets; sal terminal re-test with consistent FSA parse; lkaiin competing-reading resolution.
+| `sal` | **Tier 1** | Latin *sal* / *salus* | sl = sl exact; Balneological section; no competing Arabic sl-stem for B context. Positional privilege **retracted** (ROSETTA3c: rate 1.19× baseline, below p90). |
+| `qotaiin` | Tier 3 | — | No positional slot (CENTRAL, p=0.388); consonant selectivity only |
+| `lkaiin` | Tier 2 | ambiguous: al-kaff (Arabic) vs *lacus* (Latin) | 80% Stars → Arabic favored; *lacus* primary reading **retracted** (section mismatch) |
+| `qol` | Rejected (lexical) | — | Inner-function word profile (Layer 2); no lexical alignment |
+| `qok-` prefix | **NULL confirmed** | grammatical INIT morpheme | Zero Arabic/Hebrew qk roots; NULL = expected for grammatical particle |
 
 ---
 
@@ -162,47 +163,78 @@ python p2_analysis.py \
 ├── LICENSE
 ├── data/
 │   ├── corpus_tokens.csv          # Parsed token-level corpus (37,045 tokens)
-│   └── corpus_lines.csv           # Line-level corpus
+│   ├── corpus_lines.csv           # Line-level corpus
+│   └── ZL3b-n.txt                 # Zandbergen-Landini ZL transliteration (Eva- basic; cross-transliteration)
 ├── scripts/
 │   ├── parse_corpus.py            # IVTFF → CSV parser
-│   ├── p1_cluster_analysis.py     # Role classification + positional stats
+│   ├── p1_cluster_analysis.py     # Role classification + positional stats (P1 primary)
 │   ├── p1_3_falsification.py      # Role inversion falsification test
 │   ├── p1_4_classification.py     # Leave-one-folio-out section classifier
-│   ├── p2_analysis.py             # FSA conformance + entropy decomposition
+│   ├── p1_5_cross_transliteration.py  # Cross-transliteration r=0.937 test
+│   ├── p2_analysis.py             # FSA conformance + entropy decomposition (P2 primary)
 │   ├── p2_5_6role_rerun.py        # Anti-projection test (31 alternatives)
 │   ├── DECODE1_sal_cluster.py     # sal co-occurrence analysis
 │   ├── DECODE2_stars_ain.py       # Stars -ain folio-anchor analysis
-│   ├── DECODE3_qol_cluster.py     # qol/ol correlation analysis
+│   ├── DECODE3_qol_cluster.py     # qol/ol inner-function correlation (P2-CLAIM-006)
 │   ├── MORPH1_ain_suffix_alignment.py
 │   ├── ROSETTA1_balneological_alignment.py
-│   ├── ROSETTA2_sal_packet_position.py  # sal packet enrichment + terminal position
-│   ├── ROSETTA3_ain_stem_alignment.py   # -ain stem consonant alignment vs Arabic/Latin lexicons
+│   ├── ROSETTA2_sal_packet_position.py      # sal enrichment; original terminal-position (RETRACTED)
+│   ├── ROSETTA3_ain_stem_alignment.py       # -ain stem alignment; partial R6 alignment
+│   ├── ROSETTA3b_expanded_alignment.py      # 200-entry lexicon alignment; sal Tier 1; qok- null
+│   ├── ROSETTA3c_qotaiin_positional.py      # Packet-internal position; qokain/laiin/ai!n/qotaiin/lkaiin
+│   ├── ROSETTA3d_stolfi_zl_replication.py   # ZL cross-transliteration boundary test (ROSETTA3d)
+│   ├── ROSETTA4_sal_terminal_baseline.py    # sal pre-R2 baseline; confirms RETRACTED-001
 │   ├── FRAME1_structural_token_alignment.py
-│   ├── ILLUS1_content_token_illustration_alignment.py
-│   ├── PILOT4_balneo_packet_structure.py # B-section packet grammar analysis
-│   └── PILOT5_ain_subfolio_analysis.py  # -ain positional sub-differentiation
+│   ├── ILLUS1_content_token_illustration_alignment.py  # 44 Rosetta candidates
+│   ├── PILOT4_balneo_packet_structure.py    # B-section packet grammar; FALSIFIED-001
+│   └── PILOT5_ain_subfolio_analysis.py      # -ain positional sub-differentiation; FALSIFIED-002
 ├── results/
-│   ├── p1_1_cluster_frequencies.csv     # 47 classified clusters with role assignments
-│   ├── p1_2_section_profiles.csv        # Normalized role frequencies by section
-│   ├── p1_3_falsification_v1.1_results.json
-│   ├── p1_4_classification_results.json # 64.7% accuracy result
-│   ├── p1_6_transition_matrix.json      # 6×6 Markov transition matrix
+│   ├── p1_1_cluster_frequencies.csv         # 47 classified clusters with role assignments (role_map)
+│   ├── p1_2_section_profiles.csv            # Normalized role frequencies by section
+│   ├── p1_3_falsification_v1.1_results.json # Inversion falsification 3/3 vs 0/3
+│   ├── p1_4_classification_results.json     # 64.7% section classification accuracy
+│   ├── p1_6_transition_matrix.json          # 6×6 Markov transition matrix (R2→R1 z=+9.71)
 │   ├── DECODE1_sal_results.json
 │   ├── DECODE2_stars_ain_results.json
-│   ├── DECODE3_qol_results.json
-│   ├── ROSETTA2_sal_packet_results.json
-│   ├── ROSETTA3_ain_alignment_results.json  # stem-consonant alignment; 90.5% baseline noted
-│   ├── PILOT4_balneo_packet_results.json
-│   └── PILOT5_ain_subfolio_results.json
+│   ├── DECODE3_qol_results.json             # qol first-payload OR=7.83 (P2-CLAIM-006)
+│   ├── ROSETTA2_sal_packet_results.json     # sal enrichment 2.08× (P2-CLAIM-013)
+│   ├── ROSETTA3_ain_alignment_results.json
+│   ├── ROSETTA3b_expanded_results.json      # Tier verdicts; sal Tier 1; qok- null (P2-CLAIM-014, 016)
+│   ├── ROSETTA3c_qotaiin_positional_results.json  # Positional claims 010, 011, 020, 021
+│   ├── ROSETTA3d_stolfi_zl_results.json     # ZL boundary test; qokain/laiin/ai!n (ROSETTA3d)
+│   ├── PILOT4_balneo_packet_results.json    # B-section 374/897 packets (P2-CLAIM-007, 008, 009)
+│   └── PILOT5_ain_subfolio_results.json     # ai!n LATE corpus-wide (P2-CLAIM-012, 017)
+├── annex_maps/
+│   ├── PAPER_TO_REPO_MAP.md                 # Section-by-section paper→repo traceability
+│   ├── ANNEX_B1_structural_paper1.md        # Proof table: Paper 1 structural claims
+│   ├── ANNEX_B2_positional_paper2.md        # Proof table: positional claims (token-level)
+│   ├── ANNEX_B3_lexical_candidates.md       # Proof table: lexical/semantic claims
+│   ├── ANNEX_B4_grammatical_null.md         # Proof table: grammar/null-root claims
+│   ├── ANNEX_B5_replication_crosstranscription.md  # Cross-transliteration outcomes
+│   ├── ANNEX_B6_retracted_falsified.md      # All retracted and falsified claims
+│   ├── ANNEX_B7_section_method.md           # Section-level and method-level claims
+│   └── ANNEX_B8_verification_index.md       # Master index: all 29 claims, repo paths, status
+├── docs/
+│   ├── CLAIM_REGISTRY.md                    # Per-claim registry (ID, level, status, TC, repo path)
+│   ├── RETRACTED_AND_FALSIFIED_CLAIMS.md    # Full record of retracted/falsified claims
+│   ├── TRANSCRIPTION_SENSITIVITY_METHOD.md  # Eva-T vs Eva- taxonomy; ZL boundary-test framework
+│   ├── R6_HEBREW_ALIGNMENT_METHOD.md        # R6 Hebrew preposition alignment method (P2-CLAIM-018)
+│   ├── CONSISTENCY_AUDIT_POST_ANNEX.md      # Full audit; readiness assessment for ROSETTA3d restart
+│   └── TABLE_FIGURE_TRACEABILITY.md         # Every table/figure traced to its source script
 └── pilots/
-    ├── folio_pilot_5folios.md          # Three-layer analysis: f75r, f88r, f103r, f111v, f114v
-    ├── stars_ain_alignment.md          # Stars -ain folio-anchor test (PILOT2)
-    ├── qol_ol_doublet.md               # qol/ol inner-packet doublet analysis (PILOT3)
-    ├── ROSETTA2_sal_packet_log.md      # sal packet-internal position analysis (ROSETTA2)
-    ├── ROSETTA3_ain_alignment_log.md   # -ain stem alignment; baseline problem; qokain null result
-    ├── PILOT4_balneo_packet_log.md     # Balneological packet structure analysis (PILOT4)
-    ├── PILOT5_ain_subfolio_log.md      # -ain positional sub-differentiation (PILOT5)
-    └── NEW_FINDINGS_2026-03-19.md      # Consolidated findings + falsifications (2026-03-19)
+    ├── PILOT1_five_folio_results.md
+    ├── PILOT2_stars_ain_log.md              # Stars -ain folio-anchor test; entity-label retraction
+    ├── PILOT3_qol_ol_log.md                 # qol/ol inner-packet doublet analysis
+    ├── PILOT4_balneo_packet_log.md          # B-section packets; nested-packet falsification
+    ├── PILOT5_ain_subfolio_log.md           # -ain positional sub-differentiation
+    ├── ROSETTA2_sal_packet_log.md           # sal enrichment; terminal-position (retracted)
+    ├── ROSETTA3_ain_alignment_log.md
+    ├── ROSETTA3b_expanded_alignment_log.md
+    ├── ROSETTA3b_20260319/                  # Tier verdicts; ROSETTA3b/3c results
+    ├── ROSETTA3d_20260319/                  # ZL boundary test; token identity freeze
+    │   ├── TOKEN_IDENTITY_FREEZE.md         # ai!n ≠ aiin ≠ laiin; p-value scope resolution
+    │   └── STOLFI_ZL_POSITIONAL_REPLICATION.md  # Full ROSETTA3d results
+    └── NEW_FINDINGS_2026-03-19.md           # Consolidated batch findings
 ```
 
 ---
