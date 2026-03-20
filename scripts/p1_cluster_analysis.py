@@ -124,6 +124,40 @@ def wilson_ci(k, n, z=1.96):
     return p, max(0, center - margin), min(1, center + margin)
 
 
+def kruskal_wallis(groups):
+    """Kruskal-Wallis H-test for k independent samples (stdlib-only).
+    groups: list of lists of numeric values.
+    Returns: (H, p, k, N)
+    """
+    k = len(groups)
+    ns = [len(g) for g in groups]
+    N = sum(ns)
+    if N == 0 or k < 2:
+        return 0.0, 1.0, k, N
+    # Build flat list with group identity preserved
+    all_obs = []
+    for gi, g in enumerate(groups):
+        for v in g:
+            all_obs.append((v, gi))
+    all_obs_sorted = sorted(all_obs, key=lambda x: x[0])
+    # Assign averaged ranks for tied values
+    ranks_by_group = [0.0] * k
+    i = 0
+    while i < N:
+        j = i
+        while j < N and all_obs_sorted[j][0] == all_obs_sorted[i][0]:
+            j += 1
+        avg_rank = (i + j + 1) / 2.0  # 1-indexed average rank
+        for idx in range(i, j):
+            ranks_by_group[all_obs_sorted[idx][1]] += avg_rank
+        i = j
+    H = 12.0 / (N * (N + 1)) * sum(
+        ranks_by_group[gi] ** 2 / ns[gi] for gi in range(k) if ns[gi] > 0
+    ) - 3 * (N + 1)
+    p = chi2_sf(H, k - 1)
+    return H, p, k, N
+
+
 def chi2_uniform(counts):
     """Chi-squared test for 3 positional categories vs uniform distribution.
     counts = [initial_count, medial_count, final_count] (or more)
@@ -525,8 +559,6 @@ def run_p1_2(tokens):
 
     # Kruskal-Wallis across all 8 sections for each role
     print("\n--- Kruskal-Wallis: role frequency variation across sections ---")
-    from research.D3_currier.d3_currier_analysis import kruskal_wallis
-
     kw_results = {}
     for role in ROLES:
         groups = []
@@ -578,11 +610,7 @@ if __name__ == "__main__":
     # P1.6
     count_matrix, prob_matrix, zscores = run_p1_6(tokens)
 
-    # P1.2 — import kruskal from D3 module
-    import sys
-    sys.path.insert(0, str(BASE_DIR))
-    from research.D3_currier.d3_currier_analysis import kruskal_wallis
-
+    # P1.2
     section_data, kw_results = run_p1_2(tokens)
 
     print("\n" + "="*70)

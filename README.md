@@ -24,6 +24,8 @@ All 30 claims are tracked in [`docs/CLAIM_REGISTRY.md`](docs/CLAIM_REGISTRY.md).
 | `RETRACTED` | 1 | `sal` terminal-entity positional pattern (P2-CLAIM-015) |
 | `FALSIFIED` | 2 | Nested B-section packets (P2-CLAIM-008); folio-uniqueness as entity evidence (P2-CLAIM-017) |
 
+These five status categories are mutually exclusive. They sum to 30 (= 22 + 2 + 3 + 1 + 2).
+
 ### ROSETTA3d — ZL cross-transliteration boundary test (2026-03-19)
 
 Cross-transliteration evaluation (Zandbergen-Landini ZL corpus, Eva- basic) reveals that the ZL tests constitute **boundary tests on token comparability**, not straightforward null replications. The ZL alphabet lacks the `!` glyph-variant marker used in Takahashi H (Eva-T).
@@ -33,7 +35,7 @@ Cross-transliteration evaluation (Zandbergen-Landini ZL corpus, Eva- basic) reve
 | `qokain` (no `!`) EARLY Stars | n=7, p=0.007 | ZL `qokain` = Takahashi `qokai!n`; n=22, p=0.234, CENTRAL | `TRANSCRIPTION-BOUND` | **PROVISIONAL** — different token tested in ZL; `qokai!n` (n=39) CENTRAL; full family (n=106) CENTRAL (p=0.365) |
 | `laiin` LATE Stars | n=5, p=0.007 | 0 in Stars packet payloads | `NOT_TESTABLE_ACROSS_ZL` | **CONFIRMED + CROSS-TRANSCRIPTION_PENDING** — ZL splits `laiin` in packet context; absence ≠ falsification |
 | `ai!n` LATE corpus-wide | n=23, p=0.005 | 0 occurrences | `NOT_TESTABLE_ACROSS_ZL` | **CONFIRMED + CROSS-TRANSCRIPTION_PENDING** — `!` marker absent from ZL Eva- |
-| Structural packet count | 896 packets | 886 packets | `DIRECT` | Full replication — structural claims are transliteration-stable |
+| Structural packet count | 897 packets (PILOT4) | 886 packets | `DIRECT` | Full replication — structural claims are transliteration-stable |
 
 Full method: [`docs/TRANSCRIPTION_SENSITIVITY_METHOD.md`](docs/TRANSCRIPTION_SENSITIVITY_METHOD.md)
 
@@ -55,7 +57,7 @@ The Voynich Manuscript has resisted decipherment for over a century. Rather than
 
 The central finding: EVA clusters exhibit **directional functional asymmetry** — their roles are not interchangeable without destroying structural coherence. The R2 (Closure-like) → R1 (Initiator-like) transition is the single strongest structural signal in the corpus (*z* = +9.75 vs. 1,000 shuffled baselines), anchoring a packet grammar that operates at the paragraph level. Paragraph-level FSA conformance reaches **61.3%**, exceeding the pre-registered 60% threshold.
 
-These findings are **compatible with multiple interpretive hypotheses** (recording system, Hebrew/Semitic cipher, structured notation) and do not claim to translate the manuscript. The contribution is structural: establishing that a real, reproducible, falsification-tested grammar exists — a necessary foundation for any subsequent interpretive work.
+These findings are **compatible with multiple interpretive hypotheses** (recording system, Hebrew/Semitic cipher, structured notation) and do not claim to translate the manuscript. The contribution is structural: establishing that a real, falsification-tested grammar exists — quantified by author-runnable scripts with claim-to-artifact traceability — a necessary foundation for any subsequent interpretive work.
 
 ---
 
@@ -157,9 +159,9 @@ python parse_corpus.py
 # 2. Cluster analysis → results/p1_1_cluster_frequencies.csv, results/p1_6_transition_matrix.json
 python p1_cluster_analysis.py
 
-# 3. FSA conformance + entropy → results/p2_*.json
+# 3. FSA conformance + entropy → results/p2_all_results.json
 python p2_analysis.py
-# Key output: paragraph_fsa_conformance = 0.613
+# Key output: p2_1.para_level.pct_conformant_trans = 61.3
 ```
 
 Scripts read inputs from `data/` and write outputs to `results/` relative to the repo root.
@@ -178,7 +180,7 @@ Expected metric values: `docs/EXPECTED_OUTPUTS.md`
 /
 ├── README.md
 ├── LICENSE
-├── requirements.txt               # pandas, numpy, scipy, scikit-learn
+├── requirements.txt               # pandas, numpy, scipy, scikit-learn (for peripheral scripts; core pipeline is stdlib-only)
 ├── data/
 │   ├── corpus_tokens.csv          # Parsed token-level corpus (37,045 tokens)
 │   ├── corpus_lines.csv           # Line-level corpus

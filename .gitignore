@@ -3,6 +3,14 @@
 *.pdf
 papers/
 
+# Corpus source — community-maintained data, not redistributed in this repo
+# Download from https://www.voynich.nu/transcr.html and place in data/
+data/Lsi_ivtff_0d_v4j_fixed.txt
+
+# Script-generated ancillary data files (not required for analysis)
+data/folio_metadata.json
+data/parse_stats.json
+
 # Python
 __pycache__/
 *.py[cod]
