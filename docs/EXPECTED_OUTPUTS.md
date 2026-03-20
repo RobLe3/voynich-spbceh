@@ -52,9 +52,11 @@
 | `results/p2_all_results.json` | `p2_3.daiin.CV` | 1.502 (clustered, not periodic) |
 | `results/p2_all_results.json` | `p2_4.H_structural` | 2.5953 bits (7-role model) |
 | `results/p2_all_results.json` | `p2_4.H_variant` | 2.4949 bits (7-role model) |
-| `results/p2_all_results.json` | `p2_5.original_ranks` | TS=12/31, Classification=6/31, Markov=5/31 (7-role) |
+| `results/p2_all_results.json` | `p2_5.original_ranks` | TS=12/31, Classification=6/31, Markov=7/31 (7-role; 200-permutation baseline) |
 
 **Note**: The 7-role model (p2_analysis.py) does NOT satisfy the entropy prediction (H_structural > H_variant). The 6-role model (p2_5_6role_rerun.py) does satisfy it. Paper 2 reports 6-role values.
+
+**Permutation count update (peer review response, 2026-03-20)**: Markov structure permutation count increased from 50 to 200 in `p2_analysis.py` (line 724) and `p2_5_6role_rerun.py` (`compute_mapping_scores`). Result files re-committed. The 7-role Markov rank shifted from 5/31 to 7/31; 6-role ranks unchanged (cls=3/31, markov=5/31). See Paper 2 Section 3 (Seven-role results) for updated values.
 
 ---
 

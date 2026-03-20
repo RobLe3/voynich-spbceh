@@ -444,8 +444,9 @@ See `docs/TRANSCRIPTION_SENSITIVITY_METHOD.md` for full documentation.
 - **Repo path**: `scripts/R6_hebrew_alignment.py`, `scripts/ROSETTA3_ain_stem_alignment.py` (partial)
 - **Output**: `results/R6_hebrew_alignment_results.json`
 - **Status**: `PROVISIONAL` — score not reproducible with confirmed role_map; original R6 pool definition required
+- **Peer review response (2026-03-20)**: Footnote added to Paper 2 §6.1 stating the 52.6% rate derives from a ~19-type preliminary pool, that the formal 3-type R6 set is not directly sufficient to reproduce it, and that this claim carries PROVISIONAL status. No status change.
 - **Transcription comparability**: `NORMALIZATION_REQUIRED`
-- **Last review**: 2026-03-19
+- **Last review**: 2026-03-20
 
 ---
 
