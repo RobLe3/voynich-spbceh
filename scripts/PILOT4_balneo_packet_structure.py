@@ -16,7 +16,7 @@ import pandas as pd
 import numpy as np
 import json
 from collections import Counter, defaultdict
-from scipy.stats import chi2_contingency, fisher_exact
+from scipy.stats import chi2_contingency, fisher_exact, mannwhitneyu
 
 # ── Load data ─────────────────────────────────────────────────────────────────
 df = pd.read_csv("../data/corpus_tokens.csv")
@@ -222,6 +222,24 @@ for (r1, fp, r2), n in template_counts.most_common(20):
     sec_str = ', '.join(f"{s}:{c}" for s,c in secs.most_common())
     print(f"  {r1:<20} {fp:<20} {r2:<15} {n:>5}  [{sec_str}]")
 
+# ── T1. Shedy-cluster folio-level enrichment: B vs H ─────────────────────────
+# Source: CON3 k-means Cluster 1 (100% shedy-closure packets, random_state=42)
+# Replicates CON5 TEST 3 figure: B mean=15.2%, H mean=1.5%, U=1943.5
+import os as _os
+_CON3_PATH = _os.path.join(_os.path.dirname(__file__), '../../research/CON3_packet_clusters.csv')
+import pandas as _pd_con3
+_con3 = _pd_con3.read_csv(_CON3_PATH)
+_folio_sec_con3 = _con3[['folio_id', 'section']].drop_duplicates().set_index('folio_id')['section'].to_dict()
+_folio_c1_rate = {}
+for _folio, _grp in _con3.groupby('folio_id'):
+    _folio_c1_rate[_folio] = (_grp['cluster'] == 1).sum() / len(_grp)
+shedy_b_rates  = [_v for _f, _v in _folio_c1_rate.items() if _folio_sec_con3.get(_f) == 'B']
+shedy_h_rates  = [_v for _f, _v in _folio_c1_rate.items() if _folio_sec_con3.get(_f) == 'H']
+shedy_mean_B   = float(np.mean(shedy_b_rates)) if shedy_b_rates else 0.0
+shedy_mean_H   = float(np.mean(shedy_h_rates)) if shedy_h_rates else 0.0
+shedy_elevation = shedy_mean_B / shedy_mean_H if shedy_mean_H > 0 else None
+U_shedy, p_shedy = mannwhitneyu(shedy_b_rates, shedy_h_rates, alternative='greater')
+
 # ── T3. INIT-bleed rates by section ──────────────────────────────────────────
 init_bleed_by_section = {}
 for _sec in ['B', 'S', 'H', 'A', 'P']:
@@ -260,6 +278,12 @@ results = {
     'top_b_enriched_first_payload': [(t, nb, no, OR) for t, nb, no, _, OR, p in enrichments[:10]],
     'qol_first_payload_OR':  float(_qol_enr[0]) if _qol_enr[0] is not None else None,
     'qol_first_payload_p':   float(_qol_enr[1]) if _qol_enr[1] is not None else None,
+    # T1 — shedy folio enrichment
+    'shedy_folio_B_mean':          shedy_mean_B,
+    'shedy_folio_H_mean':          shedy_mean_H,
+    'shedy_folio_elevation':       float(shedy_elevation) if shedy_elevation is not None else None,
+    'shedy_folio_mannwhitney_U':   float(U_shedy),
+    'shedy_folio_mannwhitney_p':   float(p_shedy),
     # T2 — nested packet test
     'nested_n_init_first_B':       nested_n_init_first_B,
     'nested_n_sub_close_B':        nested_n_sub_close_B,

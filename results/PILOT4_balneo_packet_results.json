@@ -90,14 +90,14 @@
   "qokain_b_packets": 0,
   "top_b_enriched_first_payload": [
     [
-      "otedy",
-      4,
+      "dol",
+      3,
       0,
       Infinity
     ],
     [
-      "dol",
-      3,
+      "otedy",
+      4,
       0,
       Infinity
     ],
@@ -132,19 +132,19 @@
       4.675324675324675
     ],
     [
+      "okai!n",
+      3,
+      1,
+      4.6050955414012735
+    ],
+    [
       "olkedy",
       3,
       1,
       4.6050955414012735
     ],
     [
-      "sheckhy",
-      3,
-      1,
-      4.6050955414012735
-    ],
-    [
-      "okai!n",
+      "dy",
       3,
       1,
       4.6050955414012735
@@ -152,6 +152,11 @@
   ],
   "qol_first_payload_OR": 7.833876221498372,
   "qol_first_payload_p": 0.002419573712194575,
+  "shedy_folio_B_mean": 0.1520720170259139,
+  "shedy_folio_H_mean": 0.014937106918238994,
+  "shedy_folio_elevation": 10.180821350366447,
+  "shedy_folio_mannwhitney_U": 1943.5,
+  "shedy_folio_mannwhitney_p": 2.5343349451674995e-19,
   "nested_n_init_first_B": 67,
   "nested_n_sub_close_B": 0,
   "init_bleed_by_section": {
