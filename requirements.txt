@@ -1,6 +1,6 @@
 # External dependencies for SPBCEH analysis scripts
 #
-# Note: the core 5-step reproduction pipeline (reproduce.sh: parse_corpus.py,
+# Note: the core 6-step reproduction pipeline (reproduce.sh: parse_corpus.py,
 # p1_cluster_analysis.py, p1_3_falsification.py, p1_4_classification.py,
 # p2_analysis.py, p2_5_6role_rerun.py) uses only Python standard library.
 # The packages below are required only for peripheral analysis scripts:

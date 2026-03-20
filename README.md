@@ -125,7 +125,7 @@ LAYER 3 — LEXICAL ENTITIES (section- and folio-specific vocabulary)
 **Title**: Transition Grammar and Cognitive Domain Profiles in the Voynich Manuscript: Evidence for a Functional Recording System from Six-Role Cluster Analysis
 **Version**: v0.94 — Manuscript Draft, March 2026
 **Compiled**: 17 pages; 0 LaTeX errors
-**Claim IDs**: P2-CLAIM-001 through P2-CLAIM-022 (22 confirmed, 2 provisional, 3 retracted/falsified)
+**Claim IDs**: P2-CLAIM-001 through P2-CLAIM-022 (14 confirmed, 2 confirmed/cross-transcription-pending, 3 provisional, 1 retracted, 2 falsified)
 
 **Key results**:
 - Paragraph-level FSA conformance: **61.3%** (pre-registered threshold: 60%)
