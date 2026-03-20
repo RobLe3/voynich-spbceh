@@ -226,7 +226,7 @@ See `docs/TRANSCRIPTION_SENSITIVITY_METHOD.md` for full documentation.
 - **Claim level**: `TOKEN-LEVEL`
 - **Paper location**: Paper 2 §4.3
 - **Evidence class**: `STRUCTURAL`
-- **Observed result**: 10× relative rate; mean per-folio cluster-1 rate 15.2% (B, n=20 folios) vs. 1.5% (H, n=106 folios with packets); Mann-Whitney U=1943.5, p<0.0001; NMI(cluster, illustration type)=0.107 across 20 IA3 folios
+- **Observed result**: 10× relative rate; mean per-folio cluster-1 rate 15.2% (B, n=20 folios) vs. 1.5% (H, n=106 folios with packets); Mann-Whitney U=1943.5, p<0.0001; NMI(cluster, illustration type)=0.107 across 14 IA3 folios with packet assignments (6 of 20 IA3 folios have no CON3 packets)
 - **Annex ref**: Annex B, Table B.4
 - **Repo path**: `research/CON3_packet_semantic_clustering.py` → `research/CON3_packet_clusters.csv` → `research/CON5_illustration_packet_correlation.py`
 - **Output**: `research/CON3_packet_clusters.csv` (1119 packets × cluster assignments); `research/CON3_CON4_CON5_log.md` §CON.5 Test 3
