@@ -12,7 +12,7 @@ Structural and functional analysis of the Voynich Manuscript (Beinecke MS 408) u
 
 ## Current Claim State (2026-03-19)
 
-All 30 claims are tracked in [`docs/CLAIM_REGISTRY.md`](docs/CLAIM_REGISTRY.md). Full proof tables are in [`annex_maps/ANNEX_B1–B8`](annex_maps/). Claim-to-artifact map: see [Reproducing Results](#reproducing-the-613-fsa-conformance-result) and `annex_maps/ANNEX_B8_verification_index.md`.
+All 30 claims are tracked in [`docs/CLAIM_REGISTRY.md`](docs/CLAIM_REGISTRY.md). Full proof tables are in [`annex_maps/ANNEX_B1–B8`](annex_maps/). Claim-to-artifact map: see [Reproducing Results](#reproducing-the-primary-results-613-fsa-conformance-and-647-classification-accuracy) and `annex_maps/ANNEX_B8_verification_index.md`.
 
 ### Claim status summary
 
@@ -146,7 +146,7 @@ LAYER 3 — LEXICAL ENTITIES (section- and folio-specific vocabulary)
 
 ---
 
-## Reproducing the 61.3% FSA Conformance Result
+## Reproducing the Primary Results (61.3% FSA Conformance and 64.7% Classification Accuracy)
 
 ```bash
 # Place Lsi_ivtff_0d_v4j_fixed.txt in data/ (download from voynich.nu/transcr.html)
@@ -162,13 +162,17 @@ python p1_cluster_analysis.py
 # 3. FSA conformance + entropy → results/p2_all_results.json
 python p2_analysis.py
 # Key output: p2_1.para_level.pct_conformant_trans = 61.3
+
+# 4. 6-role anti-projection test → results/p2_5_v2_6role_results.json
+python p2_5_6role_rerun.py
+# Key output: p14_cls_accuracy = 0.647
 ```
 
 Scripts read inputs from `data/` and write outputs to `results/` relative to the repo root.
 
 **Requirements**: Python ≥ 3.9; install dependencies with `pip install -r requirements.txt`
 
-Full pipeline: `bash scripts/reproduce.sh` (runs steps 1–5 in order).
+Full pipeline: `bash scripts/reproduce.sh` (runs steps 1–6 in order).
 Verify existing outputs: `python scripts/smoke_test.py`
 Expected metric values: `docs/EXPECTED_OUTPUTS.md`
 
@@ -186,7 +190,7 @@ Expected metric values: `docs/EXPECTED_OUTPUTS.md`
 │   ├── corpus_lines.csv           # Line-level corpus
 │   └── ZL3b-n.txt                 # Zandbergen-Landini ZL transliteration (Eva- basic; cross-transliteration)
 ├── scripts/
-│   ├── reproduce.sh               # Full pipeline runner (steps 1–5 in order)
+│   ├── reproduce.sh               # Full pipeline runner (steps 1–6 in order)
 │   ├── smoke_test.py              # Verify output artifacts + headline metrics
 │   ├── parse_corpus.py            # IVTFF → CSV parser
 │   ├── p1_cluster_analysis.py     # Role classification + positional stats (P1 primary)
