@@ -719,9 +719,10 @@ def compute_mapping_scores(cluster_to_role_map, lines_data_in):
         for r2 in all_roles_in_map:
             obs_bigrams_flat[(r1, r2)] = bigrams[r1][r2]
 
-    # Shuffled distribution (50 permutations for speed)
+    # Shuffled distribution (200 permutations for Markov z-score stability)
+    # Increased from 50 to 200 per reviewer recommendation (stability of Markov z-scores)
     shuffled_counts = defaultdict(list)
-    for _ in range(50):
+    for _ in range(200):
         sb = defaultdict(lambda: defaultdict(int))
         for ml in mapped_lines:
             rseq = list(ml["role_seq"])

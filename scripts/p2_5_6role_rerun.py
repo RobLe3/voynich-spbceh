@@ -85,7 +85,8 @@ def shannon_entropy(counts):
     if total == 0: return 0.0
     return sum(-c/total * math.log2(c/total) for c in counts.values() if c > 0)
 
-def compute_mapping_scores(cluster_to_role_map, lines_data_in, n_shuffle=50):
+def compute_mapping_scores(cluster_to_role_map, lines_data_in, n_shuffle=200):
+    # n_shuffle=200 (increased from 50 for Markov structure stability)
     """Score a mapping on TS, classification accuracy, Markov structure."""
     all_roles = sorted(set(cluster_to_role_map.values()))
 
@@ -480,7 +481,7 @@ results_6 = []
 for idx, (name, mapping) in enumerate(all_mappings_6):
     if idx % 5 == 0:
         print(f"  [{idx+1}/{len(all_mappings_6)}] {name}...")
-    scores = compute_mapping_scores(mapping, lines_data, n_shuffle=50)
+    scores = compute_mapping_scores(mapping, lines_data, n_shuffle=200)
     results_6.append({
         "name": name,
         "is_original": name == "6ROLE_ORIGINAL",
