@@ -228,6 +228,8 @@ b_r1 = Counter(p['r1'] for p in b_pkts)
 b_r2 = Counter(p['r2'] for p in b_pkts)
 b_first_payload = Counter(p['first_payload'] for p in b_pkts if p['payload_len'] > 0)
 
+_qol_enr = next(((OR, p) for t, nb, no, _, OR, p in enrichments if t == 'qol'), (None, None))
+
 results = {
     'total_packets': len(packets),
     'b_packets': len(b_pkts),
@@ -236,6 +238,8 @@ results = {
     'b_top_first_payload': b_first_payload.most_common(10),
     'qokain_b_packets': len(b_qokain_pkts),
     'top_b_enriched_first_payload': [(t, nb, no, OR) for t, nb, no, _, OR, p in enrichments[:10]],
+    'qol_first_payload_OR':  float(_qol_enr[0]) if _qol_enr[0] is not None else None,
+    'qol_first_payload_p':   float(_qol_enr[1]) if _qol_enr[1] is not None else None,
 }
 
 with open('../results/PILOT4_balneo_packet_results.json', 'w') as f:

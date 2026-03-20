@@ -197,6 +197,14 @@ b_count = (qol_rows['section'] == 'B').sum()
 total_b_content = df[(df['section']=='B') & (~df['token'].isin(STRUCT))].shape[0]
 b_rate = b_count / total_b_content * 1000
 
+# Capture the qol-ol correlation specifically
+qol_ol_r = None
+for tok in ['ol']:
+    p1 = variant_profiles.get('qol')
+    p2 = variant_profiles.get(tok)
+    if p1 is not None and p2 is not None:
+        qol_ol_r = float(np.corrcoef(p1, p2)[0, 1])
+
 results = {
     'qol_total': int(len(qol_rows)),
     'qol_B_count': int(b_count),
@@ -207,6 +215,7 @@ results = {
     'unique_content_following_B': int(unique_content),
     'lines_both_qol_sal': int(len(lines_with_both)),
     'lines_both_qol_sal_B': int(len(lines_with_both_B)),
+    'qol_ol_pearson_r': qol_ol_r,
 }
 with open('DECODE3_qol_results.json', 'w') as f:
     json.dump(results, f, indent=2)

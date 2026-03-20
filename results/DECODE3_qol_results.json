@@ -7,5 +7,6 @@
   "struct_following_B": 53,
   "unique_content_following_B": 39,
   "lines_both_qol_sal": 3,
-  "lines_both_qol_sal_B": 3
+  "lines_both_qol_sal_B": 3,
+  "qol_ol_pearson_r": 0.9400341083286796
 }

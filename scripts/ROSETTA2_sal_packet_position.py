@@ -67,6 +67,11 @@ for sec in sorted(total_by_section.index):
     enrich = rate / overall_rate if overall_rate > 0 else 0
     print(f"  {sec:<10} {n_sal:>6} {n_total:>8} {rate:>8.4f} {enrich:>10.2f}×")
 
+_b_sal   = sal_by_section.get('B', 0)
+_b_total = total_by_section.get('B', 1)
+_b_rate  = _b_sal / _b_total if _b_total > 0 else 0
+sal_B_enrichment = _b_rate / overall_rate if overall_rate > 0 else None
+
 # ── 2. Reconstruct packets within paragraphs ──────────────────────────────────
 print("\n\n2. PACKET RECONSTRUCTION & sal POSITION WITHIN PACKETS")
 print("-" * 60)
@@ -331,6 +336,7 @@ results = {
     'top_following_tokens': next_toks.to_dict(),
     'preceding_role_distribution': prev_roles.to_dict(),
     'following_role_distribution': next_roles.to_dict(),
+    'sal_B_section_enrichment': float(sal_B_enrichment) if sal_B_enrichment else None,
 }
 
 with open('../results/ROSETTA2_sal_packet_results.json', 'w') as f:
