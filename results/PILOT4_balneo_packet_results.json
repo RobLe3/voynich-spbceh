@@ -132,24 +132,53 @@
       4.675324675324675
     ],
     [
-      "sheckhy",
-      3,
-      1,
-      4.6050955414012735
-    ],
-    [
       "olkedy",
       3,
       1,
       4.6050955414012735
     ],
     [
-      "dy",
+      "sheckhy",
+      3,
+      1,
+      4.6050955414012735
+    ],
+    [
+      "okai!n",
       3,
       1,
       4.6050955414012735
     ]
   ],
   "qol_first_payload_OR": 7.833876221498372,
-  "qol_first_payload_p": 0.002419573712194575
+  "qol_first_payload_p": 0.002419573712194575,
+  "nested_n_init_first_B": 67,
+  "nested_n_sub_close_B": 0,
+  "init_bleed_by_section": {
+    "B": {
+      "n_packets": 374,
+      "n_init_first": 67,
+      "rate": 0.1791
+    },
+    "S": {
+      "n_packets": 341,
+      "n_init_first": 27,
+      "rate": 0.0792
+    },
+    "H": {
+      "n_packets": 94,
+      "n_init_first": 6,
+      "rate": 0.0638
+    },
+    "A": {
+      "n_packets": 1,
+      "n_init_first": 0,
+      "rate": 0.0
+    },
+    "P": {
+      "n_packets": 29,
+      "n_init_first": 0,
+      "rate": 0.0
+    }
+  }
 }

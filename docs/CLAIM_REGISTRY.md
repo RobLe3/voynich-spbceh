@@ -226,12 +226,13 @@ See `docs/TRANSCRIPTION_SENSITIVITY_METHOD.md` for full documentation.
 - **Claim level**: `TOKEN-LEVEL`
 - **Paper location**: Paper 2 §4.3
 - **Evidence class**: `STRUCTURAL`
-- **Observed result**: 10× relative rate; mean per-folio 15.2% vs. 1.5%
+- **Observed result**: 10× relative rate; mean per-folio 15.2% vs. 1.5%; Mann-Whitney U=1943.5, p<0.0001
 - **Annex ref**: Annex B, Table B.4
 - **Repo path**: `scripts/p2_analysis.py`
 - **Status**: `CONFIRMED`
 - **Transcription comparability**: `DIRECT`
-- **Last review**: 2026-03-19
+- **Last review**: 2026-03-20
+- **Traceability note**: OPEN GAP (2026-03-20 audit). No script in the repo reproduces U=1943.5 or H_mean=1.5%. The paper describes a k-means packet-cluster analysis (k=8, six R2 token identity features) whose code and cluster assignments have not survived. The metric `shedy/(INIT+CLOSE)` per folio reproduces B_mean=15.3%≈15.2% but gives H_mean=2.3% and U=2375. All simple packet-rate or token-rate variants fail to reproduce the H value or U simultaneously. The directional finding (shedy strongly elevated in B vs H, p<0.0001) is robust across all tested metrics; only the precise magnitude values (1.5%, 10×, U=1943.5) are not reproducible from surviving code. This gap is noted; the claim status remains CONFIRMED on the basis of the directional signal. The LaTeX comment at Paper 2 line 371 misassigns this claim to P2-CLAIM-007 and to PILOT4; the correct ID is P2-CLAIM-004 and the correct script is p2_analysis.py.
 
 ---
 

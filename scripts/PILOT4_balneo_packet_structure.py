@@ -222,6 +222,26 @@ for (r1, fp, r2), n in template_counts.most_common(20):
     sec_str = ', '.join(f"{s}:{c}" for s,c in secs.most_common())
     print(f"  {r1:<20} {fp:<20} {r2:<15} {n:>5}  [{sec_str}]")
 
+# ── T3. INIT-bleed rates by section ──────────────────────────────────────────
+init_bleed_by_section = {}
+for _sec in ['B', 'S', 'H', 'A', 'P']:
+    _sec_pkts = [p for p in packets if p['section'] == _sec]
+    if _sec_pkts:
+        _n_init_first = sum(1 for p in _sec_pkts
+                            if p['payload_roles'] and p['payload_roles'][0] == 'INIT')
+        init_bleed_by_section[_sec] = {
+            'n_packets': len(_sec_pkts),
+            'n_init_first': _n_init_first,
+            'rate': _n_init_first / len(_sec_pkts),
+        }
+
+# ── T2. Nested packet test ────────────────────────────────────────────────────
+_b_with_payload = [p for p in packets if p['section'] == 'B' and p['payload_len'] > 0]
+_b_init_first   = [p for p in _b_with_payload
+                   if p['payload_roles'] and p['payload_roles'][0] == 'INIT']
+nested_n_init_first_B = len(_b_init_first)
+nested_n_sub_close_B  = sum(1 for p in _b_init_first if 'CLOSE' in p['payload_roles'])
+
 # ── 8. Save summary results ───────────────────────────────────────────────────
 b_pkts = [p for p in packets if p['section'] == 'B']
 b_r1 = Counter(p['r1'] for p in b_pkts)
@@ -240,6 +260,14 @@ results = {
     'top_b_enriched_first_payload': [(t, nb, no, OR) for t, nb, no, _, OR, p in enrichments[:10]],
     'qol_first_payload_OR':  float(_qol_enr[0]) if _qol_enr[0] is not None else None,
     'qol_first_payload_p':   float(_qol_enr[1]) if _qol_enr[1] is not None else None,
+    # T2 — nested packet test
+    'nested_n_init_first_B':       nested_n_init_first_B,
+    'nested_n_sub_close_B':        nested_n_sub_close_B,
+    # T3 — INIT-bleed by section
+    'init_bleed_by_section':       {sec: {'n_packets': v['n_packets'],
+                                          'n_init_first': v['n_init_first'],
+                                          'rate': round(v['rate'], 4)}
+                                    for sec, v in init_bleed_by_section.items()},
 }
 
 with open('../results/PILOT4_balneo_packet_results.json', 'w') as f:
