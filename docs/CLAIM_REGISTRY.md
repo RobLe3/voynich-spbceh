@@ -401,6 +401,7 @@ See `docs/TRANSCRIPTION_SENSITIVITY_METHOD.md` for full documentation.
 - **Original result**: ROSETTA2: 4/17 = 24% pre-R2; cited as terminal-entity evidence
 - **Falsification**: ROSETTA3c (n=374 B packets, consistent FSA): sal pre-R2 rate = 0.200 (2/10), baseline mean = 0.169, baseline p90 = 0.286; sal is 1.19× above mean but below p90 — not exceptional. Pre-R2 slot dominated by structural tokens (sol: 62.5%, qokol: 50%, ol: 33.3%).
 - **Replacement**: No terminal-entity positional claim; sal Tier 1 status based on consonant alignment only (P2-CLAIM-014)
+- **ROSETTA4 note (2026-03-20)**: ROSETTA4 (Ulugh Beg Zij + Syriac medical vocab) was planned as a next step after ROSETTA3d to test sal against additional medieval vocabulary lists. Not yet executed. If executed, any result should update P2-CLAIM-014 (not this retracted entry).
 - **See**: `docs/RETRACTED_AND_FALSIFIED_CLAIMS.md` → RETRACTED-001
 - **Status**: `RETRACTED` (removed from Paper 2 v0.94)
 - **Transcription comparability**: `NOT_APPLICABLE`
@@ -460,9 +461,10 @@ See `docs/TRANSCRIPTION_SENSITIVITY_METHOD.md` for full documentation.
 - **Observed result**: 44 tokens meeting the threshold
 - **Repo path**: `scripts/ILLUS1_content_token_illustration_alignment.py`
 - **Note**: Illustration-type data quality dependency — not fully validated
+- **ILLUS1 morphological fingerprint note (2026-03-20)**: ILLUS1 also computes morphological fingerprints for each illustration type (top suffix profiles by type). This is a supporting finding: botanical-single folios favor `-aiin/-ain` suffixes; balneological folios favor `-edy/-ody` suffixes. This fingerprint was used informally to validate the illustration-type classification but is not a separate registered claim. If formalized, it would be `P2-CLAIM-019b`.
 - **Status**: `PROVISIONAL` (enrichment confirmed; illustration-type ground truth quality unclear)
 - **Transcription comparability**: `NORMALIZATION_REQUIRED`
-- **Last review**: 2026-03-19
+- **Last review**: 2026-03-20
 
 ---
 
@@ -509,6 +511,65 @@ See `docs/TRANSCRIPTION_SENSITIVITY_METHOD.md` for full documentation.
 
 ---
 
+### P2-CLAIM-023
+- **Statement**: Unsupervised k-means clustering (k=2) of Herbal section folios using the six-dimensional role frequency vector alone recovers the Currier A/B dialectal grouping at 0.848 purity.
+- **Claim level**: `SECTION-LEVEL`
+- **Paper location**: Paper 2 §4.3 (Domain Coherence as Structural Evidence)
+- **Evidence class**: `STRUCTURAL`, `REPLICATION`
+- **Observed result**: k=2 clustering of 125 Herbal folios; Cluster 1 (n=47, Currier B): R1=0.151, R2=0.207, R4=0.286; Cluster 2 (n=78, Currier A): R4=0.757. Silhouette score=0.455. Currier alignment purity=0.848.
+- **Null model**: Purity chance baseline ≈ 0.50 for balanced 2-class grouping; purity=0.848 is strongly above chance.
+- **Repo path**: `research/loop3b/loop3b_analysis.py` (task 3b.5)
+- **Output**: `research/loop3b/3b5_clustering_results.json`
+- **Status**: `CONFIRMED`
+- **Transcription comparability**: `DIRECT`
+- **Last review**: 2026-03-20
+
+---
+
+### P2-CLAIM-024
+- **Statement**: Zodiac section R1 (Initiator-like) rate is 0.5% of classified tokens (n=1 of 205), 9× suppressed relative to the corpus mean; R2→R1 transition rate is 3.6% vs. corpus-wide 32.0% (9× suppressed).
+- **Claim level**: `SECTION-LEVEL`
+- **Paper location**: Paper 2 §4.2 (Table 2), §4.2 prose
+- **Evidence class**: `STRUCTURAL`
+- **Observed result**: Total Zodiac tokens 1,323 (15.5% classified = 205 role tokens); R1: n=1, rate=0.5%; R2→R1 transition: 3.6% vs. 32.0% corpus-wide; Zodiac structurally closest to Stars section (L2=0.295).
+- **Note**: Paper 2 §4.2 prose previously cited "< 0.1%" (incorrect: this used total tokens as denominator rather than classified tokens). Corrected to 0.5% of classified tokens (2026-03-20).
+- **Repo path**: `research/loop3b/loop3b_analysis.py` (task 3b.7)
+- **Output**: `research/loop3b/3b7_zodiac_analysis.json`
+- **Status**: `CONFIRMED`
+- **Transcription comparability**: `DIRECT`
+- **Last review**: 2026-03-20
+
+---
+
+### P2-CLAIM-025
+- **Statement**: Multi-scale CLOSE→INIT transition signal: paragraph-boundary R2→R1 occurs at 26.2% (11/42) vs. null 13.3% (z=+2.47); line-boundary signal directionally present but below significance (z=+1.87).
+- **Claim level**: `METHOD-LEVEL`
+- **Paper location**: Paper 2 §3.3 (Conformance Results)
+- **Evidence class**: `STRUCTURAL`
+- **Observed result**: Token level: z=+9.71 (P1-CLAIM-002); line-boundary: 145/600=24.2% vs. 21.0% expected, z=+1.87; paragraph-boundary: 11/42=26.2% vs. 13.3% expected, z=+2.47. 2/3 scales significant.
+- **Repo path**: `research/loop3b/loop3b_analysis.py` (task 3b.F2)
+- **Output**: `research/loop3b/3bF2_section_params.json`
+- **Status**: `CONFIRMED` (2/3 scales; line-boundary directional only)
+- **Transcription comparability**: `DIRECT`
+- **Last review**: 2026-03-20
+
+---
+
+### P2-CLAIM-026
+- **Statement**: Universal content tokens (appearing in all 8 sections) show cross-section cosine similarity 0.045, below permutation null 0.102; all 11 universal tokens VARIABLE. Rules out fixed-meaning model.
+- **Claim level**: `TOKEN-LEVEL`
+- **Paper location**: Paper 2 §4.3 (Domain Coherence as Structural Evidence)
+- **Evidence class**: `STRUCTURAL`, `NEGATIVE`
+- **Observed result**: 11 universal content tokens; mean pairwise cosine=0.045 (median=0.045); null mean=0.102; FIXED (≥0.5): 0/11; VARIABLE (<0.3): 11/11
+- **Null model**: 500-shuffle permutation of following-token pool across sections
+- **Repo path**: `research/CON4_cross_section_identity.py`
+- **Output**: `research/CON4_cross_section_identity_results.json` (if exists)
+- **Status**: `CONFIRMED`
+- **Transcription comparability**: `DIRECT`
+- **Last review**: 2026-03-20
+
+---
+
 ## NEGATIVE RESULTS SUMMARY
 
 | Claim ID | Statement | Status |
@@ -520,3 +581,64 @@ See `docs/TRANSCRIPTION_SENSITIVITY_METHOD.md` for full documentation.
 | P2-CLAIM-020 | qotaiin positional slot | `CONFIRMED` (null; Tier 3) |
 | P2-CLAIM-021 | lkaiin positional slot | `CONFIRMED` (null; Tier 2 unresolved) |
 | P2-CLAIM-016 | qok- lexical alignment | `CONFIRMED` (null = expected) |
+| P2-CLAIM-026 | Universal content tokens VARIABLE (cosine 0.045 vs null 0.102) | `CONFIRMED` (rules out fixed-meaning) |
+
+---
+
+## SUPPORTING ANALYSIS REGISTRY
+
+These entries document working analyses from the `research/` directory that do not appear as standalone formal claims in the papers but provide methodological support or negative/partial results that informed published claims.
+
+### SUPP-CON1
+- **Analysis**: Section vocabulary distinctness (CON1)
+- **Finding**: 35/50 top content tokens (70%) show section-specific frequency distributions (chi-square p<0.01). Local bigram context shift test: 9/50 (18%) significant, below 30% criterion — insufficient statistical power given 3-15 observations per token per section.
+- **Supports**: P2-CLAIM-003 (section classification), domain profile claims
+- **Verdict**: Section-level context-dependence CONFIRMED; local bigram polysemy UNDETERMINED (power issue)
+- **Repo path**: `research/CON1_context_dependent_tokens.py`
+- **Output**: `research/CON1_context_results.json`
+
+### SUPP-CON2
+- **Analysis**: Morphological decomposition (CON2)
+- **Finding**: Vocabulary compression 9,409 → 5,333 core types (1.76×); hapax rate barely changes (78% → 76%). `-dy` suffix strongly section-specific: Biological 1.87×, Herbal 0.74×, Pharmaceutical 0.59× (chi2=312.79, p≈0).
+- **Supports**: P2-CLAIM-022 (daiin content anchoring), three-layer model discussion
+- **Verdict**: Morphological structure real but content diversity driven by root diversity, not only affixation
+- **Repo path**: `research/CON2_morphological_decomposition.py`
+- **Output**: `research/CON2_morphology_results.json`
+
+### SUPP-CT1
+- **Analysis**: Content token deep analysis (CT1)
+- **Finding**: 70-84% of content token types are exclusive to a single line position (initial=71.9%, medial=83.9%, final=74.2%). Mean token length: 5.78 chars, consistent across sections. Bigram entropy ≈ max (artifact of 78% hapax rate, not independent evidence of randomness).
+- **Supports**: Three-layer model (layer 3 lexical entity characterization), IA5 semantic validation
+- **Verdict**: Position-specific vocabulary is real; bigram structure not independently informative at current corpus size
+- **Repo path**: `research/CT1_content_token_analysis.py`
+- **Output**: `research/CT1_content_token_results.json`
+
+### SUPP-IA4
+- **Analysis**: Language comparison (IA4)
+- **Finding**: Content layer Zipf exponent 0.555 (below language range 0.90–1.15); structural layer Zipf=1.028 (within range). Hapax ratio 78.0% (far above language range 0.40–0.61). Hebrew cipher z-score (external reference, voynich-toolkit) = 3.6–4.4. Verdict: AMBIGUOUS — some language-like metrics, others atypical.
+- **Supports**: Paper 2 §6 (alternative hypotheses); informed PROVISIONAL status of P2-CLAIM-018
+- **Verdict**: AMBIGUOUS — neither state-log nor natural language definitively supported by language statistics alone
+- **Repo path**: `research/IA4_language_comparison_log.md` (results from external voynich-toolkit reference)
+
+### SUPP-IA5
+- **Analysis**: Semantic label validation (IA5)
+- **Finding**: 1/4 semantic sub-label predictions confirmed (V4a shedy section association; p=0.0000). V1 (shol astronomical), V2 (daiin domain-neutral), V3 (ykchdy terminal) all FAILED.
+- **Supports**: P1-CLAIM-001 (six-role model preferred over seven-role); drove ACT+MODE → CONTENT merger
+- **Verdict**: Seven-role semantic sub-labels have minimal predictive power; six-role model is the empirically supported taxonomy
+- **Repo path**: `research/IA5_semantic_validation_log.md`
+
+### SUPP-LC1
+- **Analysis**: Hebrew cipher structural test (LC1)
+- **Finding**: Direct Hebrew grammar hits in top-200 tokens: 6 (3%). Structural tokens more Hebrew-like morphologically than content tokens (46.1% vs 33.8%). Bootstrap z-score = -1.0 (MARGINAL). Support:Against ratio = 2:3. R6 token set (ol, al, or, ar): 52.6% map directly to Hebrew function words (this is the source of P2-CLAIM-018 figure).
+- **Supports**: P2-CLAIM-018 (R6 Hebrew alignment; 52.6% figure originates from R6 token occurrence count in LC2, not in the formal R6 role_map)
+- **Verdict**: WEAK SUPPORT for Hebrew hypothesis; structural tokens more Hebrew-like than content; not decisive
+- **Repo path**: `research/LC1_hebrew_cipher_test.py`
+- **Output**: `research/LC1_hebrew_cipher_results.json`
+
+### SUPP-LOOP3B-F1
+- **Analysis**: Fractal compression test (loop3b task 3b.F1)
+- **Finding**: 6-role transition matrix rank-1 approximation (12 parameters) achieves KL=0.0478 < 0.05 threshold. Top-3 singular values capture 99.1% of variance. 6-role matrix more compressible than 7-role (99.1% vs 97.7% top-3 variance). Confirms single dominant mode in transition grammar.
+- **Supports**: Six-role model selection rationale; interpretability argument in Paper 2 §3
+- **Verdict**: CONFIRMED — rank-1 approximation sufficient; grammar has 1-2 effective degrees of freedom
+- **Repo path**: `research/loop3b/loop3b_analysis.py` (task 3b.F1)
+- **Output**: `research/loop3b/3bF1_fractal_compression.json`
