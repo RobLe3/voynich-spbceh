@@ -9,5 +9,8 @@
   "n_sig_cluster_sections": 5,
   "packet_nmi_vs_section": 0.06658451521316527,
   "best_token_nmi_vs_section": 0.20259411900365876,
-  "best_token": "okai!n"
+  "best_token": "okai!n",
+  "nmi_cluster_illus_type_ia3": 0.1066,
+  "n_ia3_packets": 147,
+  "n_ia3_folios": 14
 }

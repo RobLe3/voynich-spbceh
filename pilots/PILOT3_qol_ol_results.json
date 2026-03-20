@@ -11,5 +11,9 @@
   "qol_ol_fisher_or": 64.583,
   "qol_mean_relative_position": 0.558,
   "total_paragraphs": 923,
-  "paras_with_both_qol_ol": 36
+  "paras_with_both_qol_ol": 36,
+  "ol_total": 504,
+  "ol_in_payload": 195,
+  "ol_expected_in_payload": 137.82,
+  "ol_payload_enrichment": 1.415
 }
